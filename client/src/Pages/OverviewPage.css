@@ -1,0 +1,38 @@
+/* w-[60vw] overflow-hidden */
+.OVfamous{
+    width: 80vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.OVslider{
+    display: flex;
+    gap: 20px;
+    animation: slider 30s linear infinite;
+    width: 80vw;
+}
+
+/* .fill{
+    height:100%;
+}
+
+.red{
+    background:#ff3b3b;
+    width:82%;
+}
+
+.orange{
+    background:#f5a623;
+    width:50%;
+}
+
+.green{
+    background:#57ffd4;
+    width:92%;
+}
+
+.blue{
+    background:#7aa2ff;
+    width:7%;
+} */

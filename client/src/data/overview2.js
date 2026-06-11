@@ -1,0 +1,2859 @@
+const overviewcars2 = [
+    {
+        id: 'ferrari',
+        brand: "Ferrari",
+        img: 'https://upload.wikimedia.org/wikipedia/sco/thumb/d/d1/Ferrari-Logo.svg/1920px-Ferrari-Logo.svg.png',
+        founded_year: 1939,
+        founder: 'Enzo Ferrari',
+        headquarter: {
+            city: 'Maranello',
+            country: 'Italy'
+        },
+        description: 'Ferrari is an Italian luxury sports car manufacturer known for high-performance supercars, Formula 1 heritage, and iconic V12 engines.',
+
+        performance: {
+            top_speed_onroad: 217,
+            top_speed_trackonly: 234,
+            torque_onroad: 700,
+            torque_trackonly: 750,
+            horsepower_onroad: 950,
+            horsepower_trackonly: 1050,
+            acceleration_0_60: 2.4,
+            acceleration_0_100: 4.9,
+        },
+
+        technical: {
+            weight_kg: 1470,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V12 Naturally Aspirated',
+            displacement_liters: 6.5,
+            drivetrain: 'RWD',
+            transmission: '7-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Carbon-ceramic brakes (Brembo)',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Double wishbone with adaptive dampers',
+            aerodynamics: 'Active rear wing, underbody diffuser',
+        },
+
+        production: {
+            total_units: 499,
+            years_produced: '2013-2018',
+            price_usd: 1400000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'LaFerrari',
+        fastest_trackonly: 'Ferrari F50 GT',
+
+        famous_cars: [
+            { "model": "Ferrari 250 GTO", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/1963_Ferrari_250_GTO_%28chassis_4153GT%29_2.95.jpg" },
+            { "model": "Ferrari F40", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ferrari_F40_%288716133845%29.jpg" },
+            { "model": "Ferrari Testarossa", "image_url": "https://www.supercarworld.com/images/fullpics/039.jpg" },
+            { "model": "Ferrari Enzo", "image_url": "https://www.supercarworld.com/images/fullpics/175.jpg" },
+            { "model": "LaFerrari", "image_url": "https://www.supercarworld.com/images/fullpics/457.jpg" },
+            { "model": "Ferrari 365 GTB/4 Daytona", "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/1973_Ferrari_Daytona_365_GTB4_Blue_LC22.jpg/330px-1973_Ferrari_Daytona_365_GTB4_Blue_LC22.jpg" },
+            { "model": "Ferrari 288 GTO", "image_url": "https://www.supercarworld.com/images/fullpics/019m.jpg" },
+            { "model": "Ferrari F50", "image_url": "https://www.supercarworld.com/images/fullpics/010l.jpg" },
+            { "model": "Ferrari Dino 246 GT", "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Dino_246_GT_%2824627987921%29.jpg/960px-Dino_246_GT_%2824627987921%29.jpg" },
+            { "model": "Ferrari 458 Italia", "image_url": "https://www.supercarworld.com/images/fullpics/438b.jpg" }
+        ]
+    },
+
+    {
+        id: 'lamborghini',
+        brand: "Lamborghini",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Lamborghini_Logo.svg/1920px-Lamborghini_Logo.svg.png',
+        founded_year: 1963,
+        founder: 'Ferruccio Lamborghini',
+        headquarter: { city: "Sant'Agata Bolognese", country: 'Italy' },
+        description: 'Lamborghini is an Italian luxury supercar manufacturer renowned for extreme styling, naturally aspirated V10 and V12 engines, and some of the most aggressive hypercars in automotive history.',
+
+        performance: {
+            top_speed_onroad: 221,
+            top_speed_trackonly: 349,
+            torque_onroad: 720,
+            torque_trackonly: 750,
+            horsepower_onroad: 770,
+            horsepower_trackonly: 750,
+            acceleration_0_60: 2.8,
+            acceleration_0_100: 5.7,
+        },
+
+        technical: {
+            weight_kg: 1575,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V12 Naturally Aspirated',
+            displacement_liters: 6.5,
+            drivetrain: 'AWD',
+            transmission: '7-speed ISR automated manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque with aluminum subframes',
+            brake_material: 'Carbon-ceramic brakes (Brembo CCM)',
+            suspension_front: 'Double wishbone with magnetorheological dampers',
+            suspension_rear: 'Double wishbone with magnetorheological dampers',
+            aerodynamics: 'Active rear wing, ALA (Aerodinamica Lamborghini Attiva)',
+        },
+
+        production: {
+            total_units: 600,
+            years_produced: '2020-2022',
+            price_usd: 573966,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Aventador LP780-4 Ultimae',
+        fastest_trackonly: 'Veneno',
+
+        famous_cars: [
+            { model: "Lamborghini Miura", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Lamborghini_Miura_P400S_1970_%2814985831038%29.jpg/960px-Lamborghini_Miura_P400S_1970_%2814985831038%29.jpg" },
+            { model: "Lamborghini Countach", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/1988_Lamborghini_Countach_5000_QV_%2814392096432%29.jpg/960px-1988_Lamborghini_Countach_5000_QV_%2814392096432%29.jpg" },
+            { model: "Lamborghini Diablo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lamborghini_Diablo_%281991%29.jpg/960px-Lamborghini_Diablo_%281991%29.jpg" },
+            { model: "Lamborghini Murciélago LP670-4 SV", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Lamborghini_Murci%C3%A9lago_LP_670-4_SuperVeloce_%282010%29_%2814586468676%29.jpg/960px-Lamborghini_Murci%C3%A9lago_LP_670-4_SuperVeloce_%282010%29_%2814586468676%29.jpg" },
+            { model: "Lamborghini Veneno", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Lamborghini_Veneno_%2814399038968%29.jpg/960px-Lamborghini_Veneno_%2814399038968%29.jpg" },
+            { model: "Lamborghini Aventador SVJ", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lamborghini_Aventador_SVJ_--_2019_DC.jpg/960px-Lamborghini_Aventador_SVJ_--_2019_DC.jpg" },
+            { model: "Lamborghini Huracán Performante", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Lamborghini_Huracan_Performante_%2832329496737%29.jpg/960px-Lamborghini_Huracan_Performante_%2832329496737%29.jpg" },
+            { model: "Lamborghini Sián FKP 37", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lamborghini_Sian_%2848744898deer%29.jpg/960px-Lamborghini_Sian_%2848744898deer%29.jpg" },
+            { model: "Lamborghini Centenario", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lamborghini_Centenario_%2827860757524%29.jpg/960px-Lamborghini_Centenario_%2827860757524%29.jpg" },
+            { model: "Lamborghini Revuelto", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Lamborghini_Revuelto_%2852736700171%29.jpg/960px-Lamborghini_Revuelto_%2852736700171%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'porsche',
+        brand: "Porsche",
+        img: 'https://upload.wikimedia.org/wikipedia/de/thumb/5/5e/Porsche_Logo.svg/1920px-Porsche_Logo.svg.png',
+        founded_year: 1931,
+        founder: 'Ferdinand Porsche',
+        headquarter: { city: 'Stuttgart', country: 'Germany' },
+        description: 'Porsche is a German automobile manufacturer specializing in high-performance sports cars, SUVs, and sedans, most famous for the iconic 911 which has been in continuous production since 1963.',
+
+        performance: {
+            top_speed_onroad: 211,
+            top_speed_trackonly: 218,
+            torque_onroad: 750,
+            torque_trackonly: 700,
+            horsepower_onroad: 690,
+            horsepower_trackonly: 700,
+            acceleration_0_60: 2.7,
+            acceleration_0_100: 5.6,
+        },
+
+        technical: {
+            weight_kg: 1470,
+            engine_layout: 'Rear-engine',
+            engine_type: 'Flat-6 Twin-Turbocharged',
+            displacement_liters: 3.8,
+            drivetrain: 'RWD',
+            transmission: '7-speed PDK dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum-steel hybrid with carbon fiber components',
+            brake_material: 'PCCB (Porsche Ceramic Composite Brakes)',
+            suspension_front: 'MacPherson strut with PASM',
+            suspension_rear: 'Multi-link with PASM',
+            aerodynamics: 'Active rear wing, front splitter, underbody diffuser',
+        },
+
+        production: {
+            total_units: 1242,
+            years_produced: '2017-2019',
+            price_usd: 293200,
+            limited_edition: false,
+        },
+
+        fastest_onroad: '911 GT2 RS',
+        fastest_trackonly: '918 Spyder',
+
+        famous_cars: [
+            { model: "Porsche 911 (964) Carrera RS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Porsche_964_Carrera_RS.jpg/960px-Porsche_964_Carrera_RS.jpg" },
+            { model: "Porsche 959", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Porsche_959_%281986%29.jpg/960px-Porsche_959_%281986%29.jpg" },
+            { model: "Porsche Carrera GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Porsche_Carrera_GT_%282004%29.jpg/960px-Porsche_Carrera_GT_%282004%29.jpg" },
+            { model: "Porsche 918 Spyder", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Porsche_918_Spyder_--_2014_DC.jpg/960px-Porsche_918_Spyder_--_2014_DC.jpg" },
+            { model: "Porsche 911 GT2 RS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Porsche_911_GT2_RS_%28991%29.jpg/960px-Porsche_911_GT2_RS_%28991%29.jpg" },
+            { model: "Porsche 911 GT3 RS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porsche_911_GT3_RS_%28992%29.jpg/960px-Porsche_911_GT3_RS_%28992%29.jpg" },
+            { model: "Porsche Taycan Turbo S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Porsche_Taycan_Turbo_S_%282020%29.jpg/960px-Porsche_Taycan_Turbo_S_%282020%29.jpg" },
+            { model: "Porsche 550 Spyder", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Porsche_550_Spyder.jpg/960px-Porsche_550_Spyder.jpg" },
+            { model: "Porsche 356", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Porsche_356_A_Coupe.jpg/960px-Porsche_356_A_Coupe.jpg" },
+            { model: "Porsche 911 Turbo S (992)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Porsche_911_Turbo_S_%28992%29_--_2020_DC.jpg/960px-Porsche_911_Turbo_S_%28992%29_--_2020_DC.jpg" },
+        ]
+    },
+
+    {
+        id: 'mclaren',
+        brand: "McLaren",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/McLaren_Logo.svg/1920px-McLaren_Logo.svg.png',
+        founded_year: 1963,
+        founder: 'Bruce McLaren',
+        headquarter: { city: 'Woking', country: 'United Kingdom' },
+        description: 'McLaren Automotive is a British supercar and hypercar manufacturer born from Formula 1 technology, known for lightweight carbon construction, mid-engine layouts, and track-focused performance.',
+
+        performance: {
+            top_speed_onroad: 243,
+            top_speed_trackonly: 391,
+            torque_onroad: 720,
+            torque_trackonly: 800,
+            horsepower_onroad: 789,
+            horsepower_trackonly: 986,
+            acceleration_0_60: 2.5,
+            acceleration_0_100: 5.2,
+        },
+
+        technical: {
+            weight_kg: 1198,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 4.0,
+            drivetrain: 'RWD',
+            transmission: '7-speed SSG dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber MonoCage II monocoque',
+            brake_material: 'Carbon-ceramic brakes (Akebono)',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Double wishbone with adaptive dampers',
+            aerodynamics: 'Active rear wing, ground-effect aerodynamics',
+        },
+
+        production: {
+            total_units: 500,
+            years_produced: '2018-2019',
+            price_usd: 958966,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'McLaren F1',
+        fastest_trackonly: 'McLaren P1 GTR',
+
+        famous_cars: [
+            { model: "McLaren F1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/McLaren_F1_%281994%29.jpg/960px-McLaren_F1_%281994%29.jpg" },
+            { model: "McLaren P1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/McLaren_P1_%2814327870358%29.jpg/960px-McLaren_P1_%2814327870358%29.jpg" },
+            { model: "McLaren Senna", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/McLaren_Senna_%2847098068524%29.jpg/960px-McLaren_Senna_%2847098068524%29.jpg" },
+            { model: "McLaren 720S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/McLaren_720S_%2832329496737%29.jpg/960px-McLaren_720S_%2832329496737%29.jpg" },
+            { model: "McLaren Speedtail", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/McLaren_Speedtail_%2848912698753%29.jpg/960px-McLaren_Speedtail_%2848912698753%29.jpg" },
+            { model: "McLaren Elva", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McLaren_Elva_%2850417632937%29.jpg/960px-McLaren_Elva_%2850417632937%29.jpg" },
+            { model: "McLaren 675LT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/McLaren_675LT_%2820268064691%29.jpg/960px-McLaren_675LT_%2820268064691%29.jpg" },
+            { model: "McLaren 600LT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/McLaren_600LT_%2847098068524%29.jpg/960px-McLaren_600LT_%2847098068524%29.jpg" },
+            { model: "McLaren MP4-12C", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/McLaren_MP4-12C_%282011%29.jpg/960px-McLaren_MP4-12C_%282011%29.jpg" },
+            { model: "McLaren 765LT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/McLaren_765LT_%2851322065412%29.jpg/960px-McLaren_765LT_%2851322065412%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'bugatti',
+        brand: "Bugatti",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bugatti_logo.svg/1920px-Bugatti_logo.svg.png',
+        founded_year: 1909,
+        founder: 'Ettore Bugatti',
+        headquarter: { city: 'Molsheim', country: 'France' },
+        description: 'Bugatti is a French luxury hypercar manufacturer famous for producing the world\'s fastest and most expensive production cars, powered by its legendary quad-turbocharged W16 engine.',
+
+        performance: {
+            top_speed_onroad: 304,
+            top_speed_trackonly: 304,
+            torque_onroad: 1600,
+            torque_trackonly: 1600,
+            horsepower_onroad: 1577,
+            horsepower_trackonly: 1600,
+            acceleration_0_60: 2.4,
+            acceleration_0_100: 4.3,
+        },
+
+        technical: {
+            weight_kg: 1995,
+            engine_layout: 'Mid-engine',
+            engine_type: 'W16 Quad-Turbocharged',
+            displacement_liters: 8.0,
+            drivetrain: 'AWD',
+            transmission: '7-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Carbon-silicon carbide brakes',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Double wishbone with adaptive dampers',
+            aerodynamics: 'Active rear wing, adaptive underbody diffuser',
+        },
+
+        production: {
+            total_units: 30,
+            years_produced: '2019-2021',
+            price_usd: 5800000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Chiron Super Sport 300+',
+        fastest_trackonly: 'Chiron Pur Sport',
+
+        famous_cars: [
+            { model: "Bugatti Veyron 16.4", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bugatti_Veyron_16.4_%282006%29.jpg/960px-Bugatti_Veyron_16.4_%282006%29.jpg" },
+            { model: "Bugatti Veyron Super Sport", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bugatti_Veyron_16.4_Super_Sport.jpg/960px-Bugatti_Veyron_16.4_Super_Sport.jpg" },
+            { model: "Bugatti Chiron", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Bugatti_Chiron_-_Salon_de_Gen%C3%A8ve_2016.jpg/960px-Bugatti_Chiron_-_Salon_de_Gen%C3%A8ve_2016.jpg" },
+            { model: "Bugatti Chiron Super Sport 300+", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bugatti_Chiron_Super_Sport_300%2B.jpg/960px-Bugatti_Chiron_Super_Sport_300%2B.jpg" },
+            { model: "Bugatti Divo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bugatti_Divo_%2847098068524%29.jpg/960px-Bugatti_Divo_%2847098068524%29.jpg" },
+            { model: "Bugatti Bolide", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bugatti_Bolide_%2851245614961%29.jpg/960px-Bugatti_Bolide_%2851245614961%29.jpg" },
+            { model: "Bugatti La Voiture Noire", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bugatti_La_Voiture_Noire.jpg/960px-Bugatti_La_Voiture_Noire.jpg" },
+            { model: "Bugatti Centodieci", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bugatti_Centodieci.jpg/960px-Bugatti_Centodieci.jpg" },
+            { model: "Bugatti EB110", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bugatti_EB_110_GT_%281994%29.jpg/960px-Bugatti_EB_110_GT_%281994%29.jpg" },
+            { model: "Bugatti Mistral", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bugatti_Mistral_%2852736700171%29.jpg/960px-Bugatti_Mistral_%2852736700171%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'koenigsegg',
+        brand: "Koenigsegg",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Koenigsegg_logo.svg/1920px-Koenigsegg_logo.svg.png',
+        founded_year: 1994,
+        founder: 'Christian von Koenigsegg',
+        headquarter: { city: 'Ängelholm', country: 'Sweden' },
+        description: 'Koenigsegg is a Swedish hypercar manufacturer that consistently breaks world speed records with handbuilt, extreme-performance machines featuring cutting-edge engineering and bespoke design.',
+
+        performance: {
+            top_speed_onroad: 330,
+            top_speed_trackonly: 330,
+            torque_onroad: 1500,
+            torque_trackonly: 1500,
+            horsepower_onroad: 1600,
+            horsepower_trackonly: 1600,
+            acceleration_0_60: 2.5,
+            acceleration_0_100: 5.5,
+        },
+
+        technical: {
+            weight_kg: 1420,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 5.0,
+            drivetrain: 'RWD',
+            transmission: '9-speed LST (Light Speed Transmission)',
+            fuel_type: 'E85 / Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Carbon-ceramic brakes (Akebono)',
+            suspension_front: 'Double wishbone with triplex dampers',
+            suspension_rear: 'Double wishbone with triplex dampers',
+            aerodynamics: 'Active rear wing, underbody venturi tunnels',
+        },
+
+        production: {
+            total_units: 125,
+            years_produced: '2021-present',
+            price_usd: 2900000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Jesko Absolut',
+        fastest_trackonly: 'Agera RS',
+
+        famous_cars: [
+            { model: "Koenigsegg CC8S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Koenigsegg_CC8S.jpg/960px-Koenigsegg_CC8S.jpg" },
+            { model: "Koenigsegg CCX", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Koenigsegg_CCX_%282006%29.jpg/960px-Koenigsegg_CCX_%282006%29.jpg" },
+            { model: "Koenigsegg Agera R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Koenigsegg_Agera_R_%2814327870358%29.jpg/960px-Koenigsegg_Agera_R_%2814327870358%29.jpg" },
+            { model: "Koenigsegg Agera RS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Koenigsegg_Agera_RS_%2832329496737%29.jpg/960px-Koenigsegg_Agera_RS_%2832329496737%29.jpg" },
+            { model: "Koenigsegg One:1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Koenigsegg_One-1_%2814399038968%29.jpg/960px-Koenigsegg_One-1_%2814399038968%29.jpg" },
+            { model: "Koenigsegg Regera", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Koenigsegg_Regera_%2827860757524%29.jpg/960px-Koenigsegg_Regera_%2827860757524%29.jpg" },
+            { model: "Koenigsegg Jesko", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Koenigsegg_Jesko_%2848912698753%29.jpg/960px-Koenigsegg_Jesko_%2848912698753%29.jpg" },
+            { model: "Koenigsegg Jesko Absolut", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Koenigsegg_Jesko_Absolut_%2851245614961%29.jpg/960px-Koenigsegg_Jesko_Absolut_%2851245614961%29.jpg" },
+            { model: "Koenigsegg Gemera", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Koenigsegg_Gemera_%2851322065412%29.jpg/960px-Koenigsegg_Gemera_%2851322065412%29.jpg" },
+            { model: "Koenigsegg CC850", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Koenigsegg_CC850_%2852736700171%29.jpg/960px-Koenigsegg_CC850_%2852736700171%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'pagani',
+        brand: "Pagani",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Pagani_logo.svg/1920px-Pagani_logo.svg.png',
+        founded_year: 1992,
+        founder: 'Horacio Pagani',
+        headquarter: { city: 'San Cesario sul Panaro', country: 'Italy' },
+        description: 'Pagani Automobili is an Italian hypercar manufacturer known for hand-crafted carbon-titanium monocoques, Mercedes-AMG V12 engines, and breathtaking artisanal craftsmanship in ultra-limited production runs.',
+
+        performance: {
+            top_speed_onroad: 238,
+            top_speed_trackonly: 265,
+            torque_onroad: 1050,
+            torque_trackonly: 1100,
+            horsepower_onroad: 764,
+            horsepower_trackonly: 850,
+            acceleration_0_60: 2.8,
+            acceleration_0_100: 6.0,
+        },
+
+        technical: {
+            weight_kg: 1218,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V12 Twin-Turbocharged',
+            displacement_liters: 6.0,
+            drivetrain: 'RWD',
+            transmission: '7-speed Xtrac sequential',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbo-Titanium monocoque',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with Öhlins dampers',
+            suspension_rear: 'Double wishbone with Öhlins dampers',
+            aerodynamics: 'Active rear wing, front splitter, underbody diffuser',
+        },
+
+        production: {
+            total_units: 40,
+            years_produced: '2019-2022',
+            price_usd: 3400000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Huayra R',
+        fastest_trackonly: 'Zonda R',
+
+        famous_cars: [
+            { model: "Pagani Zonda C12", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Pagani_Zonda_C12_%281999%29.jpg/960px-Pagani_Zonda_C12_%281999%29.jpg" },
+            { model: "Pagani Zonda F", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Pagani_Zonda_F_%282005%29.jpg/960px-Pagani_Zonda_F_%282005%29.jpg" },
+            { model: "Pagani Zonda Cinque", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pagani_Zonda_Cinque.jpg/960px-Pagani_Zonda_Cinque.jpg" },
+            { model: "Pagani Zonda R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Pagani_Zonda_R_%2814327870358%29.jpg/960px-Pagani_Zonda_R_%2814327870358%29.jpg" },
+            { model: "Pagani Huayra", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Pagani_Huayra_%282012%29.jpg/960px-Pagani_Huayra_%282012%29.jpg" },
+            { model: "Pagani Huayra BC", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Pagani_Huayra_BC_%2832329496737%29.jpg/960px-Pagani_Huayra_BC_%2832329496737%29.jpg" },
+            { model: "Pagani Huayra Roadster", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Pagani_Huayra_Roadster_%2847098068524%29.jpg/960px-Pagani_Huayra_Roadster_%2847098068524%29.jpg" },
+            { model: "Pagani Huayra R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pagani_Huayra_R_%2851245614961%29.jpg/960px-Pagani_Huayra_R_%2851245614961%29.jpg" },
+            { model: "Pagani Utopia", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Pagani_Utopia_%2852736700171%29.jpg/960px-Pagani_Utopia_%2852736700171%29.jpg" },
+            { model: "Pagani Zonda HP Barchetta", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pagani_Zonda_HP_Barchetta.jpg/960px-Pagani_Zonda_HP_Barchetta.jpg" },
+        ]
+    },
+
+    {
+        id: 'astonmartin',
+        brand: "Aston Martin",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aston_Martin_logo.svg/1920px-Aston_Martin_logo.svg.png',
+        founded_year: 1913,
+        founder: 'Lionel Martin & Robert Bamford',
+        headquarter: { city: 'Gaydon', country: 'United Kingdom' },
+        description: 'Aston Martin is a British luxury sports car manufacturer synonymous with elegance, performance, and the James Bond franchise, producing grand tourers, supercars, and hypercars of exceptional refinement.',
+
+        performance: {
+            top_speed_onroad: 209,
+            top_speed_trackonly: 225,
+            torque_onroad: 900,
+            torque_trackonly: 1000,
+            horsepower_onroad: 1160,
+            horsepower_trackonly: 1100,
+            acceleration_0_60: 2.5,
+            acceleration_0_100: 4.8,
+        },
+
+        technical: {
+            weight_kg: 1030,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V12 Naturally Aspirated + Hybrid',
+            displacement_liters: 6.5,
+            drivetrain: 'RWD',
+            transmission: '7-speed automated manual',
+            fuel_type: 'Petrol-Electric Hybrid',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Carbon-ceramic brakes (Brembo)',
+            suspension_front: 'Double wishbone with coilover dampers',
+            suspension_rear: 'Double wishbone with coilover dampers',
+            aerodynamics: 'Active rear wing, ground-effect aerodynamics',
+        },
+
+        production: {
+            total_units: 150,
+            years_produced: '2022-2024',
+            price_usd: 2400000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Valkyrie',
+        fastest_trackonly: 'Vulcan',
+
+        famous_cars: [
+            { model: "Aston Martin DB5", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Aston_Martin_DB5_%281964%29.jpg/960px-Aston_Martin_DB5_%281964%29.jpg" },
+            { model: "Aston Martin DB9", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Aston_Martin_DB9_%282004%29.jpg/960px-Aston_Martin_DB9_%282004%29.jpg" },
+            { model: "Aston Martin Vantage V12", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Aston_Martin_V12_Vantage_%282009%29.jpg/960px-Aston_Martin_V12_Vantage_%282009%29.jpg" },
+            { model: "Aston Martin One-77", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Aston_Martin_One-77_%2814327870358%29.jpg/960px-Aston_Martin_One-77_%2814327870358%29.jpg" },
+            { model: "Aston Martin Vulcan", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Aston_Martin_Vulcan_%2832329496737%29.jpg/960px-Aston_Martin_Vulcan_%2832329496737%29.jpg" },
+            { model: "Aston Martin Valkyrie", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Aston_Martin_Valkyrie_%2847098068524%29.jpg/960px-Aston_Martin_Valkyrie_%2847098068524%29.jpg" },
+            { model: "Aston Martin DBS Superleggera", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Aston_Martin_DBS_Superleggera_%282018%29.jpg/960px-Aston_Martin_DBS_Superleggera_%282018%29.jpg" },
+            { model: "Aston Martin DBR1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Aston_Martin_DBR1_%281959%29.jpg/960px-Aston_Martin_DBR1_%281959%29.jpg" },
+            { model: "Aston Martin DB11", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Aston_Martin_DB11_%282016%29.jpg/960px-Aston_Martin_DB11_%282016%29.jpg" },
+            { model: "Aston Martin Valhalla", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Aston_Martin_Valhalla_%2851245614961%29.jpg/960px-Aston_Martin_Valhalla_%2851245614961%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'bentley',
+        brand: "Bentley",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Bentley_logo.svg/1920px-Bentley_logo.svg.png',
+        founded_year: 1919,
+        founder: 'W.O. Bentley',
+        headquarter: { city: 'Crewe', country: 'United Kingdom' },
+        description: 'Bentley Motors is a British manufacturer of ultra-luxury grand tourers and SUVs, combining handcrafted opulence with serious performance credentials forged through Le Mans racing heritage.',
+
+        performance: {
+            top_speed_onroad: 333,
+            top_speed_trackonly: 333,
+            torque_onroad: 900,
+            torque_trackonly: 900,
+            horsepower_onroad: 659,
+            horsepower_trackonly: 659,
+            acceleration_0_60: 3.5,
+            acceleration_0_100: 7.9,
+        },
+
+        technical: {
+            weight_kg: 1960,
+            engine_layout: 'Front-engine',
+            engine_type: 'W12 Twin-Turbocharged',
+            displacement_liters: 6.0,
+            drivetrain: 'AWD',
+            transmission: '8-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum spaceframe',
+            brake_material: 'Carbon-ceramic brakes (Brembo)',
+            suspension_front: 'Double wishbone with air suspension',
+            suspension_rear: 'Multi-link with air suspension',
+            aerodynamics: 'Active rear spoiler, underbody optimization',
+        },
+
+        production: {
+            total_units: 12,
+            years_produced: '2022-2023',
+            price_usd: 2000000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Bentley Bacalar',
+        fastest_trackonly: 'Continental GT3 Race Car',
+
+        famous_cars: [
+            { model: "Bentley 4½ Litre Blower", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/1930_Bentley_Blower_4.5_Litre.jpg/960px-1930_Bentley_Blower_4.5_Litre.jpg" },
+            { model: "Bentley Continental GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bentley_Continental_GT_%282003%29.jpg/960px-Bentley_Continental_GT_%282003%29.jpg" },
+            { model: "Bentley Continental GT Speed", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bentley_Continental_GT_Speed_%282022%29.jpg/960px-Bentley_Continental_GT_Speed_%282022%29.jpg" },
+            { model: "Bentley Mulsanne", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bentley_Mulsanne_%282010%29.jpg/960px-Bentley_Mulsanne_%282010%29.jpg" },
+            { model: "Bentley Bentayga", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bentley_Bentayga_%2832329496737%29.jpg/960px-Bentley_Bentayga_%2832329496737%29.jpg" },
+            { model: "Bentley Bacalar", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bentley_Bacalar_%2851245614961%29.jpg/960px-Bentley_Bacalar_%2851245614961%29.jpg" },
+            { model: "Bentley Speed Six", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Bentley_Speed_Six_%281930%29.jpg/960px-Bentley_Speed_Six_%281930%29.jpg" },
+            { model: "Bentley Flying Spur", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bentley_Flying_Spur_%282020%29.jpg/960px-Bentley_Flying_Spur_%282020%29.jpg" },
+            { model: "Bentley Batur", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Bentley_Batur_%2852736700171%29.jpg/960px-Bentley_Batur_%2852736700171%29.jpg" },
+            { model: "Bentley Azure", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Bentley_Azure_%281995%29.jpg/960px-Bentley_Azure_%281995%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'rollsroyce',
+        brand: "Rolls-Royce",
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rolls-Royce_Motor_Cars_logo.svg/1920px-Rolls-Royce_Motor_Cars_logo.svg.png',
+        founded_year: 1906,
+        founder: 'Charles Rolls & Henry Royce',
+        headquarter: { city: 'Goodwood', country: 'United Kingdom' },
+        description: 'Rolls-Royce Motor Cars is a British ultra-luxury automobile manufacturer, the pinnacle of bespoke automotive craftsmanship, producing hand-built motorcars that represent the absolute summit of comfort, prestige, and refinement.',
+
+        performance: {
+            top_speed_onroad: 250,
+            top_speed_trackonly: 250,
+            torque_onroad: 870,
+            torque_trackonly: 870,
+            horsepower_onroad: 624,
+            horsepower_trackonly: 624,
+            acceleration_0_60: 4.4,
+            acceleration_0_100: 10.1,
+        },
+
+        technical: {
+            weight_kg: 2560,
+            engine_layout: 'Front-engine',
+            engine_type: 'V12 Twin-Turbocharged',
+            displacement_liters: 6.75,
+            drivetrain: 'RWD',
+            transmission: '8-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum spaceframe',
+            brake_material: 'Ventilated disc brakes',
+            suspension_front: 'Double wishbone with air suspension',
+            suspension_rear: 'Multi-link with air suspension',
+            aerodynamics: 'Optimized for luxury and quietness',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2013-2020',
+            price_usd: 320000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Wraith Black Badge',
+        fastest_trackonly: 'Wraith Black Badge',
+
+        famous_cars: [
+            { model: "Rolls-Royce Silver Ghost", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1910_Rolls-Royce_Silver_Ghost.jpg/960px-1910_Rolls-Royce_Silver_Ghost.jpg" },
+            { model: "Rolls-Royce Phantom VIII", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Rolls-Royce_Phantom_VIII_%282018%29.jpg/960px-Rolls-Royce_Phantom_VIII_%282018%29.jpg" },
+            { model: "Rolls-Royce Ghost", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rolls-Royce_Ghost_%282021%29.jpg/960px-Rolls-Royce_Ghost_%282021%29.jpg" },
+            { model: "Rolls-Royce Wraith", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Rolls-Royce_Wraith_%282013%29.jpg/960px-Rolls-Royce_Wraith_%282013%29.jpg" },
+            { model: "Rolls-Royce Dawn", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Rolls-Royce_Dawn_%282016%29.jpg/960px-Rolls-Royce_Dawn_%282016%29.jpg" },
+            { model: "Rolls-Royce Cullinan", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Rolls-Royce_Cullinan_%2847098068524%29.jpg/960px-Rolls-Royce_Cullinan_%2847098068524%29.jpg" },
+            { model: "Rolls-Royce Spectre", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rolls-Royce_Spectre_%2852736700171%29.jpg/960px-Rolls-Royce_Spectre_%2852736700171%29.jpg" },
+            { model: "Rolls-Royce Silver Shadow", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rolls-Royce_Silver_Shadow_%281965%29.jpg/960px-Rolls-Royce_Silver_Shadow_%281965%29.jpg" },
+            { model: "Rolls-Royce Boat Tail", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rolls-Royce_Boat_Tail_%2851245614961%29.jpg/960px-Rolls-Royce_Boat_Tail_%2851245614961%29.jpg" },
+            { model: "Rolls-Royce Silver Seraph", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Rolls-Royce_Silver_Seraph_%281999%29.jpg/960px-Rolls-Royce_Silver_Seraph_%281999%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'bmwm',
+        brand: "BMW M",
+        img: 'https://www.freepnglogos.com/uploads/bmw-logo-11.png',
+        founded_year: 1972,
+        founder: 'BMW AG',
+        headquarter: { city: 'Munich', country: 'Germany' },
+        description: 'BMW M GmbH is the high-performance subsidiary of BMW, producing driver-focused sports cars and M-tuned versions of BMW models, blending everyday usability with race-derived engineering.',
+
+        performance: {
+            top_speed_onroad: 306,
+            top_speed_trackonly: 330,
+            torque_onroad: 750,
+            torque_trackonly: 800,
+            horsepower_onroad: 635,
+            horsepower_trackonly: 650,
+            acceleration_0_60: 3.0,
+            acceleration_0_100: 6.8,
+        },
+
+        technical: {
+            weight_kg: 1900,
+            engine_layout: 'Front-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 4.4,
+            drivetrain: 'AWD',
+            transmission: '8-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum and carbon fiber reinforced chassis',
+            brake_material: 'Carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adaptive M suspension',
+            suspension_rear: 'Multi-link with adaptive M suspension',
+            aerodynamics: 'Active rear spoiler, front splitter',
+        },
+
+        production: {
+            total_units: 1000,
+            years_produced: '2021-2023',
+            price_usd: 142000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'BMW M5 CS',
+        fastest_trackonly: 'BMW M4 GT3',
+
+        famous_cars: [
+            { model: "BMW M1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/BMW_M1_%281978%29.jpg/960px-BMW_M1_%281978%29.jpg" },
+            { model: "BMW E30 M3", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/BMW_E30_M3_%281987%29.jpg/960px-BMW_E30_M3_%281987%29.jpg" },
+            { model: "BMW E46 M3 CSL", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/BMW_E46_M3_CSL_%282003%29.jpg/960px-BMW_E46_M3_CSL_%282003%29.jpg" },
+            { model: "BMW M3 (G80) Competition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/BMW_M3_G80_%282021%29.jpg/960px-BMW_M3_G80_%282021%29.jpg" },
+            { model: "BMW M5 CS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BMW_M5_CS_%282021%29.jpg/960px-BMW_M5_CS_%282021%29.jpg" },
+            { model: "BMW M4 Competition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/BMW_M4_G82_%282021%29.jpg/960px-BMW_M4_G82_%282021%29.jpg" },
+            { model: "BMW M8 Gran Coupe", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/BMW_M8_Gran_Coupe_%282020%29.jpg/960px-BMW_M8_Gran_Coupe_%282020%29.jpg" },
+            { model: "BMW M2 Competition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/BMW_M2_Competition_%282018%29.jpg/960px-BMW_M2_Competition_%282018%29.jpg" },
+            { model: "BMW i8", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/BMW_i8_%282014%29.jpg/960px-BMW_i8_%282014%29.jpg" },
+            { model: "BMW XM Label Red", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/BMW_XM_Label_Red_%282023%29.jpg/960px-BMW_XM_Label_Red_%282023%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'mercedesamg',
+        brand: "Mercedes-AMG",
+        img: 'https://www.carlogos.org/car-logos/mercedes-benz-logo.png',
+        founded_year: 1967,
+        founder: 'Hans Werner Aufrecht & Erhard Melcher',
+        headquarter: { city: 'Affalterbach', country: 'Germany' },
+        description: 'Mercedes-AMG is the high-performance division of Mercedes-Benz, hand-building high-output engines and producing road-legal race machines, from AMG GT supercars to the hybrid One hypercar.',
+
+        performance: {
+            top_speed_onroad: 352,
+            top_speed_trackonly: 352,
+            torque_onroad: 1020,
+            torque_trackonly: 1020,
+            horsepower_onroad: 1063,
+            horsepower_trackonly: 1063,
+            acceleration_0_60: 2.9,
+            acceleration_0_100: 7.0,
+        },
+
+        technical: {
+            weight_kg: 1695,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V6 Turbocharged Hybrid',
+            displacement_liters: 1.6,
+            drivetrain: 'AWD',
+            transmission: '8-speed automated manual',
+            fuel_type: 'Petrol-Electric Hybrid',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with pushrod dampers',
+            suspension_rear: 'Double wishbone with pushrod dampers',
+            aerodynamics: 'Active aerodynamics with DRS system',
+        },
+
+        production: {
+            total_units: 275,
+            years_produced: '2022-2024',
+            price_usd: 2700000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Mercedes-AMG One',
+        fastest_trackonly: 'Mercedes-AMG One',
+
+        famous_cars: [
+            { model: "Mercedes-AMG 300 SEL 6.8", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Mercedes-Benz_300_SEL_6.8_AMG_%281971%29.jpg/960px-Mercedes-Benz_300_SEL_6.8_AMG_%281971%29.jpg" },
+            { model: "Mercedes-AMG GT R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Mercedes-AMG_GT_R_%282017%29.jpg/960px-Mercedes-AMG_GT_R_%282017%29.jpg" },
+            { model: "Mercedes-AMG GT Black Series", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mercedes-AMG_GT_Black_Series_%282020%29.jpg/960px-Mercedes-AMG_GT_Black_Series_%282020%29.jpg" },
+            { model: "Mercedes-AMG One", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mercedes-AMG_One_%2851245614961%29.jpg/960px-Mercedes-AMG_One_%2851245614961%29.jpg" },
+            { model: "Mercedes-AMG C63 S E Performance", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mercedes-AMG_C63_S_E_Performance_%282022%29.jpg/960px-Mercedes-AMG_C63_S_E_Performance_%282022%29.jpg" },
+            { model: "Mercedes-AMG E63 S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Mercedes-AMG_E63_S_%282017%29.jpg/960px-Mercedes-AMG_E63_S_%282017%29.jpg" },
+            { model: "Mercedes-AMG SLS AMG", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mercedes-Benz_SLS_AMG_%282010%29.jpg/960px-Mercedes-Benz_SLS_AMG_%282010%29.jpg" },
+            { model: "Mercedes-AMG G63", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Mercedes-AMG_G63_%282018%29.jpg/960px-Mercedes-AMG_G63_%282018%29.jpg" },
+            { model: "Mercedes-AMG S63 Coupe", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mercedes-AMG_S63_Coupe_%282014%29.jpg/960px-Mercedes-AMG_S63_Coupe_%282014%29.jpg" },
+            { model: "Mercedes-AMG GTS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Mercedes-AMG_GTS_%282015%29.jpg/960px-Mercedes-AMG_GTS_%282015%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'abarth',
+        brand: "Abarth",
+        img: "https://www.carlogos.org/car-logos/abarth-logo.png",
+        founded_year: 1949,
+        founder: 'Carlo Abarth',
+        headquarter: { city: 'Turin', country: 'Italy' },
+        description: 'Abarth is an Italian performance car and racing car manufacturer, now a subsidiary of Stellantis, famous for producing high-performance versions of Fiat cars with distinctive scorpion badges.',
+
+        performance: {
+            top_speed_onroad: 225,
+            top_speed_trackonly: 240,
+            torque_onroad: 250,
+            torque_trackonly: 280,
+            horsepower_onroad: 190,
+            horsepower_trackonly: 220,
+            acceleration_0_60: 5.9,
+            acceleration_0_100: 13.5,
+        },
+
+        technical: {
+            weight_kg: 997,
+            engine_layout: 'Front-engine',
+            engine_type: 'Inline-4 Turbocharged',
+            displacement_liters: 1.4,
+            drivetrain: 'FWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Steel unibody with lightweight components',
+            brake_material: 'Brembo performance disc brakes',
+            suspension_front: 'MacPherson strut',
+            suspension_rear: 'Torsion beam with Koni dampers',
+            aerodynamics: 'Front splitter, rear diffuser',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2015-2019',
+            price_usd: 40000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Abarth 695 Biposto',
+        fastest_trackonly: 'Abarth 500 Assetto Corse',
+
+        famous_cars: [
+            { model: "Abarth 695 Biposto", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Abarth_695_Biposto.jpg/960px-Abarth_695_Biposto.jpg" },
+            { model: "Abarth 500", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Abarth_500_%282008%29.jpg/960px-Abarth_500_%282008%29.jpg" },
+            { model: "Abarth 124 Spider", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Abarth_124_Spider_%282016%29.jpg/960px-Abarth_124_Spider_%282016%29.jpg" },
+            { model: "Abarth 595 Competizione", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Abarth_595_Competizione.jpg/960px-Abarth_595_Competizione.jpg" },
+            { model: "Abarth 750 GT Zagato", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Abarth_750_GT_Zagato.jpg/960px-Abarth_750_GT_Zagato.jpg" },
+        ]
+    },
+
+    {
+        id: 'acura',
+        brand: "Acura",
+        img: "https://www.carlogos.org/car-logos/acura-logo.png",
+        founded_year: 1986,
+        founder: 'Honda Motor Company',
+        headquarter: { city: 'Torrance', country: 'USA' },
+        description: 'Acura is the luxury and performance division of Honda, known for precision-engineered sports cars and sedans including the legendary NSX supercar.',
+
+        performance: {
+            top_speed_onroad: 191,
+            top_speed_trackonly: 200,
+            torque_onroad: 550,
+            torque_trackonly: 590,
+            horsepower_onroad: 600,
+            horsepower_trackonly: 620,
+            acceleration_0_60: 2.9,
+            acceleration_0_100: 6.5,
+        },
+
+        technical: {
+            weight_kg: 1725,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V6 Twin-Turbocharged Hybrid',
+            displacement_liters: 3.5,
+            drivetrain: 'AWD',
+            transmission: '9-speed dual-clutch',
+            fuel_type: 'Petrol-Electric Hybrid',
+        },
+
+        chassis: {
+            material: 'Aluminum and high-strength steel space frame',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Multi-link with adaptive dampers',
+            aerodynamics: 'Active rear wing, underbody diffuser',
+        },
+
+        production: {
+            total_units: 350,
+            years_produced: '2022-2022',
+            price_usd: 169500,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Acura NSX Type S',
+        fastest_trackonly: 'Acura NSX GT3',
+
+        famous_cars: [
+            { model: "Acura NSX (NA1)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1991_Acura_NSX_%28NA1%29.jpg/960px-1991_Acura_NSX_%28NA1%29.jpg" },
+            { model: "Acura NSX Type S (2022)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2022_Acura_NSX_Type_S.jpg/960px-2022_Acura_NSX_Type_S.jpg" },
+            { model: "Acura Integra Type R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Acura_Integra_Type_R_%281997%29.jpg/960px-Acura_Integra_Type_R_%281997%29.jpg" },
+            { model: "Acura RSX Type S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Acura_RSX_Type_S_%282002%29.jpg/960px-Acura_RSX_Type_S_%282002%29.jpg" },
+            { model: "Acura TLX Type S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2021_Acura_TLX_Type_S.jpg/960px-2021_Acura_TLX_Type_S.jpg" },
+        ]
+    },
+
+    {
+        id: 'alfaromeo',
+        brand: "Alfa Romeo",
+        img: "https://www.carlogos.org/car-logos/alfa-romeo-logo.png",
+        founded_year: 1910,
+        founder: 'Cavaliere Ugo Stella',
+        headquarter: { city: 'Milan', country: 'Italy' },
+        description: 'Alfa Romeo is an Italian luxury car manufacturer celebrated for passionate driving dynamics, racing heritage, and iconic styling across nearly 115 years of production.',
+
+        performance: {
+            top_speed_onroad: 307,
+            top_speed_trackonly: 320,
+            torque_onroad: 600,
+            torque_trackonly: 650,
+            horsepower_onroad: 540,
+            horsepower_trackonly: 580,
+            acceleration_0_60: 3.6,
+            acceleration_0_100: 8.1,
+        },
+
+        technical: {
+            weight_kg: 1520,
+            engine_layout: 'Front-engine',
+            engine_type: 'V6 Twin-Turbocharged',
+            displacement_liters: 2.9,
+            drivetrain: 'RWD',
+            transmission: '8-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber composite with aluminum',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Multi-link with adaptive dampers',
+            aerodynamics: 'Active front splitter, rear wing',
+        },
+
+        production: {
+            total_units: 500,
+            years_produced: '2020-2021',
+            price_usd: 143000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Alfa Romeo 8C Competizione',
+        fastest_trackonly: 'Alfa Romeo 33 Stradale',
+
+        famous_cars: [
+            { model: "Alfa Romeo 8C Competizione", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Alfa_Romeo_8C_Competizione_%282007%29.jpg/960px-Alfa_Romeo_8C_Competizione_%282007%29.jpg" },
+            { model: "Alfa Romeo Giulia GTA", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Alfa_Romeo_Giulia_GTA_%282021%29.jpg/960px-Alfa_Romeo_Giulia_GTA_%282021%29.jpg" },
+            { model: "Alfa Romeo 4C", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Alfa_Romeo_4C_%282013%29.jpg/960px-Alfa_Romeo_4C_%282013%29.jpg" },
+            { model: "Alfa Romeo 33 Stradale", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Alfa_Romeo_33_Stradale_%282023%29.jpg/960px-Alfa_Romeo_33_Stradale_%282023%29.jpg" },
+            { model: "Alfa Romeo GTV6", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Alfa_Romeo_GTV6_%281980%29.jpg/960px-Alfa_Romeo_GTV6_%281980%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'alpine',
+        brand: "Alpine",
+        img: "https://www.carlogos.org/car-logos/alpine-logo.png",
+        founded_year: 1955,
+        founder: 'Jean Rédélé',
+        headquarter: { city: 'Dieppe', country: 'France' },
+        description: 'Alpine is a French sports car manufacturer revived by Renault, known for lightweight, driver-focused sports cars with motorsport DNA dating back to the 1960s.',
+
+        performance: {
+            top_speed_onroad: 177,
+            top_speed_trackonly: 190,
+            torque_onroad: 340,
+            torque_trackonly: 380,
+            horsepower_onroad: 300,
+            horsepower_trackonly: 320,
+            acceleration_0_60: 4.2,
+            acceleration_0_100: 9.5,
+        },
+
+        technical: {
+            weight_kg: 1103,
+            engine_layout: 'Mid-engine',
+            engine_type: 'Inline-4 Turbocharged',
+            displacement_liters: 1.8,
+            drivetrain: 'RWD',
+            transmission: '7-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Bonded aluminum chassis',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'Double wishbone',
+            suspension_rear: 'Double wishbone',
+            aerodynamics: 'Rear diffuser, optimized underbody',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2022-present',
+            price_usd: 85000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Alpine A110 R',
+        fastest_trackonly: 'Alpine A110 Cup',
+
+        famous_cars: [
+            { model: "Alpine A110 (1961)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Alpine_A110_%281961%29.jpg/960px-Alpine_A110_%281961%29.jpg" },
+            { model: "Alpine A110 (2017)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Alpine_A110_%282017%29.jpg/960px-Alpine_A110_%282017%29.jpg" },
+            { model: "Alpine A110 R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Alpine_A110_R_%282022%29.jpg/960px-Alpine_A110_R_%282022%29.jpg" },
+            { model: "Alpine A310", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Alpine_A310_%281971%29.jpg/960px-Alpine_A310_%281971%29.jpg" },
+            { model: "Alpine A610", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Alpine_A610_%281991%29.jpg/960px-Alpine_A610_%281991%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'apollo',
+        brand: "Apollo Automobil",
+        img: "https://www.carlogos.org/car-logos/apollo-logo.png",
+        founded_year: 2004,
+        founder: 'Roland Gumpert',
+        headquarter: { city: 'Denkendorf', country: 'Germany' },
+        description: 'Apollo Automobil is a German hypercar manufacturer producing extreme track-focused machines with aggressive aerodynamics and uncompromising performance credentials.',
+
+        performance: {
+            top_speed_onroad: 335,
+            top_speed_trackonly: 350,
+            torque_onroad: 760,
+            torque_trackonly: 760,
+            horsepower_onroad: 780,
+            horsepower_trackonly: 780,
+            acceleration_0_60: 2.7,
+            acceleration_0_100: 6.0,
+        },
+
+        technical: {
+            weight_kg: 1250,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V12 Naturally Aspirated',
+            displacement_liters: 6.3,
+            drivetrain: 'RWD',
+            transmission: '6-speed sequential',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with pushrod dampers',
+            suspension_rear: 'Double wishbone with pushrod dampers',
+            aerodynamics: 'Extreme downforce package, adjustable wing',
+        },
+
+        production: {
+            total_units: 10,
+            years_produced: '2019-2021',
+            price_usd: 2800000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Apollo IE',
+        fastest_trackonly: 'Apollo IE',
+
+        famous_cars: [
+            { model: "Apollo IE", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Apollo_Intensa_Emozione.jpg/960px-Apollo_Intensa_Emozione.jpg" },
+            { model: "Gumpert Apollo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Gumpert_Apollo_%282005%29.jpg/960px-Gumpert_Apollo_%282005%29.jpg" },
+            { model: "Apollo Arrow", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Apollo_Arrow_%282016%29.jpg/960px-Apollo_Arrow_%282016%29.jpg" },
+            { model: "Apollo EVO R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Apollo_EVO_R_%282021%29.jpg/960px-Apollo_EVO_R_%282021%29.jpg" },
+            { model: "Gumpert Apollo S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gumpert_Apollo_S_%282010%29.jpg/960px-Gumpert_Apollo_S_%282010%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'ariel',
+        brand: "Ariel",
+        img: "https://www.carlogos.org/car-logos/ariel-logo.png",
+        founded_year: 1999,
+        founder: 'Simon Saunders',
+        headquarter: { city: 'Crewkerne', country: 'United Kingdom' },
+        description: 'Ariel Motor Company is a British manufacturer of ultra-lightweight, minimalist sports cars, most famous for the Atom which delivers supercar performance with barely any bodywork.',
+
+        performance: {
+            top_speed_onroad: 270,
+            top_speed_trackonly: 280,
+            torque_onroad: 420,
+            torque_trackonly: 450,
+            horsepower_onroad: 400,
+            horsepower_trackonly: 450,
+            acceleration_0_60: 2.8,
+            acceleration_0_100: 6.3,
+        },
+
+        technical: {
+            weight_kg: 580,
+            engine_layout: 'Mid-engine',
+            engine_type: 'Inline-4 Supercharged',
+            displacement_liters: 2.0,
+            drivetrain: 'RWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Tubular steel space frame',
+            brake_material: 'AP Racing disc brakes',
+            suspension_front: 'Double wishbone with Öhlins dampers',
+            suspension_rear: 'Double wishbone with Öhlins dampers',
+            aerodynamics: 'Minimal bodywork for low drag',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2018-present',
+            price_usd: 80000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Ariel Atom 4R',
+        fastest_trackonly: 'Ariel Atom 4R',
+
+        famous_cars: [
+            { model: "Ariel Atom 3", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ariel_Atom_3.jpg/960px-Ariel_Atom_3.jpg" },
+            { model: "Ariel Atom 4", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ariel_Atom_4_%282018%29.jpg/960px-Ariel_Atom_4_%282018%29.jpg" },
+            { model: "Ariel Nomad", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ariel_Nomad_%282015%29.jpg/960px-Ariel_Nomad_%282015%29.jpg" },
+            { model: "Ariel Ace", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ariel_Ace_%282014%29.jpg/960px-Ariel_Ace_%282014%29.jpg" },
+            { model: "Ariel Hipercar", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ariel_Hipercar_%282020%29.jpg/960px-Ariel_Hipercar_%282020%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'audisport',
+        brand: "Audi Sport",
+        img: "https://www.carlogos.org/car-logos/audi-logo.png",
+        founded_year: 1983,
+        founder: 'Audi AG',
+        headquarter: { city: 'Neckarsulm', country: 'Germany' },
+        description: 'Audi Sport GmbH is the high-performance division of Audi, responsible for the R8 supercar and RS-badged performance vehicles featuring Quattro all-wheel drive technology.',
+
+        performance: {
+            top_speed_onroad: 330,
+            top_speed_trackonly: 340,
+            torque_onroad: 550,
+            torque_trackonly: 620,
+            horsepower_onroad: 620,
+            horsepower_trackonly: 640,
+            acceleration_0_60: 3.1,
+            acceleration_0_100: 7.0,
+        },
+
+        technical: {
+            weight_kg: 1595,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V10 Naturally Aspirated',
+            displacement_liters: 5.2,
+            drivetrain: 'RWD',
+            transmission: '7-speed S tronic dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum Space Frame with carbon fiber',
+            brake_material: 'Carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with magnetic ride',
+            suspension_rear: 'Double wishbone with magnetic ride',
+            aerodynamics: 'Active rear wing, underbody aero',
+        },
+
+        production: {
+            total_units: 222,
+            years_produced: '2022-2023',
+            price_usd: 210000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Audi R8 V10 GT RWD',
+        fastest_trackonly: 'Audi R18 e-tron',
+
+        famous_cars: [
+            { model: "Audi R8 V10 Plus", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Audi_R8_V10_Plus_%282015%29.jpg/960px-Audi_R8_V10_Plus_%282015%29.jpg" },
+            { model: "Audi RS6 Avant", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Audi_RS6_Avant_%282019%29.jpg/960px-Audi_RS6_Avant_%282019%29.jpg" },
+            { model: "Audi RS e-tron GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Audi_RS_e-tron_GT_%282021%29.jpg/960px-Audi_RS_e-tron_GT_%282021%29.jpg" },
+            { model: "Audi Quattro Sport", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Audi_Sport_Quattro_%281984%29.jpg/960px-Audi_Sport_Quattro_%281984%29.jpg" },
+            { model: "Audi R8 GT RWD", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Audi_R8_GT_RWD_%282023%29.jpg/960px-Audi_R8_GT_RWD_%282023%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'bac',
+        brand: "BAC",
+        img: "https://www.carlogos.org/car-logos/bac-logo.png",
+        founded_year: 2009,
+        founder: 'Neill & Ian Briggs',
+        headquarter: { city: 'Liverpool', country: 'United Kingdom' },
+        description: 'Briggs Automotive Company is a British manufacturer of the single-seat, road-legal Mono — one of the most track-focused and lightweight supercars legally driven on public roads.',
+
+        performance: {
+            top_speed_onroad: 270,
+            top_speed_trackonly: 280,
+            torque_onroad: 400,
+            torque_trackonly: 420,
+            horsepower_onroad: 332,
+            horsepower_trackonly: 350,
+            acceleration_0_60: 2.7,
+            acceleration_0_100: 5.9,
+        },
+
+        technical: {
+            weight_kg: 555,
+            engine_layout: 'Mid-engine',
+            engine_type: 'Inline-4 Turbocharged',
+            displacement_liters: 2.5,
+            drivetrain: 'RWD',
+            transmission: '6-speed sequential',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'AP Racing carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adjustable dampers',
+            suspension_rear: 'Double wishbone with adjustable dampers',
+            aerodynamics: 'Ground effect aerodynamics, rear wing',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2019-present',
+            price_usd: 250000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'BAC Mono R',
+        fastest_trackonly: 'BAC Mono R',
+
+        famous_cars: [
+            { model: "BAC Mono", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/BAC_Mono_%282011%29.jpg/960px-BAC_Mono_%282011%29.jpg" },
+            { model: "BAC Mono R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/BAC_Mono_R_%282019%29.jpg/960px-BAC_Mono_R_%282019%29.jpg" },
+            { model: "BAC Mono Carbon Edition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/BAC_Mono_Carbon_Edition.jpg/960px-BAC_Mono_Carbon_Edition.jpg" },
+            { model: "BAC Mono GP Edition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/BAC_Mono_GP_Edition.jpg/960px-BAC_Mono_GP_Edition.jpg" },
+            { model: "BAC Mono (2023)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BAC_Mono_2023.jpg/960px-BAC_Mono_2023.jpg" },
+        ]
+    },
+
+    {
+        id: 'bizzarrini',
+        brand: "Bizzarrini",
+        img: "https://www.carlogos.org/car-logos/bizzarrini-logo.png",
+        founded_year: 1964,
+        founder: 'Giotto Bizzarrini',
+        headquarter: { city: 'Livorno', country: 'Italy' },
+        description: 'Bizzarrini is an Italian exotic car manufacturer founded by the engineer behind the Ferrari 250 GTO, producing raw, race-bred supercars with V8 power.',
+
+        performance: {
+            top_speed_onroad: 280,
+            top_speed_trackonly: 295,
+            torque_onroad: 500,
+            torque_trackonly: 550,
+            horsepower_onroad: 400,
+            horsepower_trackonly: 450,
+            acceleration_0_60: 4.1,
+            acceleration_0_100: 9.2,
+        },
+
+        technical: {
+            weight_kg: 1100,
+            engine_layout: 'Front-engine',
+            engine_type: 'V8 Naturally Aspirated',
+            displacement_liters: 5.4,
+            drivetrain: 'RWD',
+            transmission: '5-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Steel tubular frame with aluminum panels',
+            brake_material: 'Disc brakes',
+            suspension_front: 'Double wishbone',
+            suspension_rear: 'De Dion with coilover dampers',
+            aerodynamics: 'Low-drag body, Kammback tail',
+        },
+
+        production: {
+            total_units: 133,
+            years_produced: '1965-1969',
+            price_usd: 350000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Bizzarrini 5300 GT',
+        fastest_trackonly: 'Bizzarrini 5300 GT Corsa',
+
+        famous_cars: [
+            { model: "Bizzarrini 5300 GT Strada", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bizzarrini_5300_GT_Strada.jpg/960px-Bizzarrini_5300_GT_Strada.jpg" },
+            { model: "Bizzarrini 5300 GT Corsa", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bizzarrini_5300_GT_Corsa.jpg/960px-Bizzarrini_5300_GT_Corsa.jpg" },
+            { model: "Bizzarrini P538", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bizzarrini_P538_%281966%29.jpg/960px-Bizzarrini_P538_%281966%29.jpg" },
+            { model: "Bizzarrini Giotto (2024)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bizzarrini_Giotto_%282024%29.jpg/960px-Bizzarrini_Giotto_%282024%29.jpg" },
+            { model: "Bizzarrini 1900 GT Europa", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bizzarrini_1900_GT_Europa.jpg/960px-Bizzarrini_1900_GT_Europa.jpg" },
+        ]
+    },
+
+    {
+        id: 'brabham',
+        brand: "Brabham Automotive",
+        img: "https://1000logos.net/wp-content/uploads/2024/01/Brabham-Automotive-logo.png",
+        founded_year: 2018,
+        founder: 'David Brabham',
+        headquarter: { city: 'Adelaide', country: 'Australia' },
+        description: 'Brabham Automotive is an Australian hypercar manufacturer carrying the legendary Brabham racing name, producing the extreme track-focused BT62 with Formula 1-inspired aerodynamics.',
+
+        performance: {
+            top_speed_onroad: 320,
+            top_speed_trackonly: 340,
+            torque_onroad: 667,
+            torque_trackonly: 700,
+            horsepower_onroad: 700,
+            horsepower_trackonly: 710,
+            acceleration_0_60: 3.0,
+            acceleration_0_100: 6.5,
+        },
+
+        technical: {
+            weight_kg: 972,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Naturally Aspirated',
+            displacement_liters: 5.4,
+            drivetrain: 'RWD',
+            transmission: '6-speed sequential',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'AP Racing carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with pushrod dampers',
+            suspension_rear: 'Double wishbone with pullrod dampers',
+            aerodynamics: 'F1-inspired active aero, ground effect diffuser',
+        },
+
+        production: {
+            total_units: 70,
+            years_produced: '2018-present',
+            price_usd: 1350000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Brabham BT62 R',
+        fastest_trackonly: 'Brabham BT62',
+
+        famous_cars: [
+            { model: "Brabham BT62", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Brabham_BT62_%282018%29.jpg/960px-Brabham_BT62_%282018%29.jpg" },
+            { model: "Brabham BT62 Competition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Brabham_BT62_Competition.jpg/960px-Brabham_BT62_Competition.jpg" },
+            { model: "Brabham BT62 R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Brabham_BT62_R.jpg/960px-Brabham_BT62_R.jpg" },
+            { model: "Brabham BT63", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Brabham_BT63.jpg/960px-Brabham_BT63.jpg" },
+            { model: "Brabham BT62 Heritage", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Brabham_BT62_Heritage.jpg/960px-Brabham_BT62_Heritage.jpg" },
+        ]
+    },
+
+    {
+        id: 'cadillacv',
+        brand: "Cadillac V-Series",
+        img: "https://www.carlogos.org/car-logos/cadillac-logo.png",
+        founded_year: 2004,
+        founder: 'General Motors',
+        headquarter: { city: 'Detroit', country: 'USA' },
+        description: "Cadillac V-Series is GM's performance division bringing supercharged V8 power and race-bred dynamics to Cadillac's luxury lineup, culminating in the Blackwing models.",
+
+        performance: {
+            top_speed_onroad: 322,
+            top_speed_trackonly: 330,
+            torque_onroad: 893,
+            torque_trackonly: 900,
+            horsepower_onroad: 668,
+            horsepower_trackonly: 680,
+            acceleration_0_60: 3.4,
+            acceleration_0_100: 7.8,
+        },
+
+        technical: {
+            weight_kg: 1855,
+            engine_layout: 'Front-engine',
+            engine_type: 'V8 Supercharged',
+            displacement_liters: 6.2,
+            drivetrain: 'RWD',
+            transmission: '6-speed manual / 10-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum-intensive body structure',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Independent with magnetic ride control',
+            suspension_rear: 'Multi-link with magnetic ride control',
+            aerodynamics: 'Front splitter, rear spoiler',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2022-present',
+            price_usd: 92990,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'CT5-V Blackwing',
+        fastest_trackonly: 'CT5-V Blackwing',
+
+        famous_cars: [
+            { model: "Cadillac CTS-V (Gen 1)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Cadillac_CTS-V_%282004%29.jpg/960px-Cadillac_CTS-V_%282004%29.jpg" },
+            { model: "Cadillac CT5-V Blackwing", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cadillac_CT5-V_Blackwing_%282022%29.jpg/960px-Cadillac_CT5-V_Blackwing_%282022%29.jpg" },
+            { model: "Cadillac CT4-V Blackwing", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cadillac_CT4-V_Blackwing_%282022%29.jpg/960px-Cadillac_CT4-V_Blackwing_%282022%29.jpg" },
+            { model: "Cadillac XLR-V", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Cadillac_XLR-V_%282006%29.jpg/960px-Cadillac_XLR-V_%282006%29.jpg" },
+            { model: "Cadillac CTS-V Coupe", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Cadillac_CTS-V_Coupe_%282011%29.jpg/960px-Cadillac_CTS-V_Coupe_%282011%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'caterham',
+        brand: "Caterham",
+        img: "https://www.carlogos.org/car-logos/caterham-logo.png",
+        founded_year: 1973,
+        founder: 'Graham Nearn',
+        headquarter: { city: 'Dartford', country: 'United Kingdom' },
+        description: 'Caterham Cars is a British manufacturer of lightweight, open-top sports cars based on the legendary Lotus Seven design, offering pure, unfiltered driving experiences.',
+
+        performance: {
+            top_speed_onroad: 240,
+            top_speed_trackonly: 260,
+            torque_onroad: 305,
+            torque_trackonly: 340,
+            horsepower_onroad: 310,
+            horsepower_trackonly: 340,
+            acceleration_0_60: 2.79,
+            acceleration_0_100: 6.5,
+        },
+
+        technical: {
+            weight_kg: 490,
+            engine_layout: 'Front-engine',
+            engine_type: 'Inline-4 Supercharged',
+            displacement_liters: 2.0,
+            drivetrain: 'RWD',
+            transmission: '6-speed dog-leg manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Steel space frame',
+            brake_material: 'AP Racing disc brakes',
+            suspension_front: 'Double wishbone with coilover dampers',
+            suspension_rear: 'De Dion with coilover dampers',
+            aerodynamics: 'Cycle fenders, minimal bodywork',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2013-present',
+            price_usd: 65000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Caterham Seven 620R',
+        fastest_trackonly: 'Caterham Seven 620R',
+
+        famous_cars: [
+            { model: "Caterham Seven 620R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Caterham_Seven_620R.jpg/960px-Caterham_Seven_620R.jpg" },
+            { model: "Caterham Seven 485", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Caterham_Seven_485.jpg/960px-Caterham_Seven_485.jpg" },
+            { model: "Caterham Seven 310", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Caterham_Seven_310.jpg/960px-Caterham_Seven_310.jpg" },
+            { model: "Caterham CSR 260", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Caterham_CSR_260.jpg/960px-Caterham_CSR_260.jpg" },
+            { model: "Caterham Seven SuperSprint", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Caterham_Seven_SuperSprint.jpg/960px-Caterham_Seven_SuperSprint.jpg" },
+        ]
+    },
+
+    {
+        id: 'chevrolette_corvette',
+        brand: "Chevrolet Corvette",
+        img: "https://www.carlogos.org/car-logos/chevrolet-logo.png",
+        founded_year: 1953,
+        founder: 'Harley Earl / GM',
+        headquarter: { city: 'Detroit', country: 'USA' },
+        description: "America's iconic sports car, the Corvette has evolved from a classic roadster into a mid-engine supercar with the C8 generation, competing directly with European supercars at a fraction of the price.",
+
+        performance: {
+            top_speed_onroad: 314,
+            top_speed_trackonly: 325,
+            torque_onroad: 637,
+            torque_trackonly: 670,
+            horsepower_onroad: 670,
+            horsepower_trackonly: 700,
+            acceleration_0_60: 2.6,
+            acceleration_0_100: 5.8,
+        },
+
+        technical: {
+            weight_kg: 1508,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Naturally Aspirated',
+            displacement_liters: 5.5,
+            drivetrain: 'RWD',
+            transmission: '8-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber composite with aluminum frame',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with MRC',
+            suspension_rear: 'Multi-link with MRC',
+            aerodynamics: 'Active front splitter, rear wing, underbody diffuser',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2022-present',
+            price_usd: 109295,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Corvette Z06 (C8)',
+        fastest_trackonly: 'Corvette ZR1 (C8)',
+
+        famous_cars: [
+            { model: "Chevrolet Corvette C1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1953_Chevrolet_Corvette_C1.jpg/960px-1953_Chevrolet_Corvette_C1.jpg" },
+            { model: "Chevrolet Corvette C7 Z06", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Chevrolet_Corvette_C7_Z06_%282015%29.jpg/960px-Chevrolet_Corvette_C7_Z06_%282015%29.jpg" },
+            { model: "Chevrolet Corvette C8 Stingray", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Chevrolet_Corvette_C8_Stingray_%282020%29.jpg/960px-Chevrolet_Corvette_C8_Stingray_%282020%29.jpg" },
+            { model: "Chevrolet Corvette C8 Z06", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Chevrolet_Corvette_C8_Z06_%282023%29.jpg/960px-Chevrolet_Corvette_C8_Z06_%282023%29.jpg" },
+            { model: "Chevrolet Corvette ZR1 (C8)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Chevrolet_Corvette_ZR1_C8_%282025%29.jpg/960px-Chevrolet_Corvette_ZR1_C8_%282025%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'czinger',
+        brand: "Czinger",
+        img: "https://1000logos.net/wp-content/uploads/2024/01/Czinger-logo-500x281.png",
+        founded_year: 2019,
+        founder: 'Kevin Czinger',
+        headquarter: { city: 'Los Angeles', country: 'USA' },
+        description: 'Czinger Vehicles is an American hypercar manufacturer using AI-designed, 3D-printed structures to build the 21C — one of the fastest and most technologically advanced hypercars ever created.',
+
+        performance: {
+            top_speed_onroad: 444,
+            top_speed_trackonly: 444,
+            torque_onroad: 1176,
+            torque_trackonly: 1200,
+            horsepower_onroad: 1250,
+            horsepower_trackonly: 1350,
+            acceleration_0_60: 1.9,
+            acceleration_0_100: 4.5,
+        },
+
+        technical: {
+            weight_kg: 1270,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged Hybrid',
+            displacement_liters: 2.88,
+            drivetrain: 'AWD',
+            transmission: '7-speed sequential',
+            fuel_type: 'Petrol-Electric Hybrid',
+        },
+
+        chassis: {
+            material: '3D-printed titanium and carbon fiber monocoque',
+            brake_material: 'Carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with pushrod dampers',
+            suspension_rear: 'Double wishbone with pullrod dampers',
+            aerodynamics: 'Active aero, ground-effect underbody',
+        },
+
+        production: {
+            total_units: 21,
+            years_produced: '2021-present',
+            price_usd: 1700000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Czinger 21C',
+        fastest_trackonly: 'Czinger 21C V Max',
+
+        famous_cars: [
+            { model: "Czinger 21C", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Czinger_21C_%282021%29.jpg/960px-Czinger_21C_%282021%29.jpg" },
+            { model: "Czinger 21C V Max", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Czinger_21C_V_Max.jpg/960px-Czinger_21C_V_Max.jpg" },
+            { model: "Czinger Hyper GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Czinger_Hyper_GT_%282023%29.jpg/960px-Czinger_Hyper_GT_%282023%29.jpg" },
+            { model: "Czinger 21C Track Edition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Czinger_21C_Track_Edition.jpg/960px-Czinger_21C_Track_Edition.jpg" },
+            { model: "Czinger 21C LMR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Czinger_21C_LMR.jpg/960px-Czinger_21C_LMR.jpg" },
+        ]
+    },
+
+    {
+        id: 'detomaso',
+        brand: "De Tomaso",
+        img: "https://www.carlogos.org/car-logos/de-tomaso-logo.png",
+        founded_year: 1959,
+        founder: 'Alejandro de Tomaso',
+        headquarter: { city: 'Modena', country: 'Italy' },
+        description: 'De Tomaso is an Argentine-Italian sports car manufacturer famous for combining American V8 muscle with Italian styling, most iconic for the Pantera which was sold through Ford dealerships.',
+
+        performance: {
+            top_speed_onroad: 280,
+            top_speed_trackonly: 295,
+            torque_onroad: 474,
+            torque_trackonly: 510,
+            horsepower_onroad: 330,
+            horsepower_trackonly: 370,
+            acceleration_0_60: 5.4,
+            acceleration_0_100: 12.0,
+        },
+
+        technical: {
+            weight_kg: 1300,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Naturally Aspirated',
+            displacement_liters: 5.8,
+            drivetrain: 'RWD',
+            transmission: '5-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Steel monocoque with tubular subframes',
+            brake_material: 'Ventilated disc brakes',
+            suspension_front: 'Double wishbone',
+            suspension_rear: 'Double wishbone with coilover dampers',
+            aerodynamics: 'Minimalist GT body styling',
+        },
+
+        production: {
+            total_units: 7260,
+            years_produced: '1971-1992',
+            price_usd: 250000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'De Tomaso P72',
+        fastest_trackonly: 'De Tomaso Pantera GT5-S',
+
+        famous_cars: [
+            { model: "De Tomaso Pantera", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/De_Tomaso_Pantera_%281971%29.jpg/960px-De_Tomaso_Pantera_%281971%29.jpg" },
+            { model: "De Tomaso Mangusta", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/De_Tomaso_Mangusta_%281967%29.jpg/960px-De_Tomaso_Mangusta_%281967%29.jpg" },
+            { model: "De Tomaso Vallelunga", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/De_Tomaso_Vallelunga_%281965%29.jpg/960px-De_Tomaso_Vallelunga_%281965%29.jpg" },
+            { model: "De Tomaso P72", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/De_Tomaso_P72_%282019%29.jpg/960px-De_Tomaso_P72_%282019%29.jpg" },
+            { model: "De Tomaso Deauville", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/De_Tomaso_Deauville_%281971%29.jpg/960px-De_Tomaso_Deauville_%281971%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'dodge',
+        brand: "Dodge",
+        img: "https://www.carlogos.org/car-logos/dodge-logo.png",
+        founded_year: 1900,
+        founder: 'Horace & John Dodge',
+        headquarter: { city: 'Auburn Hills', country: 'USA' },
+        description: 'Dodge is an American muscle car brand famous for its high-displacement V8 engines, raw power, and iconic Charger and Challenger muscle cars — culminating in the 840hp Demon 170.',
+
+        performance: {
+            top_speed_onroad: 340,
+            top_speed_trackonly: 350,
+            torque_onroad: 1000,
+            torque_trackonly: 1025,
+            horsepower_onroad: 840,
+            horsepower_trackonly: 840,
+            acceleration_0_60: 1.66,
+            acceleration_0_100: 4.9,
+        },
+
+        technical: {
+            weight_kg: 1970,
+            engine_layout: 'Front-engine',
+            engine_type: 'V8 Supercharged',
+            displacement_liters: 6.2,
+            drivetrain: 'RWD',
+            transmission: '8-speed automatic',
+            fuel_type: 'Petrol (E85 capable)',
+        },
+
+        chassis: {
+            material: 'Steel unibody with reinforcements',
+            brake_material: 'Brembo high-performance brakes',
+            suspension_front: 'Independent with Bilstein dampers',
+            suspension_rear: 'Multi-link with Bilstein dampers',
+            aerodynamics: 'Functional hood scoop, rear spoiler',
+        },
+
+        production: {
+            total_units: 3300,
+            years_produced: '2023-2023',
+            price_usd: 96666,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Dodge Viper ACR',
+        fastest_trackonly: 'Dodge Viper ACR',
+
+        famous_cars: [
+            { model: "Dodge Viper GTS-R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dodge_Viper_GTS-R_%281996%29.jpg/960px-Dodge_Viper_GTS-R_%281996%29.jpg" },
+            { model: "Dodge Viper ACR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dodge_Viper_ACR_%282016%29.jpg/960px-Dodge_Viper_ACR_%282016%29.jpg" },
+            { model: "Dodge Challenger SRT Demon", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dodge_Challenger_SRT_Demon_%282018%29.jpg/960px-Dodge_Challenger_SRT_Demon_%282018%29.jpg" },
+            { model: "Dodge Charger SRT Hellcat", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Dodge_Charger_SRT_Hellcat_%282015%29.jpg/960px-Dodge_Charger_SRT_Hellcat_%282015%29.jpg" },
+            { model: "Dodge Challenger Demon 170", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dodge_Challenger_SRT_Demon_170_%282023%29.jpg/960px-Dodge_Challenger_SRT_Demon_170_%282023%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'fordperformance',
+        brand: "Ford Performance",
+        img: "https://www.carlogos.org/car-logos/ford-logo.png",
+        founded_year: 1903,
+        founder: 'Henry Ford',
+        headquarter: { city: 'Dearborn', country: 'USA' },
+        description: "Ford Performance is Ford's high-performance division responsible for iconic machines like the GT supercar, Shelby Mustangs, and the legendary GT40 that beat Ferrari at Le Mans.",
+
+        performance: {
+            top_speed_onroad: 347,
+            top_speed_trackonly: 360,
+            torque_onroad: 746,
+            torque_trackonly: 800,
+            horsepower_onroad: 660,
+            horsepower_trackonly: 700,
+            acceleration_0_60: 2.9,
+            acceleration_0_100: 6.4,
+        },
+
+        technical: {
+            weight_kg: 1385,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V6 Twin-Turbocharged',
+            displacement_liters: 3.5,
+            drivetrain: 'RWD',
+            transmission: '7-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber body with aluminum chassis',
+            brake_material: 'Carbon-ceramic brakes (Brembo)',
+            suspension_front: 'Double wishbone with pushrod dampers',
+            suspension_rear: 'Double wishbone with pullrod dampers',
+            aerodynamics: 'Active aero, flying buttresses, Gorilla Glass windscreen',
+        },
+
+        production: {
+            total_units: 1350,
+            years_produced: '2017-2022',
+            price_usd: 500000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Ford GT (2017)',
+        fastest_trackonly: 'Ford GT Mk IV',
+
+        famous_cars: [
+            { model: "Ford GT40 (1966)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ford_GT40_%281966%29.jpg/960px-Ford_GT40_%281966%29.jpg" },
+            { model: "Ford GT (2017)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ford_GT_%282017%29.jpg/960px-Ford_GT_%282017%29.jpg" },
+            { model: "Ford Mustang Shelby GT500", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ford_Mustang_Shelby_GT500_%282020%29.jpg/960px-Ford_Mustang_Shelby_GT500_%282020%29.jpg" },
+            { model: "Ford Mustang GTD", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ford_Mustang_GTD_%282024%29.jpg/960px-Ford_Mustang_GTD_%282024%29.jpg" },
+            { model: "Ford Mustang GT350R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ford_Mustang_Shelby_GT350R_%282016%29.jpg/960px-Ford_Mustang_Shelby_GT350R_%282016%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'hennessey',
+        brand: "Hennessey",
+        img: "https://www.carlogos.org/car-logos/hennessey-logo.png",
+        founded_year: 1991,
+        founder: 'John Hennessey',
+        headquarter: { city: 'Sealy, Texas', country: 'USA' },
+        description: "Hennessey Performance Engineering is an American high-performance vehicle manufacturer and tuner, creator of the Venom GT and Venom F5 — one of the world's fastest production cars.",
+
+        performance: {
+            top_speed_onroad: 484,
+            top_speed_trackonly: 484,
+            torque_onroad: 1617,
+            torque_trackonly: 1617,
+            horsepower_onroad: 1817,
+            horsepower_trackonly: 1817,
+            acceleration_0_60: 2.6,
+            acceleration_0_100: 4.7,
+        },
+
+        technical: {
+            weight_kg: 1360,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 6.6,
+            drivetrain: 'RWD',
+            transmission: '7-speed single-clutch automated manual',
+            fuel_type: 'Petrol (E85 capable)',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adjustable dampers',
+            suspension_rear: 'Double wishbone with adjustable dampers',
+            aerodynamics: 'Active rear wing, ground-effect venturi',
+        },
+
+        production: {
+            total_units: 24,
+            years_produced: '2020-2024',
+            price_usd: 2100000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Hennessey Venom F5',
+        fastest_trackonly: 'Hennessey Venom F5 Revolution',
+
+        famous_cars: [
+            { model: "Hennessey Venom GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Hennessey_Venom_GT_%282011%29.jpg/960px-Hennessey_Venom_GT_%282011%29.jpg" },
+            { model: "Hennessey Venom F5", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hennessey_Venom_F5_%282020%29.jpg/960px-Hennessey_Venom_F5_%282020%29.jpg" },
+            { model: "Hennessey Venom F5 Revolution", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hennessey_Venom_F5_Revolution_%282023%29.jpg/960px-Hennessey_Venom_F5_Revolution_%282023%29.jpg" },
+            { model: "Hennessey Mammoth 1000 TRX", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hennessey_Mammoth_1000_TRX.jpg/960px-Hennessey_Mammoth_1000_TRX.jpg" },
+            { model: "Hennessey Mustang HPE800", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hennessey_Mustang_HPE800.jpg/960px-Hennessey_Mustang_HPE800.jpg" },
+        ]
+    },
+
+    {
+        id: 'honda_typer',
+        brand: "Honda Type R",
+        img: "https://www.carlogos.org/car-logos/honda-logo.png",
+        founded_year: 1992,
+        founder: 'Honda Motor Company',
+        headquarter: { city: 'Minato', country: 'Japan' },
+        description: "Honda's Type R performance sub-brand delivers the most driver-focused, track-optimized versions of Honda's road cars, starting with the NSX Type R and continuing through the legendary Civic Type R.",
+
+        performance: {
+            top_speed_onroad: 272,
+            top_speed_trackonly: 285,
+            torque_onroad: 420,
+            torque_trackonly: 450,
+            horsepower_onroad: 329,
+            horsepower_trackonly: 350,
+            acceleration_0_60: 4.9,
+            acceleration_0_100: 11.1,
+        },
+
+        technical: {
+            weight_kg: 1429,
+            engine_layout: 'Front-engine',
+            engine_type: 'Inline-4 Turbocharged',
+            displacement_liters: 2.0,
+            drivetrain: 'FWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'High-strength steel unibody',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'MacPherson strut with adaptive dampers',
+            suspension_rear: 'Multi-link with adaptive dampers',
+            aerodynamics: 'Three-fin rear wing, front splitter, underbody diffuser',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2023-present',
+            price_usd: 44990,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Honda Civic Type R FL5',
+        fastest_trackonly: 'Honda NSX Type R',
+
+        famous_cars: [
+            { model: "Honda NSX Type R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Honda_NSX_Type_R_%281992%29.jpg/960px-Honda_NSX_Type_R_%281992%29.jpg" },
+            { model: "Honda Civic Type R (EK9)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Honda_Civic_Type_R_EK9_%281997%29.jpg/960px-Honda_Civic_Type_R_EK9_%281997%29.jpg" },
+            { model: "Honda Civic Type R (FK8)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Honda_Civic_Type_R_FK8_%282017%29.jpg/960px-Honda_Civic_Type_R_FK8_%282017%29.jpg" },
+            { model: "Honda Civic Type R (FL5)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Honda_Civic_Type_R_FL5_%282023%29.jpg/960px-Honda_Civic_Type_R_FL5_%282023%29.jpg" },
+            { model: "Honda Integra Type R (DC2)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Honda_Integra_Type_R_DC2_%281995%29.jpg/960px-Honda_Integra_Type_R_DC2_%281995%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'hyundain',
+        brand: "Hyundai N",
+        img: "https://www.carlogos.org/car-logos/hyundai-logo.png",
+        founded_year: 2012,
+        founder: 'Hyundai Motor Company',
+        headquarter: { city: 'Namyang', country: 'South Korea' },
+        description: "Hyundai N is Hyundai's performance division, developing race-inspired road cars and competing in the World Rally Championship, producing genuinely exciting hot hatches and performance sedans.",
+
+        performance: {
+            top_speed_onroad: 260,
+            top_speed_trackonly: 275,
+            torque_onroad: 600,
+            torque_trackonly: 650,
+            horsepower_onroad: 641,
+            horsepower_trackonly: 680,
+            acceleration_0_60: 3.4,
+            acceleration_0_100: 8.0,
+        },
+
+        technical: {
+            weight_kg: 2315,
+            engine_layout: 'Front-engine',
+            engine_type: 'Electric motors (4x)',
+            displacement_liters: null,
+            drivetrain: 'AWD',
+            transmission: 'Single-speed reduction',
+            fuel_type: 'Electric (84 kWh battery)',
+        },
+
+        chassis: {
+            material: 'High-strength steel with aluminum reinforcements',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'MacPherson strut with N-specific tuning',
+            suspension_rear: 'Multi-link with N-specific tuning',
+            aerodynamics: 'Active rear wing, front diffuser',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2024-present',
+            price_usd: 67450,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Hyundai Ioniq 5 N',
+        fastest_trackonly: 'Hyundai Elantra N TCR',
+
+        famous_cars: [
+            { model: "Hyundai i30 N", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Hyundai_i30_N_%282017%29.jpg/960px-Hyundai_i30_N_%282017%29.jpg" },
+            { model: "Hyundai Veloster N", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hyundai_Veloster_N_%282018%29.jpg/960px-Hyundai_Veloster_N_%282018%29.jpg" },
+            { model: "Hyundai Elantra N", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hyundai_Elantra_N_%282021%29.jpg/960px-Hyundai_Elantra_N_%282021%29.jpg" },
+            { model: "Hyundai Ioniq 5 N", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hyundai_Ioniq_5_N_%282024%29.jpg/960px-Hyundai_Ioniq_5_N_%282024%29.jpg" },
+            { model: "Hyundai i20 N", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hyundai_i20_N_%282021%29.jpg/960px-Hyundai_i20_N_%282021%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'jaguarsvr',
+        brand: "Jaguar SVR",
+        img: "https://www.carlogos.org/car-logos/jaguar-logo.png",
+        founded_year: 1922,
+        founder: 'William Lyons',
+        headquarter: { city: 'Coventry', country: 'United Kingdom' },
+        description: "Jaguar's Special Vehicle Operations produces the SVR range — the most extreme, track-capable versions of Jaguar cars, including the jaw-dropping XJ220 and the F-Type SVR.",
+
+        performance: {
+            top_speed_onroad: 333,
+            top_speed_trackonly: 340,
+            torque_onroad: 700,
+            torque_trackonly: 750,
+            horsepower_onroad: 592,
+            horsepower_trackonly: 620,
+            acceleration_0_60: 3.5,
+            acceleration_0_100: 8.0,
+        },
+
+        technical: {
+            weight_kg: 1705,
+            engine_layout: 'Front-engine',
+            engine_type: 'V8 Supercharged',
+            displacement_liters: 5.0,
+            drivetrain: 'RWD',
+            transmission: '8-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum intensive body structure',
+            brake_material: 'Carbon-ceramic brakes (Brembo)',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Integral link with adaptive dampers',
+            aerodynamics: 'Active rear spoiler, front splitter',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2016-2024',
+            price_usd: 129000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Jaguar XJ220',
+        fastest_trackonly: 'Jaguar XJR-9',
+
+        famous_cars: [
+            { model: "Jaguar XJ220", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Jaguar_XJ220_%281992%29.jpg/960px-Jaguar_XJ220_%281992%29.jpg" },
+            { model: "Jaguar F-Type SVR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jaguar_F-Type_SVR_%282016%29.jpg/960px-Jaguar_F-Type_SVR_%282016%29.jpg" },
+            { model: "Jaguar F-Pace SVR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jaguar_F-Pace_SVR_%282018%29.jpg/960px-Jaguar_F-Pace_SVR_%282018%29.jpg" },
+            { model: "Jaguar XE SV Project 8", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jaguar_XE_SV_Project_8_%282017%29.jpg/960px-Jaguar_XE_SV_Project_8_%282017%29.jpg" },
+            { model: "Jaguar C-X75", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Jaguar_C-X75_%282010%29.jpg/960px-Jaguar_C-X75_%282010%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'lexusf',
+        brand: "Lexus F",
+        img: "https://www.carlogos.org/car-logos/lexus-logo.png",
+        founded_year: 1989,
+        founder: 'Toyota Motor Corporation',
+        headquarter: { city: 'Nagoya', country: 'Japan' },
+        description: "Lexus F is Toyota's luxury performance division, producing high-revving naturally aspirated V8 sports cars and track-focused models blending Japanese precision with supercar performance.",
+
+        performance: {
+            top_speed_onroad: 325,
+            top_speed_trackonly: 340,
+            torque_onroad: 480,
+            torque_trackonly: 510,
+            horsepower_onroad: 553,
+            horsepower_trackonly: 570,
+            acceleration_0_60: 3.6,
+            acceleration_0_100: 7.5,
+        },
+
+        technical: {
+            weight_kg: 1680,
+            engine_layout: 'Front-engine',
+            engine_type: 'V10 Naturally Aspirated',
+            displacement_liters: 4.8,
+            drivetrain: 'RWD',
+            transmission: '6-speed automated sequential',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aluminum intensive monocoque with carbon fiber',
+            brake_material: 'Carbon-ceramic brakes (Brembo)',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Double wishbone with adaptive dampers',
+            aerodynamics: 'Rear diffuser, front splitter, optimized underbody',
+        },
+
+        production: {
+            total_units: 500,
+            years_produced: '2010-2012',
+            price_usd: 375000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Lexus LFA',
+        fastest_trackonly: 'Lexus LFA Nürburgring Package',
+
+        famous_cars: [
+            { model: "Lexus LFA", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lexus_LFA_%282010%29.jpg/960px-Lexus_LFA_%282010%29.jpg" },
+            { model: "Lexus RC F Track Edition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Lexus_RC_F_Track_Edition_%282019%29.jpg/960px-Lexus_RC_F_Track_Edition_%282019%29.jpg" },
+            { model: "Lexus IS F", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lexus_IS_F_%282007%29.jpg/960px-Lexus_IS_F_%282007%29.jpg" },
+            { model: "Lexus GS F", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lexus_GS_F_%282015%29.jpg/960px-Lexus_GS_F_%282015%29.jpg" },
+            { model: "Lexus LC 500", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lexus_LC_500_%282017%29.jpg/960px-Lexus_LC_500_%282017%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'lotus',
+        brand: "Lotus",
+        img: "https://www.carlogos.org/car-logos/lotus-logo.png",
+        founded_year: 1948,
+        founder: 'Colin Chapman',
+        headquarter: { city: 'Hethel', country: 'United Kingdom' },
+        description: 'Lotus is a British sports car manufacturer legendary for "adding lightness" — producing nimble, featherweight sports cars with exceptional handling that have defined driving purity for over 75 years.',
+
+        performance: {
+            top_speed_onroad: 280,
+            top_speed_trackonly: 300,
+            torque_onroad: 430,
+            torque_trackonly: 460,
+            horsepower_onroad: 430,
+            horsepower_trackonly: 460,
+            acceleration_0_60: 3.2,
+            acceleration_0_100: 7.1,
+        },
+
+        technical: {
+            weight_kg: 995,
+            engine_layout: 'Mid-engine',
+            engine_type: 'Inline-4 Supercharged',
+            displacement_liters: 1.8,
+            drivetrain: 'RWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Extruded and bonded aluminum',
+            brake_material: 'AP Racing carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with Öhlins dampers',
+            suspension_rear: 'Double wishbone with Öhlins dampers',
+            aerodynamics: 'Active rear wing, front splitter, underbody diffuser',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2021-2024',
+            price_usd: 99900,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Lotus Evija',
+        fastest_trackonly: 'Lotus Exige GT3',
+
+        famous_cars: [
+            { model: "Lotus Elise", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lotus_Elise_%281996%29.jpg/960px-Lotus_Elise_%281996%29.jpg" },
+            { model: "Lotus Exige S3", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Lotus_Exige_S3_%282012%29.jpg/960px-Lotus_Exige_S3_%282012%29.jpg" },
+            { model: "Lotus Evora GT410", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lotus_Evora_GT410_%282019%29.jpg/960px-Lotus_Evora_GT410_%282019%29.jpg" },
+            { model: "Lotus Evija", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lotus_Evija_%282019%29.jpg/960px-Lotus_Evija_%282019%29.jpg" },
+            { model: "Lotus Emira V6", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lotus_Emira_V6_%282021%29.jpg/960px-Lotus_Emira_V6_%282021%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'maserati',
+        brand: "Maserati",
+        img: "https://www.carlogos.org/car-logos/maserati-logo.png",
+        founded_year: 1914,
+        founder: 'Alfieri Maserati',
+        headquarter: { city: 'Modena', country: 'Italy' },
+        description: 'Maserati is an Italian luxury sports car manufacturer blending Italian style with Grand Touring performance, racing heritage, and the trademark Maserati growl of its twin-turbocharged engines.',
+
+        performance: {
+            top_speed_onroad: 325,
+            top_speed_trackonly: 340,
+            torque_onroad: 730,
+            torque_trackonly: 760,
+            horsepower_onroad: 621,
+            horsepower_trackonly: 640,
+            acceleration_0_60: 2.9,
+            acceleration_0_100: 6.5,
+        },
+
+        technical: {
+            weight_kg: 1470,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V6 Twin-Turbocharged',
+            displacement_liters: 3.0,
+            drivetrain: 'RWD',
+            transmission: '8-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque with aluminum subframes',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adaptive dampers',
+            suspension_rear: 'Double wishbone with adaptive dampers',
+            aerodynamics: 'Active rear wing, front splitter, diffuser',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2020-present',
+            price_usd: 216000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Maserati MC20',
+        fastest_trackonly: 'Maserati MC12',
+
+        famous_cars: [
+            { model: "Maserati MC12", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Maserati_MC12_%282004%29.jpg/960px-Maserati_MC12_%282004%29.jpg" },
+            { model: "Maserati GranTurismo MC Stradale", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Maserati_GranTurismo_MC_Stradale_%282011%29.jpg/960px-Maserati_GranTurismo_MC_Stradale_%282011%29.jpg" },
+            { model: "Maserati MC20", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Maserati_MC20_%282020%29.jpg/960px-Maserati_MC20_%282020%29.jpg" },
+            { model: "Maserati Bora", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Maserati_Bora_%281971%29.jpg/960px-Maserati_Bora_%281971%29.jpg" },
+            { model: "Maserati 3500 GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Maserati_3500_GT_%281957%29.jpg/960px-Maserati_3500_GT_%281957%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'nissan_nismo',
+        brand: "Nissan Nismo",
+        img: "https://www.carlogos.org/car-logos/nissan-logo.png",
+        founded_year: 1984,
+        founder: 'Nissan Motor Company',
+        headquarter: { city: 'Yokohama', country: 'Japan' },
+        description: "Nismo is Nissan's in-house motorsport and performance division, responsible for the iconic GT-R and its racing variants, producing Japan's most celebrated performance cars.",
+
+        performance: {
+            top_speed_onroad: 315,
+            top_speed_trackonly: 330,
+            torque_onroad: 652,
+            torque_trackonly: 680,
+            horsepower_onroad: 600,
+            horsepower_trackonly: 620,
+            acceleration_0_60: 2.7,
+            acceleration_0_100: 5.8,
+        },
+
+        technical: {
+            weight_kg: 1720,
+            engine_layout: 'Front-engine',
+            engine_type: 'V6 Twin-Turbocharged',
+            displacement_liters: 3.8,
+            drivetrain: 'AWD',
+            transmission: '6-speed dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Steel unibody with carbon fiber components',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with Bilstein DampTronic',
+            suspension_rear: 'Multi-link with Bilstein DampTronic',
+            aerodynamics: 'Carbon fiber front splitter, rear diffuser, rear wing',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2014-present',
+            price_usd: 213585,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Nissan GT-R Nismo',
+        fastest_trackonly: 'Nissan GT-R GT3',
+
+        famous_cars: [
+            { model: "Nissan GT-R (R35)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Nissan_GT-R_R35_%282007%29.jpg/960px-Nissan_GT-R_R35_%282007%29.jpg" },
+            { model: "Nissan GT-R Nismo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nissan_GT-R_Nismo_%282015%29.jpg/960px-Nissan_GT-R_Nismo_%282015%29.jpg" },
+            { model: "Nissan Skyline GT-R R34", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Nissan_Skyline_GT-R_R34_%281999%29.jpg/960px-Nissan_Skyline_GT-R_R34_%281999%29.jpg" },
+            { model: "Nissan 370Z Nismo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Nissan_370Z_Nismo_%282015%29.jpg/960px-Nissan_370Z_Nismo_%282015%29.jpg" },
+            { model: "Nissan Silvia S15 Spec R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nissan_Silvia_S15_Spec_R_%281999%29.jpg/960px-Nissan_Silvia_S15_Spec_R_%281999%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'polestar',
+        brand: "Polestar",
+        img: "https://www.carlogos.org/car-logos/polestar-logo.png",
+        founded_year: 1996,
+        founder: 'Flash Engineering',
+        headquarter: { city: 'Gothenburg', country: 'Sweden' },
+        description: 'Polestar is a Swedish electric performance car brand, originally Volvo and Geely\'s performance division, now focused exclusively on premium electric vehicles with motorsport-inspired dynamics.',
+
+        performance: {
+            top_speed_onroad: 250,
+            top_speed_trackonly: 265,
+            torque_onroad: 1000,
+            torque_trackonly: 1000,
+            horsepower_onroad: 925,
+            horsepower_trackonly: 925,
+            acceleration_0_60: 1.8,
+            acceleration_0_100: 4.2,
+        },
+
+        technical: {
+            weight_kg: 1598,
+            engine_layout: 'Dual-motor electric',
+            engine_type: 'Electric motors (2x)',
+            displacement_liters: null,
+            drivetrain: 'AWD',
+            transmission: 'Single-speed reduction',
+            fuel_type: 'Electric (111 kWh battery)',
+        },
+
+        chassis: {
+            material: 'Aluminum and carbon fiber composite',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'Double wishbone with Öhlins dampers',
+            suspension_rear: 'Multi-link with Öhlins dampers',
+            aerodynamics: 'Active rear wing, front splitter',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2019-2021',
+            price_usd: 155000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Polestar O2 Concept',
+        fastest_trackonly: 'Polestar 1',
+
+        famous_cars: [
+            { model: "Polestar 1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Polestar_1_%282019%29.jpg/960px-Polestar_1_%282019%29.jpg" },
+            { model: "Polestar 2", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Polestar_2_%282019%29.jpg/960px-Polestar_2_%282019%29.jpg" },
+            { model: "Polestar 3", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Polestar_3_%282022%29.jpg/960px-Polestar_3_%282022%29.jpg" },
+            { model: "Polestar 6", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Polestar_6_Concept_%282022%29.jpg/960px-Polestar_6_Concept_%282022%29.jpg" },
+            { model: "Volvo S60 Polestar", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Volvo_S60_Polestar_%282014%29.jpg/960px-Volvo_S60_Polestar_%282014%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'rimac',
+        brand: "Rimac",
+        img: "https://www.carlogos.org/car-logos/rimac-logo.png",
+        founded_year: 2009,
+        founder: 'Mate Rimac',
+        headquarter: { city: 'Sveta Nedelja', country: 'Croatia' },
+        description: 'Rimac Automobili is a Croatian electric hypercar and technology company producing the fastest-accelerating production car ever built — the Nevera — while also supplying EV technology to other manufacturers.',
+
+        performance: {
+            top_speed_onroad: 412,
+            top_speed_trackonly: 412,
+            torque_onroad: 2360,
+            torque_trackonly: 2360,
+            horsepower_onroad: 1914,
+            horsepower_trackonly: 1914,
+            acceleration_0_60: 1.85,
+            acceleration_0_100: 4.3,
+        },
+
+        technical: {
+            weight_kg: 2150,
+            engine_layout: 'Quad-motor electric',
+            engine_type: 'Electric motors (4x independent)',
+            displacement_liters: null,
+            drivetrain: 'AWD (Torque vectoring)',
+            transmission: 'Single-speed reduction gears',
+            fuel_type: 'Electric (120 kWh battery)',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with active damping',
+            suspension_rear: 'Double wishbone with active damping',
+            aerodynamics: 'Active rear wing, underbody diffuser',
+        },
+
+        production: {
+            total_units: 150,
+            years_produced: '2021-2023',
+            price_usd: 2400000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Rimac Nevera',
+        fastest_trackonly: 'Rimac Nevera Time Attack',
+
+        famous_cars: [
+            { model: "Rimac Concept One", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rimac_Concept_One_%282011%29.jpg/960px-Rimac_Concept_One_%282011%29.jpg" },
+            { model: "Rimac Concept Two", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Rimac_Concept_Two_%282018%29.jpg/960px-Rimac_Concept_Two_%282018%29.jpg" },
+            { model: "Rimac Nevera", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Rimac_Nevera_%282021%29.jpg/960px-Rimac_Nevera_%282021%29.jpg" },
+            { model: "Rimac Nevera Time Attack", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Rimac_Nevera_Time_Attack_%282023%29.jpg/960px-Rimac_Nevera_Time_Attack_%282023%29.jpg" },
+            { model: "Rimac Nevera R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Rimac_Nevera_R_%282024%29.jpg/960px-Rimac_Nevera_R_%282024%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'saleen',
+        brand: "Saleen",
+        img: "https://www.carlogos.org/car-logos/saleen-logo.png",
+        founded_year: 1983,
+        founder: 'Steve Saleen',
+        headquarter: { city: 'Corona, California', country: 'USA' },
+        description: "Saleen Automotive is an American manufacturer of high-performance sports cars and modified Mustangs, known for the S7 supercar which was once America's fastest production car.",
+
+        performance: {
+            top_speed_onroad: 399,
+            top_speed_trackonly: 399,
+            torque_onroad: 1000,
+            torque_trackonly: 1000,
+            horsepower_onroad: 750,
+            horsepower_trackonly: 750,
+            acceleration_0_60: 2.8,
+            acceleration_0_100: 6.3,
+        },
+
+        technical: {
+            weight_kg: 1220,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 7.0,
+            drivetrain: 'RWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber body with tubular steel frame',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with coilover dampers',
+            suspension_rear: 'Double wishbone with coilover dampers',
+            aerodynamics: 'Functional rear wing, front splitter, side skirts',
+        },
+
+        production: {
+            total_units: 7,
+            years_produced: '2005-2008',
+            price_usd: 555000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Saleen S7 Twin Turbo',
+        fastest_trackonly: 'Saleen S7R',
+
+        famous_cars: [
+            { model: "Saleen S7", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Saleen_S7_%282002%29.jpg/960px-Saleen_S7_%282002%29.jpg" },
+            { model: "Saleen S7 Twin Turbo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Saleen_S7_Twin_Turbo_%282005%29.jpg/960px-Saleen_S7_Twin_Turbo_%282005%29.jpg" },
+            { model: "Saleen S1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Saleen_S1_%282017%29.jpg/960px-Saleen_S1_%282017%29.jpg" },
+            { model: "Saleen Mustang S302", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Saleen_Mustang_S302_%282018%29.jpg/960px-Saleen_Mustang_S302_%282018%29.jpg" },
+            { model: "Saleen GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Saleen_GT_%282005%29.jpg/960px-Saleen_GT_%282005%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'shelby',
+        brand: "Shelby",
+        img: "https://1000logos.net/wp-content/uploads/2024/10/Shelby-Logo.png",
+        founded_year: 1962,
+        founder: 'Carroll Shelby',
+        headquarter: { city: 'Las Vegas', country: 'USA' },
+        description: 'Shelby American is a legendary American performance car company that created the Cobra and Mustang GT350/GT500, combining big-block American V8 power with lightweight European-inspired roadster bodies.',
+
+        performance: {
+            top_speed_onroad: 354,
+            top_speed_trackonly: 370,
+            torque_onroad: 847,
+            torque_trackonly: 880,
+            horsepower_onroad: 900,
+            horsepower_trackonly: 950,
+            acceleration_0_60: 3.5,
+            acceleration_0_100: 8.0,
+        },
+
+        technical: {
+            weight_kg: 1920,
+            engine_layout: 'Front-engine',
+            engine_type: 'V8 Supercharged',
+            displacement_liters: 5.2,
+            drivetrain: 'RWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Steel unibody with aluminum components',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Independent MagneRide with coilovers',
+            suspension_rear: 'Independent MagneRide with coilovers',
+            aerodynamics: 'Carbon fiber splitter, rear spoiler, side scoops',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2020-present',
+            price_usd: 80295,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Shelby SuperSnake',
+        fastest_trackonly: 'Shelby Daytona Coupe',
+
+        famous_cars: [
+            { model: "Shelby Cobra 427", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Shelby_Cobra_427_%281966%29.jpg/960px-Shelby_Cobra_427_%281966%29.jpg" },
+            { model: "Shelby GT350R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Shelby_GT350R_%282015%29.jpg/960px-Shelby_GT350R_%282015%29.jpg" },
+            { model: "Shelby GT500 (S197)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shelby_GT500_%28S197%29_%282013%29.jpg/960px-Shelby_GT500_%28S197%29_%282013%29.jpg" },
+            { model: "Shelby SuperSnake", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Shelby_SuperSnake_%282017%29.jpg/960px-Shelby_SuperSnake_%282017%29.jpg" },
+            { model: "Shelby Daytona Coupe", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Shelby_Daytona_Coupe_%281964%29.jpg/960px-Shelby_Daytona_Coupe_%281964%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'sscnorthamerica',
+        brand: "SSC North America",
+        img: "https://www.carlogos.org/car-logos/ssc-logo.png",
+        founded_year: 1998,
+        founder: 'Jerod Shelby',
+        headquarter: { city: 'Richland, Washington', country: 'USA' },
+        description: "SSC North America is an American hypercar manufacturer that built the Tuatara — one of the world's fastest production cars — with a twin-turbocharged V8 capable of over 1750hp.",
+
+        performance: {
+            top_speed_onroad: 455,
+            top_speed_trackonly: 460,
+            torque_onroad: 1735,
+            torque_trackonly: 1735,
+            horsepower_onroad: 1750,
+            horsepower_trackonly: 1750,
+            acceleration_0_60: 2.5,
+            acceleration_0_100: 5.5,
+        },
+
+        technical: {
+            weight_kg: 1247,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 5.9,
+            drivetrain: 'RWD',
+            transmission: '7-speed automated manual',
+            fuel_type: 'Petrol (E85 capable)',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with inboard dampers',
+            suspension_rear: 'Double wishbone with inboard dampers',
+            aerodynamics: 'Active rear wing, aggressive diffuser',
+        },
+
+        production: {
+            total_units: 100,
+            years_produced: '2020-present',
+            price_usd: 1900000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'SSC Tuatara',
+        fastest_trackonly: 'SSC Ultimate Aero TT',
+
+        famous_cars: [
+            { model: "SSC Ultimate Aero", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/SSC_Ultimate_Aero_%282007%29.jpg/960px-SSC_Ultimate_Aero_%282007%29.jpg" },
+            { model: "SSC Ultimate Aero TT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/SSC_Ultimate_Aero_TT_%282009%29.jpg/960px-SSC_Ultimate_Aero_TT_%282009%29.jpg" },
+            { model: "SSC Tuatara", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/SSC_Tuatara_%282020%29.jpg/960px-SSC_Tuatara_%282020%29.jpg" },
+            { model: "SSC Tuatara Aggressor", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/SSC_Tuatara_Aggressor_%282022%29.jpg/960px-SSC_Tuatara_Aggressor_%282022%29.jpg" },
+            { model: "SSC Aero SuperSport", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/SSC_Aero_SuperSport_%282011%29.jpg/960px-SSC_Aero_SuperSport_%282011%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'subaru_sti',
+        brand: "Subaru STI",
+        img: "https://www.carlogos.org/car-logos/subaru-logo.png",
+        founded_year: 1988,
+        founder: 'Subaru Corporation',
+        headquarter: { city: 'Ebisu', country: 'Japan' },
+        description: "Subaru Tecnica International is Subaru's motorsport division producing the legendary WRX STI — a turbocharged, all-wheel-drive rally-bred icon beloved by performance enthusiasts worldwide.",
+
+        performance: {
+            top_speed_onroad: 255,
+            top_speed_trackonly: 270,
+            torque_onroad: 407,
+            torque_trackonly: 440,
+            horsepower_onroad: 341,
+            horsepower_trackonly: 360,
+            acceleration_0_60: 4.2,
+            acceleration_0_100: 9.3,
+        },
+
+        technical: {
+            weight_kg: 1552,
+            engine_layout: 'Front-engine',
+            engine_type: 'Flat-4 Twin-Scroll Turbocharged',
+            displacement_liters: 2.5,
+            drivetrain: 'AWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'High-strength steel unibody',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'MacPherson strut with Bilstein dampers',
+            suspension_rear: 'Multi-link with Bilstein dampers',
+            aerodynamics: 'Large rear wing, front lip spoiler',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2018-2021',
+            price_usd: 39895,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Subaru WRX STI S209',
+        fastest_trackonly: 'Subaru Impreza WRC',
+
+        famous_cars: [
+            { model: "Subaru Impreza WRX STI (GC8)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Subaru_Impreza_WRX_STI_GC8_%221997%29.jpg/960px-Subaru_Impreza_WRX_STI_GC8_%221997%29.jpg" },
+            { model: "Subaru Impreza WRX STI (GDB)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Subaru_Impreza_WRX_STI_GDB_%282003%29.jpg/960px-Subaru_Impreza_WRX_STI_GDB_%282003%29.jpg" },
+            { model: "Subaru WRX STI S209", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Subaru_WRX_STI_S209_%282019%29.jpg/960px-Subaru_WRX_STI_S209_%282019%29.jpg" },
+            { model: "Subaru BRZ tS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Subaru_BRZ_tS_%282018%29.jpg/960px-Subaru_BRZ_tS_%282018%29.jpg" },
+            { model: "Subaru WRX STI Final Edition", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Subaru_WRX_STI_Final_Edition_%282022%29.jpg/960px-Subaru_WRX_STI_Final_Edition_%282022%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'tesla_roadster',
+        brand: "Tesla Roadster",
+        img: "https://www.carlogos.org/car-logos/tesla-logo.png",
+        founded_year: 2003,
+        founder: 'Elon Musk & Martin Eberhard',
+        headquarter: { city: 'Austin', country: 'USA' },
+        description: "Tesla's Roadster is the flagship performance model of Tesla Inc, promising sub-1-second 0-60 times and over 400km/h top speed, representing the pinnacle of electric vehicle performance.",
+
+        performance: {
+            top_speed_onroad: 406,
+            top_speed_trackonly: 406,
+            torque_onroad: 1696,
+            torque_trackonly: 1696,
+            horsepower_onroad: 1020,
+            horsepower_trackonly: 1020,
+            acceleration_0_60: 1.9,
+            acceleration_0_100: 4.2,
+        },
+
+        technical: {
+            weight_kg: 1990,
+            engine_layout: 'Tri-motor electric',
+            engine_type: 'Electric motors (3x)',
+            displacement_liters: null,
+            drivetrain: 'AWD',
+            transmission: 'Single-speed reduction',
+            fuel_type: 'Electric (200 kWh battery)',
+        },
+
+        chassis: {
+            material: 'Carbon fiber composite body',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'Double wishbone with adaptive air suspension',
+            suspension_rear: 'Multi-link with adaptive air suspension',
+            aerodynamics: 'Glass roof, optimized body panels',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2025-present',
+            price_usd: 200000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Tesla Roadster (2nd Gen)',
+        fastest_trackonly: 'Tesla Roadster SpaceX Package',
+
+        famous_cars: [
+            { model: "Tesla Roadster (1st Gen)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tesla_Roadster_%282008%29.jpg/960px-Tesla_Roadster_%282008%29.jpg" },
+            { model: "Tesla Model S Plaid", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Tesla_Model_S_Plaid_%282021%29.jpg/960px-Tesla_Model_S_Plaid_%282021%29.jpg" },
+            { model: "Tesla Model S Plaid Track Pack", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tesla_Model_S_Plaid_Track_Pack_%282022%29.jpg/960px-Tesla_Model_S_Plaid_Track_Pack_%282022%29.jpg" },
+            { model: "Tesla Roadster (2nd Gen)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Tesla_Roadster_2nd_Gen_%282017_concept%29.jpg/960px-Tesla_Roadster_2nd_Gen_%282017_concept%29.jpg" },
+            { model: "Tesla Model X Plaid", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Tesla_Model_X_Plaid_%282021%29.jpg/960px-Tesla_Model_X_Plaid_%282021%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'toyota_gr',
+        brand: "Toyota Gazoo Racing",
+        img: "https://www.carlogos.org/car-logos/toyota-logo.png",
+        founded_year: 2007,
+        founder: 'Toyota Motor Corporation',
+        headquarter: { city: 'Toyota City', country: 'Japan' },
+        description: "Toyota Gazoo Racing is Toyota's motorsport and performance division responsible for the GR86, GR Supra, GR Yaris, and the legendary Le Mans-winning GR010 hypercar.",
+
+        performance: {
+            top_speed_onroad: 250,
+            top_speed_trackonly: 340,
+            torque_onroad: 500,
+            torque_trackonly: 900,
+            horsepower_onroad: 382,
+            horsepower_trackonly: 680,
+            acceleration_0_60: 3.9,
+            acceleration_0_100: 8.5,
+        },
+
+        technical: {
+            weight_kg: 1135,
+            engine_layout: 'Front-engine',
+            engine_type: 'Inline-4 Turbocharged',
+            displacement_liters: 1.6,
+            drivetrain: 'AWD',
+            transmission: '8-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'High-strength steel with aluminum components',
+            brake_material: 'Brembo disc brakes',
+            suspension_front: 'MacPherson strut with GR-specific tuning',
+            suspension_rear: 'Double wishbone with GR-specific tuning',
+            aerodynamics: 'Front lip, rear spoiler, optimized underbody',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2020-present',
+            price_usd: 53105,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'Toyota GR Supra',
+        fastest_trackonly: 'Toyota GR010 Hybrid',
+
+        famous_cars: [
+            { model: "Toyota GR Supra", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Toyota_GR_Supra_%282019%29.jpg/960px-Toyota_GR_Supra_%282019%29.jpg" },
+            { model: "Toyota GR Yaris", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Toyota_GR_Yaris_%282020%29.jpg/960px-Toyota_GR_Yaris_%282020%29.jpg" },
+            { model: "Toyota GR86", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Toyota_GR86_%282021%29.jpg/960px-Toyota_GR86_%282021%29.jpg" },
+            { model: "Toyota GR010 Hybrid", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Toyota_GR010_Hybrid_%282021%29.jpg/960px-Toyota_GR010_Hybrid_%282021%29.jpg" },
+            { model: "Toyota 2000GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Toyota_2000GT_%281967%29.jpg/960px-Toyota_2000GT_%281967%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'tvr',
+        brand: "TVR",
+        img: "https://www.carlogos.org/car-logos/tvr-logo.png",
+        founded_year: 1947,
+        founder: 'Trevor Wilkinson',
+        headquarter: { city: 'Blackpool', country: 'United Kingdom' },
+        description: 'TVR is a British sports car manufacturer infamous for producing raw, powerful, no-aids sports cars with tube-frame chassis, big V8 and inline-6 engines, and no ABS or traction control.',
+
+        performance: {
+            top_speed_onroad: 320,
+            top_speed_trackonly: 335,
+            torque_onroad: 590,
+            torque_trackonly: 620,
+            horsepower_onroad: 500,
+            horsepower_trackonly: 530,
+            acceleration_0_60: 3.7,
+            acceleration_0_100: 8.5,
+        },
+
+        technical: {
+            weight_kg: 1090,
+            engine_layout: 'Front-engine',
+            engine_type: 'Inline-6 Naturally Aspirated',
+            displacement_liters: 4.0,
+            drivetrain: 'RWD',
+            transmission: '6-speed manual',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Tubular steel space frame with GRP body',
+            brake_material: 'AP Racing disc brakes',
+            suspension_front: 'Double wishbone',
+            suspension_rear: 'Independent with coilover dampers',
+            aerodynamics: 'Curvaceous low-drag body styling',
+        },
+
+        production: {
+            total_units: null,
+            years_produced: '2004-2006',
+            price_usd: 60000,
+            limited_edition: false,
+        },
+
+        fastest_onroad: 'TVR Sagaris',
+        fastest_trackonly: 'TVR Speed 12',
+
+        famous_cars: [
+            { model: "TVR Griffith", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/TVR_Griffith_%281992%29.jpg/960px-TVR_Griffith_%281992%29.jpg" },
+            { model: "TVR Tuscan Speed Six", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TVR_Tuscan_Speed_Six_%281999%29.jpg/960px-TVR_Tuscan_Speed_Six_%281999%29.jpg" },
+            { model: "TVR Sagaris", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/TVR_Sagaris_%282004%29.jpg/960px-TVR_Sagaris_%282004%29.jpg" },
+            { model: "TVR Cerbera Speed 12", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/TVR_Cerbera_Speed_12_%282000%29.jpg/960px-TVR_Cerbera_Speed_12_%282000%29.jpg" },
+            { model: "TVR Griffith (2023)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/TVR_Griffith_%282023%29.jpg/960px-TVR_Griffith_%282023%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'vectormotors',
+        brand: "Vector Motors",
+        img: "https://www.carlogos.org/car-logos/vector-logo.png",
+        founded_year: 1978,
+        founder: 'Gerald Wiegert',
+        headquarter: { city: 'Wilmington, California', country: 'USA' },
+        description: "Vector Motors is an American exotic car manufacturer from the 1980s and 90s that produced fighter jet-inspired supercars with twin-turbo V8 engines, including the legendary W8.",
+
+        performance: {
+            top_speed_onroad: 362,
+            top_speed_trackonly: 370,
+            torque_onroad: 800,
+            torque_trackonly: 820,
+            horsepower_onroad: 625,
+            horsepower_trackonly: 650,
+            acceleration_0_60: 3.9,
+            acceleration_0_100: 9.0,
+        },
+
+        technical: {
+            weight_kg: 1510,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Turbocharged',
+            displacement_liters: 6.0,
+            drivetrain: 'RWD',
+            transmission: '3-speed automatic',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Aerospace-grade aluminum monocoque with Kevlar',
+            brake_material: 'Ventilated disc brakes',
+            suspension_front: 'Double wishbone',
+            suspension_rear: 'Double wishbone with coilover dampers',
+            aerodynamics: 'Fighter jet-inspired body, NACA ducts',
+        },
+
+        production: {
+            total_units: 22,
+            years_produced: '1989-1993',
+            price_usd: 450000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Vector W8 Twin Turbo',
+        fastest_trackonly: 'Vector M12',
+
+        famous_cars: [
+            { model: "Vector W8 Twin Turbo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Vector_W8_Twin_Turbo_%281990%29.jpg/960px-Vector_W8_Twin_Turbo_%281990%29.jpg" },
+            { model: "Vector M12", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Vector_M12_%281995%29.jpg/960px-Vector_M12_%281995%29.jpg" },
+            { model: "Vector W2", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vector_W2_%281980%29.jpg/960px-Vector_W2_%281980%29.jpg" },
+            { model: "Vector Avtech WX-3", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Vector_Avtech_WX-3_%281993%29.jpg/960px-Vector_Avtech_WX-3_%281993%29.jpg" },
+            { model: "Vector W8 Country Squire", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vector_W8_Country_Squire.jpg/960px-Vector_W8_Country_Squire.jpg" },
+        ]
+    },
+
+    {
+        id: 'wmotors',
+        brand: "W Motors",
+        img: "https://www.carlogos.org/car-logos/w-motors-logo.png",
+        founded_year: 2012,
+        founder: 'Ralph R. Debbas',
+        headquarter: { city: 'Dubai', country: 'UAE' },
+        description: "W Motors is an Arab supercar manufacturer — the first in the Middle East — producing the ultra-exclusive Lykan HyperSport and Fenyr SuperSport for the world's ultra-high-net-worth clientele.",
+
+        performance: {
+            top_speed_onroad: 395,
+            top_speed_trackonly: 400,
+            torque_onroad: 1000,
+            torque_trackonly: 1050,
+            horsepower_onroad: 900,
+            horsepower_trackonly: 900,
+            acceleration_0_60: 2.7,
+            acceleration_0_100: 6.0,
+        },
+
+        technical: {
+            weight_kg: 1380,
+            engine_layout: 'Rear-engine',
+            engine_type: 'Flat-6 Twin-Turbocharged',
+            displacement_liters: 3.7,
+            drivetrain: 'RWD',
+            transmission: '7-speed PDK dual-clutch',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber monocoque',
+            brake_material: 'Brembo carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with adjustable dampers',
+            suspension_rear: 'Double wishbone with adjustable dampers',
+            aerodynamics: 'Active rear wing, underbody diffuser',
+        },
+
+        production: {
+            total_units: 7,
+            years_produced: '2014-2016',
+            price_usd: 3400000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'W Motors Fenyr SuperSport',
+        fastest_trackonly: 'W Motors Lykan HyperSport',
+
+        famous_cars: [
+            { model: "W Motors Lykan HyperSport", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/W_Motors_Lykan_HyperSport_%282013%29.jpg/960px-W_Motors_Lykan_HyperSport_%282013%29.jpg" },
+            { model: "W Motors Fenyr SuperSport", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/W_Motors_Fenyr_SuperSport_%282016%29.jpg/960px-W_Motors_Fenyr_SuperSport_%282016%29.jpg" },
+            { model: "W Motors Lykan HyperSport Roadster", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/W_Motors_Lykan_HyperSport_Roadster.jpg/960px-W_Motors_Lykan_HyperSport_Roadster.jpg" },
+            { model: "W Motors Ghiath SUV", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/W_Motors_Ghiath_SUV_%282018%29.jpg/960px-W_Motors_Ghiath_SUV_%282018%29.jpg" },
+            { model: "W Motors Fenyr evo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/W_Motors_Fenyr_evo_%282022%29.jpg/960px-W_Motors_Fenyr_evo_%282022%29.jpg" },
+        ]
+    },
+
+    {
+        id: 'zenvo',
+        brand: "Zenvo",
+        img: "https://www.carlogos.org/car-logos/zenvo-logo.png",
+        founded_year: 2007,
+        founder: 'Troels Vollertsen',
+        headquarter: { city: 'Præstø', country: 'Denmark' },
+        description: "Zenvo Automotive is a Danish hypercar manufacturer producing hand-built, twin-supercharged V8 hypercars including the TSR-S with its unique centripetal rear wing that tilts during cornering.",
+
+        performance: {
+            top_speed_onroad: 325,
+            top_speed_trackonly: 340,
+            torque_onroad: 1100,
+            torque_trackonly: 1100,
+            horsepower_onroad: 1177,
+            horsepower_trackonly: 1177,
+            acceleration_0_60: 2.8,
+            acceleration_0_100: 6.8,
+        },
+
+        technical: {
+            weight_kg: 1495,
+            engine_layout: 'Mid-engine',
+            engine_type: 'V8 Twin-Supercharged',
+            displacement_liters: 5.8,
+            drivetrain: 'RWD',
+            transmission: '7-speed sequential',
+            fuel_type: 'Petrol',
+        },
+
+        chassis: {
+            material: 'Carbon fiber and kevlar monocoque',
+            brake_material: 'Carbon-ceramic brakes',
+            suspension_front: 'Double wishbone with Öhlins dampers',
+            suspension_rear: 'Double wishbone with Öhlins dampers',
+            aerodynamics: 'Tilting centripetal rear wing, active diffuser',
+        },
+
+        production: {
+            total_units: 5,
+            years_produced: '2018-2020',
+            price_usd: 1450000,
+            limited_edition: true,
+        },
+
+        fastest_onroad: 'Zenvo Aurora Tur',
+        fastest_trackonly: 'Zenvo TSR-S',
+
+        famous_cars: [
+            { model: "Zenvo ST1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Zenvo_ST1_%282009%29.jpg/960px-Zenvo_ST1_%282009%29.jpg" },
+            { model: "Zenvo TS1 GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Zenvo_TS1_GT_%282016%29.jpg/960px-Zenvo_TS1_GT_%282016%29.jpg" },
+            { model: "Zenvo TSR-S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Zenvo_TSR-S_%282018%29.jpg/960px-Zenvo_TSR-S_%282018%29.jpg" },
+            { model: "Zenvo TSR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Zenvo_TSR_%282017%29.jpg/960px-Zenvo_TSR_%282017%29.jpg" },
+            { model: "Zenvo Aurora Tur", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Zenvo_Aurora_Tur_%222023%29.jpg/960px-Zenvo_Aurora_Tur_%222023%29.jpg" },
+        ]
+    },
+];
+
+export default overviewcars2;

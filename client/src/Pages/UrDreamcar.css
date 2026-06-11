@@ -1,0 +1,32 @@
+.title{
+    position: relative;
+    width: 100%;
+}
+.overlay-1{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title-text, .floatingcar{
+    font-size: 3rem;
+	animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+    
+  }
+  40% {
+    opacity: 0.6;
+    text-decoration: underline;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+    text-decoration: underline ;
+  }
+}

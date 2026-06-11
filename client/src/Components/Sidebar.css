@@ -1,0 +1,36 @@
+.sidebarcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #393E46;
+    height: 100%;
+    width: 25vw;
+    border-radius: 10px;
+    margin: 7px;
+}
+ .car-bike-opt{
+    display: flex;
+    margin: 10px;
+    padding-left: 10px ;
+    gap: 30px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.companies{
+    display: grid;
+    margin-top: 20px;
+    padding: 5px 15px;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+    grid-gap:10px 10px;
+    grid-template-rows: repeat(minmax(20vh, 1fr));
+    padding-bottom: 15px;
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+button{
+    cursor: pointer;
+}
