@@ -1,7 +1,30 @@
-.NavActive{
-    background-color: var(--hover);
-    border-radius: 40px;
-    color: white;
-    transition:all 0.5s ease-in;
-    transform: translateY(10px);
+body {
+  padding-top: 90px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(75, 85, 99, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 20px;
+  height: auto;
+  border-radius: 2rem;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-visible {
+  transform: translateY(0);
+}
+
+.navbar-hidden {
+  transform: translateY(-150%);
 }
