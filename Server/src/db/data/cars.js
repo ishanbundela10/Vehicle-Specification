@@ -877,7 +877,8 @@ const cars = [
         },
         era: "Contemporary",
         status: "Discontinued",
-        rarity: "Rare"
+        rarity: "Rare",
+        isFamous: true
     },
     {
         id: "ferrari21",
@@ -1009,7 +1010,8 @@ const cars = [
         },
         era: "Contemporary",
         status: "Active",
-        rarity: "Rare"
+        rarity: "Rare",
+        isFamous: true
     },
     {
         id: "ferrari24",
@@ -4490,7 +4492,8 @@ const cars = [
         },
         era: "Contemporary",
         status: "Discontinued",
-        rarity: "Rare"
+        rarity: "Rare",
+        isFamous:true
     },
     {
         id: "lamborghini31",
@@ -5371,7 +5374,365 @@ const cars = [
         era: "Contemporary",
         status: "Discontinued",
         rarity: "One-Off"
-    }
+    },
+    {
+    id: "lamborghini_revuelto",
+    brand: "Lamborghini",
+    name: "Revuelto",
+    img: "https://i.ytimg.com/vi/yxQL3gQ8UL8/hq720.jpg",
+    type: "Supercar",
+    comfort: 4,
+    mileage: 1,
+    stability: 5,
+    rating: 4.8,
+
+    performance: {
+        power_hp: 1001,
+        top_speed_kmh: 350,
+        acceleration_sec: 2.5,
+        weight_kg: 1772,
+        power_to_weight: 0.56
+    },
+
+    technical: {
+        engine: "6.5L V12 Hybrid",
+        displacement_cc: 6498,
+        fuel: "Hybrid",
+        transmission: "8-Speed DCT",
+        cylinders: 12
+    },
+
+    chassis: {
+        material: "Carbon fiber monofuselage",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Double Wishbone",
+        drivetrain: "AWD"
+    },
+
+    production: {
+        start_year: 2023,
+        end_year: null,
+        units_produced: 1000,
+        country: "Italy"
+    },
+
+    price: {
+        inr: { min: 88900000, max: 95000000, currency: "INR" },
+        usd: { min: 600000, max: 650000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "In Production",
+    rarity: "Limited",
+    isFamous: true
+},
+{
+    id: "bugatti_chiron",
+    brand: "Bugatti",
+    name: "Chiron",
+    img: "https://upload.wikimedia.org/wikipedia/commons/1/18/Bugatti_Chiron_1.jpg",
+    type: "Hypercar",
+    comfort: 4,
+    mileage: 1,
+    stability: 5,
+    rating: 4.9,
+
+    performance: {
+        power_hp: 1479,
+        top_speed_kmh: 420,
+        acceleration_sec: 2.4,
+        weight_kg: 1995,
+        power_to_weight: 0.74
+    },
+
+    technical: {
+        engine: "8.0L Quad Turbo W16",
+        displacement_cc: 7993,
+        fuel: "Petrol",
+        transmission: "7-Speed DCT",
+        cylinders: 16
+    },
+
+    chassis: {
+        material: "Carbon fiber monocoque",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Adaptive Independent",
+        drivetrain: "AWD"
+    },
+
+    production: {
+        start_year: 2016,
+        end_year: 2024,
+        units_produced: 500,
+        country: "France"
+    },
+
+    price: {
+        inr: { min: 280000000, max: 320000000, currency: "INR" },
+        usd: { min: 3000000, max: 3500000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "Discontinued",
+    rarity: "Ultra Rare",
+    isFamous: true
+},
+{
+    id: "mclaren_720s",
+    brand: "McLaren",
+    name: "720S",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/af/Mclaren_720S.jpg",
+    type: "Supercar",
+    comfort: 4,
+    mileage: 2,
+    stability: 5,
+    rating: 4.6,
+
+    performance: {
+        power_hp: 710,
+        top_speed_kmh: 341,
+        acceleration_sec: 2.8,
+        weight_kg: 1419,
+        power_to_weight: 0.50
+    },
+
+    technical: {
+        engine: "4.0L Twin Turbo V8",
+        displacement_cc: 3994,
+        fuel: "Petrol",
+        transmission: "7-Speed DCT",
+        cylinders: 8
+    },
+
+    chassis: {
+        material: "Carbon fiber Monocage II",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Proactive Chassis Control",
+        drivetrain: "RWD"
+    },
+
+    production: {
+        start_year: 2017,
+        end_year: 2023,
+        units_produced: 4000,
+        country: "UK"
+    },
+
+    price: {
+        inr: { min: 46500000, max: 52000000, currency: "INR" },
+        usd: { min: 300000, max: 330000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "Discontinued",
+    rarity: "Limited",
+    isFamous: true
+},
+{
+    id: "porsche_911_gt3rs",
+    brand: "Porsche",
+    name: "911 GT3 RS",
+    img: "https://p.turbosquid.com/ts-thumb/uF/9kOhJL/5f/2023_porsche_911_gt3_rs.jpg",
+    type: "Sports Car",
+    comfort: 4,
+    mileage: 3,
+    stability: 5,
+    rating: 4.5,
+
+    performance: {
+        power_hp: 518,
+        top_speed_kmh: 296,
+        acceleration_sec: 3.2,
+        weight_kg: 1450,
+        power_to_weight: 0.36
+    },
+
+    technical: {
+        engine: "4.0L Flat-6",
+        displacement_cc: 3996,
+        fuel: "Petrol",
+        transmission: "7-Speed PDK",
+        cylinders: 6
+    },
+
+    chassis: {
+        material: "Aluminium & Carbon Hybrid",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Double Wishbone",
+        drivetrain: "RWD"
+    },
+
+    production: {
+        start_year: 2023,
+        end_year: null,
+        units_produced: 2000,
+        country: "Germany"
+    },
+
+    price: {
+        inr: { min: 35000000, max: 38000000, currency: "INR" },
+        usd: { min: 225000, max: 250000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "In Production",
+    rarity: "Limited",
+    isFamous: true
+},
+{
+    id: "koenigsegg_jesko",
+    brand: "Koenigsegg",
+    name: "Jesko",
+    img: "https://www.topgear.com/sites/default/files/news-listicle/image/jeskolucerne.jpg",
+    type: "Hypercar",
+    comfort: 3,
+    mileage: 1,
+    stability: 5,
+    rating: 4.9,
+
+    performance: {
+        power_hp: 1600,
+        top_speed_kmh: 480,
+        acceleration_sec: 2.5,
+        weight_kg: 1420,
+        power_to_weight: 1.12
+    },
+
+    technical: {
+        engine: "5.0L Twin Turbo V8",
+        displacement_cc: 5000,
+        fuel: "Petrol",
+        transmission: "9-Speed Light Speed",
+        cylinders: 8
+    },
+
+    chassis: {
+        material: "Carbon fiber monocoque",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Double Wishbone",
+        drivetrain: "RWD"
+    },
+
+    production: {
+        start_year: 2021,
+        end_year: 2025,
+        units_produced: 125,
+        country: "Sweden"
+    },
+
+    price: {
+        inr: { min: 240000000, max: 260000000, currency: "INR" },
+        usd: { min: 2800000, max: 3000000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "Limited Production",
+    rarity: "Ultra Rare",
+    isFamous: true
+},
+{
+    id: "astonmartin_valkyrie",
+    brand: "Aston Martin",
+    name: "Valkyrie",
+    img: "https://www.topgear.com/sites/default/files/2023/03/1-Aston-Martin-Valkyrie.jpg",
+    type: "Hypercar",
+    comfort: 2,
+    mileage: 1,
+    stability: 5,
+    rating: 4.8,
+
+    performance: {
+        power_hp: 1160,
+        top_speed_kmh: 355,
+        acceleration_sec: 2.6,
+        weight_kg: 1270,
+        power_to_weight: 0.91
+    },
+
+    technical: {
+        engine: "6.5L V12 Hybrid",
+        displacement_cc: 6498,
+        fuel: "Hybrid",
+        transmission: "7-Speed Sequential",
+        cylinders: 12
+    },
+
+    chassis: {
+        material: "Carbon fiber monocoque",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Pushrod Suspension",
+        drivetrain: "RWD"
+    },
+
+    production: {
+        start_year: 2021,
+        end_year: 2023,
+        units_produced: 150,
+        country: "UK"
+    },
+
+    price: {
+        inr: { min: 250000000, max: 270000000, currency: "INR" },
+        usd: { min: 3000000, max: 3200000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "Limited Production",
+    rarity: "Ultra Rare",
+    isFamous: true
+},
+{
+    id: "pagani_huayra",
+    brand: "Pagani",
+    name: "Huayra",
+    img: "https://www.topgear.com/sites/default/files/cars-car/image/2016/08/rh_huayrabc.jpg",
+    type: "Hypercar",
+    comfort: 3,
+    mileage: 1,
+    stability: 5,
+    rating: 4.7,
+
+    performance: {
+        power_hp: 720,
+        top_speed_kmh: 383,
+        acceleration_sec: 2.8,
+        weight_kg: 1350,
+        power_to_weight: 0.53
+    },
+
+    technical: {
+        engine: "6.0L Twin Turbo V12",
+        displacement_cc: 5980,
+        fuel: "Petrol",
+        transmission: "7-Speed Automated Manual",
+        cylinders: 12
+    },
+
+    chassis: {
+        material: "Carbotanium (Carbon + Titanium)",
+        brake_material: "Carbon-ceramic brakes",
+        suspension: "Double Wishbone",
+        drivetrain: "RWD"
+    },
+
+    production: {
+        start_year: 2011,
+        end_year: 2024,
+        units_produced: 100,
+        country: "Italy"
+    },
+
+    price: {
+        inr: { min: 200000000, max: 230000000, currency: "INR" },
+        usd: { min: 2400000, max: 2700000, currency: "USD" }
+    },
+
+    era: "Contemporary",
+    status: "Discontinued",
+    rarity: "Ultra Rare",
+    isFamous: true
+}
+
 ];
 
 

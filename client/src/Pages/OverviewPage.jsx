@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import overview from '../data/overview'
+// import overview from '../data/overview'
 import '../Pages/OverviewPage.css'
 import '../App.css'
 

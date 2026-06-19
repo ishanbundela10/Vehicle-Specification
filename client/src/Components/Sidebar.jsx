@@ -88,9 +88,9 @@ function Sidebar({ companies }) {
 
         <div className="companies">
           {visibleCompanies.length > 0 ? (
-            visibleCompanies.map((company, index) => (
-              <Link key={company.id} to={`/brand/${company.title.toLowerCase()}`}>
-                <Button key={index} img={company.img} title={company.title} />
+            visibleCompanies.map((company) => (
+              <Link key={company._id} to={`/brand/${company.title.toLowerCase()}`}>
+                <Button img={company.img} title={company.title} />
               </Link>
             ))
           ) : (

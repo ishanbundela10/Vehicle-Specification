@@ -1,18 +1,41 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import cars from "../data/cars"
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+
+// import cars from "../data/cars"
 import '../App.css'
+
 const CarDetails = () => {
-    const { brandName, Name } = useParams();
+    const { brandName, modelName } = useParams();
+    const [CD, setCD] = useState(null)
     // car details:
-    const CD = cars.find(
-        (item) =>
-            item.brand.toLowerCase() === brandName.toLowerCase() &&
-            item.name.toLowerCase() === decodeURIComponent(Name).toLowerCase()
-    );
-    if (!CD) {
-        return <h1 className='p-4'>Car not found</h1>;
-    }
+
+    useEffect(() => {
+    const fetchCar = async () => {
+      try {
+        const response = await axios.get(
+          `/api/cars/brand/${brandName}/${encodeURIComponent(modelName)}`
+        );
+        setCD(response.data);
+        console.log(response.data)
+      } catch (error) {
+        console.error(error);
+      }
+    };
+       fetchCar();
+    }, [brandName, modelName]
+);
+    if (!CD) return <h1 className='p-4'>Loading...</h1>;
+    
+    // const CD = cars.find(
+    //     (item) =>
+    //         item.brand.toLowerCase() === brandName.toLowerCase() &&
+    //         item.name.toLowerCase() === decodeURIComponent(Name).toLowerCase()
+    // );
+    // if (!CD) {
+    //     return <h1 className='p-4'>Car not found</h1>;
+    // }
 
     const formatPrice = (min, max) => {
         const avg = (min + max) / 2;
@@ -31,12 +54,12 @@ const CarDetails = () => {
                     </div>
                     <Link to={`/brand/${brandName}`} className='bg-gray-600 p-2 rounded-2xl font-bold'>← BACK</Link>
                 </div>
-                <div className='mt-6 max-w-[full]  rounded-2xl '>
+                <div className='mt-6  rounded-2xl '>
                     <div className='flex '>
-                        <div className='w-[50vw] h-[70vh] p-4 bg-gray-700 rounded-2xl'>
+                        <div className='w-[50vw] h-1/2 p-4 bg-gray-700 rounded-2xl'>
                             <img src={CD.img} alt="img%-->$" className='w-full h-full rounded-2xl' />
                         </div>
-                        <div className='w-[50vw] h-[70vh] pt-3 pl-4'>
+                        <div className='w-[50vw] pt-3 pl-4'>
                             <div className='flex flex-col gap-3'>
                                 <div className='flex gap-5'>
                                     <div className={`flex size-fit px-5 rounded-2xl text-[1em] gap-1 p-3
