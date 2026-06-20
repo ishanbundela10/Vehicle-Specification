@@ -31,13 +31,13 @@ router.get("/test", async (req, res) => {
 router.get("/brand/:brandName/:modelName", async (req, res) => {
   try {
     const { brandName, modelName } = req.params
-    console.log("brandName:", brandName)
-    console.log("modelName:", modelName)  
+    // console.log("brandName:", brandName)
+    // console.log("modelName:", modelName)  
     const car = await Car.findOne({
        brand: { $regex: new RegExp(`^${brandName}$`, "i") },
       name: { $regex: new RegExp(`^${modelName}$`, "i") }
     });
-    console.log(car)
+    // console.log(car)
     
     if (!car) {
       return res.status(404).json({ message: "Car not found" });

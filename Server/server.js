@@ -8,6 +8,7 @@ import { DB_NAME } from "./constants.js";
 import connectDB from "./src/db/index.js";
 import carsroutes from "./src/routes/cars.routes.js";
 import companyroutes from "./src/routes/company.routes.js";
+import brandoverviewroutes from "./src/routes/brandoverview.routes.js";
 
 dotenv.config();
 
@@ -56,6 +57,7 @@ connectDB();
 // })
 app.use("/api/cars", carsroutes);
 app.use("/api/companies", companyroutes);
+app.use("/api/brands", brandoverviewroutes )
 
 app.listen(port, ()=>{
   console.log(`App is listening on port ${port}`)

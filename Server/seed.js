@@ -2,18 +2,19 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import connectDB from "./src/db/index.js";
-import { Car } from "./src/models/car.models.js";
-import cars from "./src/db/data/cars.js"
+// import { Car } from "./src/models/car.models.js";
+import {BrandOverview} from "./src/models/brandoverview.models.js"
+import overviewbrands from "./src/db/data/overview.js"
 
 const seedData = async () => {
   try {
     await connectDB();
 
-    await Car.deleteMany(); // optional (clears old data)
+    await BrandOverview.deleteMany(); // optional (clears old data)
 
-    await Car.insertMany(cars);
+    await BrandOverview.insertMany(overviewbrands);
 
-    console.log("Cars inserted successfully");
+    console.log("overviewbrands inserted successfully");
     process.exit();
   } catch (error) {
     console.error(error);

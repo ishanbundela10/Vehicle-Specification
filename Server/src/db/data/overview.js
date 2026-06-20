@@ -1,8 +1,8 @@
-const overviewcars = [
+const overviewbrands = [
     {
         id: 'ferrari',
         brand: "Ferrari",
-        img: 'https://upload.wikimedia.org/wikipedia/sco/thumb/d/d1/Ferrari-Logo.svg/1920px-Ferrari-Logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/sco/thumb/d/d1/Ferrari-Logo.svg/1920px-Ferrari-Logo.svg.png',
         founded_year: 1939,
         founder: 'Enzo Ferrari',
         headquarter: {
@@ -32,7 +32,7 @@ const overviewcars = [
     {
         id: 'lamborghini',
         brand: "Lamborghini",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Lamborghini_Logo.svg/1920px-Lamborghini_Logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Lamborghini_Logo.svg/1920px-Lamborghini_Logo.svg.png',
         founded_year: 1963,
         founder: 'Ferruccio Lamborghini',
         headquarter: { city: "Sant'Agata Bolognese", country: 'Italy' },
@@ -60,7 +60,7 @@ const overviewcars = [
     {
         id: 'porsche',
         brand: "Porsche",
-        img: 'https://upload.wikimedia.org/wikipedia/de/thumb/5/fifty/Porsche_Logo.svg/1920px-Porsche_Logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/de/thumb/5/fifty/Porsche_Logo.svg/1920px-Porsche_Logo.svg.png',
         founded_year: 1931,
         founder: 'Ferdinand Porsche',
         headquarter: { city: 'Stuttgart', country: 'Germany' },
@@ -88,7 +88,7 @@ const overviewcars = [
     {
         id: 'mclaren',
         brand: "McLaren",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/forty/McLaren_Logo.svg/1920px-McLaren_Logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/forty/McLaren_Logo.svg/1920px-McLaren_Logo.svg.png',
         founded_year: 1963,
         founder: 'Bruce McLaren',
         headquarter: { city: 'Woking', country: 'United Kingdom' },
@@ -116,7 +116,7 @@ const overviewcars = [
     {
         id: 'bugatti',
         brand: "Bugatti",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/eight/Bugatti_logo.svg/1920px-Bugatti_logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/eight/Bugatti_logo.svg/1920px-Bugatti_logo.svg.png',
         founded_year: 1909,
         founder: 'Ettore Bugatti',
         headquarter: { city: 'Molsheim', country: 'France' },
@@ -144,7 +144,7 @@ const overviewcars = [
     {
         id: 'koenigsegg',
         brand: "Koenigsegg",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Koenigsegg_logo.svg/1920px-Koenigsegg_logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Koenigsegg_logo.svg/1920px-Koenigsegg_logo.svg.png',
         founded_year: 1994,
         founder: 'Christian von Koenigsegg',
         headquarter: { city: 'Ängelholm', country: 'Sweden' },
@@ -172,7 +172,7 @@ const overviewcars = [
     {
         id: 'pagani',
         brand: "Pagani",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Pagani_logo.svg/1920px-Pagani_logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Pagani_logo.svg/1920px-Pagani_logo.svg.png',
         founded_year: 1992,
         founder: 'Horacio Pagani',
         headquarter: { city: 'San Cesario sul Panaro', country: 'Italy' },
@@ -200,7 +200,7 @@ const overviewcars = [
     {
         id: 'astonmartin',
         brand: "Aston Martin",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aston_Martin_logo.svg/1920px-Aston_Martin_logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aston_Martin_logo.svg/1920px-Aston_Martin_logo.svg.png',
         founded_year: 1913,
         founder: 'Lionel Martin & Robert Bamford',
         headquarter: { city: 'Gaydon', country: 'United Kingdom' },
@@ -226,7 +226,7 @@ const overviewcars = [
     {
         id: 'bentley',
         brand: "Bentley",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/sixty/Bentley_logo.svg/1920px-Bentley_logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/sixty/Bentley_logo.svg/1920px-Bentley_logo.svg.png',
         founded_year: 1919,
         founder: 'W.O. Bentley',
         headquarter: { city: 'Crewe', country: 'United Kingdom' },
@@ -252,7 +252,7 @@ const overviewcars = [
     {
         id: 'rollsroyce',
         brand: "Rolls-Royce",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rolls-Royce_Motor_Cars_logo.svg/1920px-Rolls-Royce_Motor_Cars_logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rolls-Royce_Motor_Cars_logo.svg/1920px-Rolls-Royce_Motor_Cars_logo.svg.png',
         founded_year: 1906,
         founder: 'Charles Rolls & Henry Royce',
         headquarter: { city: 'Goodwood', country: 'United Kingdom' },
@@ -278,7 +278,7 @@ const overviewcars = [
     {
         id: 'bmwm',
         brand: "BMW M",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/forty/BMW_logo_%28gray%29.svg/1920px-BMW_logo_%28gray%29.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/forty/BMW_logo_%28gray%29.svg/1920px-BMW_logo_%28gray%29.svg.png',
         founded_year: 1972,
         founder: 'BMW AG',
         headquarter: { city: 'Munich', country: 'Germany' },
@@ -304,7 +304,7 @@ const overviewcars = [
     {
         id: 'mercedesamg',
         brand: "Mercedes-AMG",
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/ninety/Mercedes-Benz_logo_2010.svg/1920px-Mercedes-Benz_logo_2010.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/ninety/Mercedes-Benz_logo_2010.svg/1920px-Mercedes-Benz_logo_2010.svg.png',
         founded_year: 1967,
         founder: 'Hans Werner Aufrecht & Erhard Melcher',
         headquarter: { city: 'Affalterbach', country: 'Germany' },
@@ -329,7 +329,7 @@ const overviewcars = [
     {
         id: 'abarth',
         brand: "Abarth",
-        img: "https://www.carlogos.org/car-logos/abarth-logo.png",
+        logo: "https://www.carlogos.org/car-logos/abarth-logo.png",
         founded_year: 1949,
         founder: 'Carlo Abarth',
         headquarter: { city: 'Turin', country: 'Italy' },
@@ -350,7 +350,7 @@ const overviewcars = [
     {
         id: 'acura',
         brand: "Acura",
-        img: "https://www.carlogos.org/car-logos/acura-logo.png",
+        logo: "https://www.carlogos.org/car-logos/acura-logo.png",
         founded_year: 1986,
         founder: 'Honda Motor Company',
         headquarter: { city: 'Torrance', country: 'USA' },
@@ -371,7 +371,7 @@ const overviewcars = [
     {
         id: 'alfaromeo',
         brand: "Alfa Romeo",
-        img: "https://www.carlogos.org/car-logos/alfa-romeo-logo.png",
+        logo: "https://www.carlogos.org/car-logos/alfa-romeo-logo.png",
         founded_year: 1910,
         founder: 'Cavaliere Ugo Stella',
         headquarter: { city: 'Milan', country: 'Italy' },
@@ -392,7 +392,7 @@ const overviewcars = [
     {
         id: 'alpine',
         brand: "Alpine",
-        img: "https://www.carlogos.org/car-logos/alpine-logo.png",
+        logo: "https://www.carlogos.org/car-logos/alpine-logo.png",
         founded_year: 1955,
         founder: 'Jean Rédélé',
         headquarter: { city: 'Dieppe', country: 'France' },
@@ -413,7 +413,7 @@ const overviewcars = [
     {
         id: 'apollo',
         brand: "Apollo Automobil",
-        img: "https://www.carlogos.org/car-logos/apollo-logo.png",
+        logo: "https://www.carlogos.org/car-logos/apollo-logo.png",
         founded_year: 2004,
         founder: 'Roland Gumpert',
         headquarter: { city: 'Denkendorf', country: 'Germany' },
@@ -434,7 +434,7 @@ const overviewcars = [
     {
         id: 'ariel',
         brand: "Ariel",
-        img: "https://www.carlogos.org/car-logos/ariel-logo.png",
+        logo: "https://www.carlogos.org/car-logos/ariel-logo.png",
         founded_year: 1999,
         founder: 'Simon Saunders',
         headquarter: { city: 'Crewkerne', country: 'United Kingdom' },
@@ -455,7 +455,7 @@ const overviewcars = [
     {
         id: 'audisport',
         brand: "Audi Sport",
-        img: "https://www.carlogos.org/car-logos/audi-logo.png",
+        logo: "https://www.carlogos.org/car-logos/audi-logo.png",
         founded_year: 1983,
         founder: 'Audi AG',
         headquarter: { city: 'Neckarsulm', country: 'Germany' },
@@ -476,7 +476,7 @@ const overviewcars = [
     {
         id: 'bac',
         brand: "BAC",
-        img: "https://www.carlogos.org/car-logos/bac-logo.png",
+        logo: "https://www.carlogos.org/car-logos/bac-logo.png",
         founded_year: 2009,
         founder: 'Neill & Ian Briggs',
         headquarter: { city: 'Liverpool', country: 'United Kingdom' },
@@ -497,7 +497,7 @@ const overviewcars = [
     {
         id: 'bizzarrini',
         brand: "Bizzarrini",
-        img: "https://www.carlogos.org/car-logos/bizzarrini-logo.png",
+        logo: "https://www.carlogos.org/car-logos/bizzarrini-logo.png",
         founded_year: 1964,
         founder: 'Giotto Bizzarrini',
         headquarter: { city: 'Livorno', country: 'Italy' },
@@ -518,7 +518,7 @@ const overviewcars = [
     {
         id: 'brabham',
         brand: "Brabham Automotive",
-        img: "https://1000logos.net/wp-content/uploads/2024/01/Brabham-Automotive-logo.png",
+        logo: "https://1000logos.net/wp-content/uploads/2024/01/Brabham-Automotive-logo.png",
         founded_year: 2018,
         founder: 'David Brabham',
         headquarter: { city: 'Adelaide', country: 'Australia' },
@@ -539,7 +539,7 @@ const overviewcars = [
     {
         id: 'cadillacv',
         brand: "Cadillac V-Series",
-        img: "https://www.carlogos.org/car-logos/cadillac-logo.png",
+        logo: "https://www.carlogos.org/car-logos/cadillac-logo.png",
         founded_year: 2004,
         founder: 'General Motors',
         headquarter: { city: 'Detroit', country: 'USA' },
@@ -560,7 +560,7 @@ const overviewcars = [
     {
         id: 'caterham',
         brand: "Caterham",
-        img: "https://www.carlogos.org/car-logos/caterham-logo.png",
+        logo: "https://www.carlogos.org/car-logos/caterham-logo.png",
         founded_year: 1973,
         founder: 'Graham Nearn',
         headquarter: { city: 'Dartford', country: 'United Kingdom' },
@@ -581,7 +581,7 @@ const overviewcars = [
     {
         id: 'chevrolette_corvette',
         brand: "Chevrolet Corvette",
-        img: "https://www.carlogos.org/car-logos/chevrolet-logo.png",
+        logo: "https://www.carlogos.org/car-logos/chevrolet-logo.png",
         founded_year: 1953,
         founder: 'Harley Earl / GM',
         headquarter: { city: 'Detroit', country: 'USA' },
@@ -602,7 +602,7 @@ const overviewcars = [
     {
         id: 'czinger',
         brand: "Czinger",
-        img: "https://1000logos.net/wp-content/uploads/2024/01/Czinger-logo-500x281.png",
+        logo: "https://1000logos.net/wp-content/uploads/2024/01/Czinger-logo-500x281.png",
         founded_year: 2019,
         founder: 'Kevin Czinger',
         headquarter: { city: 'Los Angeles', country: 'USA' },
@@ -623,7 +623,7 @@ const overviewcars = [
     {
         id: 'detomaso',
         brand: "De Tomaso",
-        img: "https://www.carlogos.org/car-logos/de-tomaso-logo.png",
+        logo: "https://www.carlogos.org/car-logos/de-tomaso-logo.png",
         founded_year: 1959,
         founder: 'Alejandro de Tomaso',
         headquarter: { city: 'Modena', country: 'Italy' },
@@ -644,7 +644,7 @@ const overviewcars = [
     {
         id: 'dodge',
         brand: "Dodge",
-        img: "https://www.carlogos.org/car-logos/dodge-logo.png",
+        logo: "https://www.carlogos.org/car-logos/dodge-logo.png",
         founded_year: 1900,
         founder: 'Horace & John Dodge',
         headquarter: { city: 'Auburn Hills', country: 'USA' },
@@ -665,7 +665,7 @@ const overviewcars = [
     {
         id: 'fordperformance',
         brand: "Ford Performance",
-        img: "https://www.carlogos.org/car-logos/ford-logo.png",
+        logo: "https://www.carlogos.org/car-logos/ford-logo.png",
         founded_year: 1903,
         founder: 'Henry Ford',
         headquarter: { city: 'Dearborn', country: 'USA' },
@@ -686,7 +686,7 @@ const overviewcars = [
     {
         id: 'hennessey',
         brand: "Hennessey",
-        img: "https://www.carlogos.org/car-logos/hennessey-logo.png",
+        logo: "https://www.carlogos.org/car-logos/hennessey-logo.png",
         founded_year: 1991,
         founder: 'John Hennessey',
         headquarter: { city: 'Sealy, Texas', country: 'USA' },
@@ -707,7 +707,7 @@ const overviewcars = [
     {
         id: 'honda_typer',
         brand: "Honda Type R",
-        img: "https://www.carlogos.org/car-logos/honda-logo.png",
+        logo: "https://www.carlogos.org/car-logos/honda-logo.png",
         founded_year: 1992,
         founder: 'Honda Motor Company',
         headquarter: { city: 'Minato', country: 'Japan' },
@@ -728,7 +728,7 @@ const overviewcars = [
     {
         id: 'hyundain',
         brand: "Hyundai N",
-        img: "https://www.carlogos.org/car-logos/hyundai-logo.png",
+        logo: "https://www.carlogos.org/car-logos/hyundai-logo.png",
         founded_year: 2012,
         founder: 'Hyundai Motor Company',
         headquarter: { city: 'Namyang', country: 'South Korea' },
@@ -749,7 +749,7 @@ const overviewcars = [
     {
         id: 'jaguarsvr',
         brand: "Jaguar SVR",
-        img: "https://www.carlogos.org/car-logos/jaguar-logo.png",
+        logo: "https://www.carlogos.org/car-logos/jaguar-logo.png",
         founded_year: 1922,
         founder: 'William Lyons',
         headquarter: { city: 'Coventry', country: 'United Kingdom' },
@@ -769,7 +769,7 @@ const overviewcars = [
     {
         id: 'lexusf',
         brand: "Lexus F",
-        img: "https://www.carlogos.org/car-logos/lexus-logo.png",
+        logo: "https://www.carlogos.org/car-logos/lexus-logo.png",
         founded_year: 1989,
         founder: 'Toyota Motor Corporation',
         headquarter: { city: 'Nagoya', country: 'Japan' },
@@ -790,7 +790,7 @@ const overviewcars = [
     {
         id: 'lotus',
         brand: "Lotus",
-        img: "https://www.carlogos.org/car-logos/lotus-logo.png",
+        logo: "https://www.carlogos.org/car-logos/lotus-logo.png",
         founded_year: 1948,
         founder: 'Colin Chapman',
         headquarter: { city: 'Hethel', country: 'United Kingdom' },
@@ -811,7 +811,7 @@ const overviewcars = [
     {
         id: 'maserati',
         brand: "Maserati",
-        img: "https://www.carlogos.org/car-logos/maserati-logo.png",
+        logo: "https://www.carlogos.org/car-logos/maserati-logo.png",
         founded_year: 1914,
         founder: 'Alfieri Maserati',
         headquarter: { city: 'Modena', country: 'Italy' },
@@ -832,7 +832,7 @@ const overviewcars = [
     {
         id: 'nissan_nismo',
         brand: "Nissan Nismo",
-        img: "https://www.carlogos.org/car-logos/nissan-logo.png",
+        logo: "https://www.carlogos.org/car-logos/nissan-logo.png",
         founded_year: 1984,
         founder: 'Nissan Motor Company',
         headquarter: { city: 'Yokohama', country: 'Japan' },
@@ -853,7 +853,7 @@ const overviewcars = [
     {
         id: 'polestar',
         brand: "Polestar",
-        img: "https://www.carlogos.org/car-logos/polestar-logo.png",
+        logo: "https://www.carlogos.org/car-logos/polestar-logo.png",
         founded_year: 1996,
         founder: 'Flash Engineering',
         headquarter: { city: 'Gothenburg', country: 'Sweden' },
@@ -873,7 +873,7 @@ const overviewcars = [
     {
         id: 'rimac',
         brand: "Rimac",
-        img: "https://www.carlogos.org/car-logos/rimac-logo.png",
+        logo: "https://www.carlogos.org/car-logos/rimac-logo.png",
         founded_year: 2009,
         founder: 'Mate Rimac',
         headquarter: { city: 'Sveta Nedelja', country: 'Croatia' },
@@ -894,7 +894,7 @@ const overviewcars = [
     {
         id: 'saleen',
         brand: "Saleen",
-        img: "https://www.carlogos.org/car-logos/saleen-logo.png",
+        logo: "https://www.carlogos.org/car-logos/saleen-logo.png",
         founded_year: 1983,
         founder: 'Steve Saleen',
         headquarter: { city: 'Corona, California', country: 'USA' },
@@ -915,7 +915,7 @@ const overviewcars = [
     {
         id: 'shelby',
         brand: "Shelby",
-        img: "https://1000logos.net/wp-content/uploads/2024/10/Shelby-Logo.png",
+        logo: "https://1000logos.net/wp-content/uploads/2024/10/Shelby-Logo.png",
         founded_year: 1962,
         founder: 'Carroll Shelby',
         headquarter: { city: 'Las Vegas', country: 'USA' },
@@ -936,7 +936,7 @@ const overviewcars = [
     {
         id: 'sscnorthamerica',
         brand: "SSC North America",
-        img: "https://www.carlogos.org/car-logos/ssc-logo.png",
+        logo: "https://www.carlogos.org/car-logos/ssc-logo.png",
         founded_year: 1998,
         founder: 'Jerod Shelby',
         headquarter: { city: 'Richland, Washington', country: 'USA' },
@@ -957,7 +957,7 @@ const overviewcars = [
     {
         id: 'subaru_sti',
         brand: "Subaru STI",
-        img: "https://www.carlogos.org/car-logos/subaru-logo.png",
+        logo: "https://www.carlogos.org/car-logos/subaru-logo.png",
         founded_year: 1988,
         founder: 'Subaru Corporation',
         headquarter: { city: 'Ebisu', country: 'Japan' },
@@ -978,7 +978,7 @@ const overviewcars = [
     {
         id: 'tesla_roadster',
         brand: "Tesla Roadster",
-        img: "https://www.carlogos.org/car-logos/tesla-logo.png",
+        logo: "https://www.carlogos.org/car-logos/tesla-logo.png",
         founded_year: 2003,
         founder: 'Elon Musk & Martin Eberhard',
         headquarter: { city: 'Austin', country: 'USA' },
@@ -999,7 +999,7 @@ const overviewcars = [
     {
         id: 'toyota_gr',
         brand: "Toyota Gazoo Racing",
-        img: "https://www.carlogos.org/car-logos/toyota-logo.png",
+        logo: "https://www.carlogos.org/car-logos/toyota-logo.png",
         founded_year: 2007,
         founder: 'Toyota Motor Corporation',
         headquarter: { city: 'Toyota City', country: 'Japan' },
@@ -1020,7 +1020,7 @@ const overviewcars = [
     {
         id: 'tvr',
         brand: "TVR",
-        img: "https://www.carlogos.org/car-logos/tvr-logo.png",
+        logo: "https://www.carlogos.org/car-logos/tvr-logo.png",
         founded_year: 1947,
         founder: 'Trevor Wilkinson',
         headquarter: { city: 'Blackpool', country: 'United Kingdom' },
@@ -1041,7 +1041,7 @@ const overviewcars = [
     {
         id: 'vectormotors',
         brand: "Vector Motors",
-        img: "https://www.carlogos.org/car-logos/vector-logo.png",
+        logo: "https://www.carlogos.org/car-logos/vector-logo.png",
         founded_year: 1978,
         founder: 'Gerald Wiegert',
         headquarter: { city: 'Wilmington, California', country: 'USA' },
@@ -1062,7 +1062,7 @@ const overviewcars = [
     {
         id: 'wmotors',
         brand: "W Motors",
-        img: "https://www.carlogos.org/car-logos/w-motors-logo.png",
+        logo: "https://www.carlogos.org/car-logos/w-motors-logo.png",
         founded_year: 2012,
         founder: 'Ralph R. Debbas',
         headquarter: { city: 'Dubai', country: 'UAE' },
@@ -1083,7 +1083,7 @@ const overviewcars = [
     {
         id: 'zenvo',
         brand: "Zenvo",
-        img: "https://www.carlogos.org/car-logos/zenvo-logo.png",
+        logo: "https://www.carlogos.org/car-logos/zenvo-logo.png",
         founded_year: 2007,
         founder: 'Troels Vollertsen',
         headquarter: { city: 'Præstø', country: 'Denmark' },
@@ -1101,4 +1101,4 @@ const overviewcars = [
         ]
     }
 ]
-export default overviewcars;
+export default overviewbrands;

@@ -33,10 +33,10 @@ function BrandPage() {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const comapnys = await axios.get(
+        const company = await axios.get(
           `/api/companies`
         );
-        setCompanies(comapnys.data);
+        setCompanies(company.data);
       } catch (error) {
         console.error("Error fetching companies:", error);
       }

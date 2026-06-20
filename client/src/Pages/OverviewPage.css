@@ -10,9 +10,13 @@
     display: flex;
     gap: 20px;
     animation: slider 30s linear infinite;
-    width: 80vw;
+    width: auto;
 }
-
+.carbox{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
 /* .fill{
     height:100%;
 }

@@ -18,7 +18,7 @@ const CarDetails = () => {
           `/api/cars/brand/${brandName}/${encodeURIComponent(modelName)}`
         );
         setCD(response.data);
-        console.log(response.data)
+        // console.log(response.data)
       } catch (error) {
         console.error(error);
       }
