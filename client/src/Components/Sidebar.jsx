@@ -1,116 +1,99 @@
-import React, { useState } from 'react'
-import "./Sidebar.css"
-import Button from './Button'
-import { FaCar } from "react-icons/fa";
-import { TbMotorbikeFilled } from "react-icons/tb";
-import { CiSearch } from "react-icons/ci";
-import make_car from '../assets/make_car.jpg';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Car, Bike, Search, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
+import Button from './Button';
+import make_car from '../assets/make_car.jpg';
+import './Sidebar.css';
 
-function Sidebar({ companies }) {
+function Sidebar({ companies = [] }) {
+  const [showAll, setShowAll] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const [showall, setShowall] = useState(false)
-  const [searchQuery, setSearchQuery] = useState("")
+  // Search logic: uses .includes() instead of .startsWith() for better results
+  const filteredCompanies = companies.filter((company) =>
+    company?.title?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-  // Filter first, then slice if not showing all
-  const filteredCompanies = companies.filter(company =>
-    company.title.toLowerCase().startsWith(searchQuery.toLowerCase())
-  )
-
-  const visibleCompanies = showall ? filteredCompanies : filteredCompanies.slice(0, 10)
+  const visibleCompanies = showAll ? filteredCompanies : filteredCompanies.slice(0, 10);
 
   return (
-    <>
-      <aside className='sidebarcontainer'>
+    <aside className="sidebar-container">
+      {/* HEADER */}
+      <div className="sidebar-header">
+        <h2>E-Garage</h2>
+      </div>
 
-        <div className='font-bold text-2xl px-5 py-3 underline'>Welcome to my EGarage</div>
+      {/* QUICK CATEGORY SWITCHER */}
+      <div className="category-row">
+        <Link to="/" className="cat-btn active" title="Cars Catalog">
+          <Car size={20} />
+          <span>Cars</span>
+        </Link>
+        <Link to="/bikes" className="cat-btn coming-soon" title="Motorcycles (Coming Soon)">
+          <Bike size={20} />
+          <span>Bikes</span>
+        </Link>
+      </div>
 
-        <div className="car-bike-opt">
-          <div className='flex gap-4 justify-center align-middle items-center'>
-            <Link to={'/'} className='font-medium text-xs bg-gray-500 p-4 rounded-2xl'><FaCar className='text-2xl' /></Link>
-            <Link className='font-medium text-xs bg-gray-500 p-4 rounded-2xl'><TbMotorbikeFilled className='text-2xl' /></Link>
-            <Link to={`/makedreamcar`} >
-            <button
-              style={{
-                position: "relative",
-                width: "160px",
-                height: "75px",
-                border: "none",
-                padding: 0,
-                overflow: "hidden",
-                borderRadius: "12px",
-                cursor: "pointer",
-              }}
-              >
-              <img
-                src={make_car}
-                alt="car"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  zIndex: 1,
-                  filter: "brightness(50%)",
-                }}
-              />
-              <span
-                style={{
-                  position: "relative",
-                  zIndex: 10,
-                  color: "white",
-                  fontWeight: "bold",
-                  fontSize: "14px",
-                }}
-              >
-                MAKE YOUR DREAM GARAGE
-              </span>
-            </button>
-          </Link>
-          </div>
+      {/* DREAM CAR BUILDER BANNER */}
+      <Link to="/makedreamcar" className="dream-builder-banner">
+        <img src={make_car} alt="Dream Car Builder" className="banner-bg" />
+        <div className="banner-overlay">
+          <Sparkles size={16} className="text-gold" />
+          <span>MAKE YOUR DREAM GARAGE</span>
         </div>
+      </Link>
 
-        <div className="search flex justify-center items-center">
-          <CiSearch className='text-3xl' />
-          <input
-            type="text"
-            placeholder='Search by Company or Model'
-            className='bg-gray-500 w-70 px-3 py-1 rounded-2xl'
-            value={searchQuery}
-            onChange={(e) => {
-              setSearchQuery(e.target.value)
-              setShowall(false) // reset to top 10 on new search
-            }}
-          />
-        </div>
+      {/* SEARCH BOX */}
+      <div className="sidebar-search-box">
+        <Search size={18} className="search-icon" />
+        <input
+          type="text"
+          placeholder="Search brand or model..."
+          value={searchQuery}
+          onChange={(e) => {
+            setSearchQuery(e.target.value);
+            setShowAll(false); // Reset pagination on search
+          }}
+        />
+      </div>
 
-        <div className="companies">
+      {/* BRANDS / COMPANIES LIST */}
+      <div className="companies-section">
+        <span className="section-label">Popular Brands</span>
+
+        <div className="companies-list">
           {visibleCompanies.length > 0 ? (
             visibleCompanies.map((company) => (
-              <Link key={company._id} to={`/brand/${company.title.toLowerCase()}`}>
+              <Link 
+                key={company._id || company.title} 
+                to={`/brand/${encodeURIComponent(company.title.toLowerCase())}`}
+                className="brand-link"
+              >
                 <Button img={company.img} title={company.title} />
               </Link>
             ))
           ) : (
-            <p className="text-center text-gray-400 py-4">No brands found</p>
-          )}
-
-          {/* Only show View all/less if not searching */}
-          {!searchQuery && (
-            <button
-              onClick={() => setShowall(!showall)}
-              className="bg-gray-500 text-white px-3 py-2 rounded-2xl w-full"
-            >
-              {showall ? "View less" : "View all"}
-            </button>
+            <p className="no-brands-text">No brands found</p>
           )}
         </div>
 
-      </aside>
-    </>
-  )
+        {/* VIEW ALL / LESS BUTTON */}
+        {!searchQuery && filteredCompanies.length > 10 && (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="view-toggle-btn"
+          >
+            {showAll ? (
+              <>View Less <ChevronUp size={16} /></>
+            ) : (
+              <>View All ({filteredCompanies.length}) <ChevronDown size={16} /></>
+            )}
+          </button>
+        )}
+      </div>
+    </aside>
+  );
 }
 
 export default Sidebar;

@@ -8,6 +8,7 @@ import OverviewPage from './Pages/OverviewPage.jsx'
 import UrDreamcar from './Pages/UrDreamcar.jsx'
 import CarDetails from './Pages/CarDetails.jsx'
 import About from './Pages/About.jsx'
+import Contact from './Pages/Contact.jsx'
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     {
       path: "about",
       element: <About />
+    },
+    {
+      path: "contact",
+      element: <Contact />
     }
 
     ],

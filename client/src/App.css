@@ -34,59 +34,6 @@ html{
     gap: 1.5rem;
     padding: 1rem;
 }
-.famous-container{
-    flex: 1;
-    min-width: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.famouscards{
-    display: flex;
-    gap: 1.5rem;
-    /* padding: 0 0.5rem 2rem; */
-    animation: slider 60s linear infinite;
-    width: fit-content;
-}
-.famouscards:hover{
-    animation-play-state: paused;
-}
-
-.slider{
-    width: 69vw;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-
-}
-/* 
-.slider::-webkit-scrollbar {
-    height: 6px;
-}
-
-.slider::-webkit-scrollbar-track {
-    background: var(--primary);
-}
-
-.slider::-webkit-scrollbar-thumb {
-    background: var(--hover);
-    border-radius: 3px;
-}
-
-.slider::-webkit-scrollbar-thumb:hover {
-    background: #b89968;
-} */
-
-@keyframes slider {
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(calc(-50% - 12px));
-    }
-}
-
 /* cardetails */
 
 .fill{

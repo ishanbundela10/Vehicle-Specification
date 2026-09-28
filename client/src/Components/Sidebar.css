@@ -1,36 +1,303 @@
-.sidebarcontainer{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #393E46;
-    height: fit-content;
-    width: 25vw;
-    border-radius: 10px;
-    margin: 7px;
-}
- .car-bike-opt{
-    display: flex;
-    margin: 10px;
-    padding-left: 10px ;
-    gap: 30px;
-    align-items: flex-start;
-    flex-direction: column;
+/* SIDEBAR CONTAINER */
+.sidebar-container {
+  width: 280px;
+  min-height: calc(100vh - 70px);
+  background: var(--panel-bg, #121620);
+  border-right: 1px solid var(--border-color, #232a3b);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--text-main, #f3f4f6);
+  font-family: 'Rajdhani', sans-serif;
 }
 
-.companies{
-    display: grid;
-    margin-top: 20px;
-    padding: 5px 15px;
-    grid-template-columns: repeat(3, minmax(90px, 1fr));
-    grid-gap:10px 10px;
-    grid-template-rows: repeat(minmax(20vh, 1fr));
-    padding-bottom: 15px;
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-width: none;
+/* HEADER */
+.sidebar-header h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color, #232a3b);
 }
 
-button{
-    cursor: pointer;
+/* CATEGORY ROW */
+.category-row {
+  display: flex;
+  gap: 10px;
+}
+
+.cat-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, #232a3b);
+  color: var(--text-muted, #9ca3af);
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.cat-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.cat-btn.active {
+  background: rgba(229, 184, 105, 0.15);
+  border-color: var(--accent-gold, #e5b869);
+  color: var(--accent-gold, #e5b869);
+}
+
+.cat-btn.coming-soon {
+  opacity: 0.6;
+}
+
+/* DREAM BUILDER BANNER */
+.dream-builder-banner {
+  position: relative;
+  height: 75px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid var(--accent-gold, #e5b869);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.dream-builder-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 184, 105, 0.3);
+}
+
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35) contrast(1.2);
+  transition: transform 0.5s ease;
+}
+
+.dream-builder-banner:hover .banner-bg {
+  transform: scale(1.08);
+}
+
+.banner-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.text-gold {
+  color: var(--accent-gold, #e5b869);
+}
+
+/* SEARCH BOX */
+.sidebar-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-search-box .search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted, #9ca3af);
+  pointer-events: none;
+}
+
+.sidebar-search-box input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, #232a3b);
+  color: #fff;
+  padding: 10px 12px 10px 38px;
+  border-radius: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.sidebar-search-box input:focus {
+  border-color: var(--accent-gold, #e5b869);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(229, 184, 105, 0.2);
+}
+
+.sidebar-search-box input::placeholder {
+  color: var(--text-muted, #9ca3af);
+}
+
+/* COMPANIES / BRAND LIST */
+/* .companies-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} */
+
+/* .section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted, #9ca3af);
+  letter-spacing: 1px;
+} */
+
+/* .companies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+} */
+
+/* .brand-link {
+  text-decoration: none;
+} */
+
+/* .no-brands-text {
+  text-align: center;
+  color: var(--text-muted, #9ca3af);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+} */
+/* =========================================================
+   SLEEK BRAND LIST & CUSTOM DARK SCROLLBAR
+========================================================= */
+
+/* 1. CUSTOM DARK SCROLLBAR (Fixes the ugly white bar) */
+.companies-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.companies-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.companies-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+.companies-list::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold, #e5b869);
+}
+
+/* 2. BRAND CONTAINER LIST */
+.companies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* 3. OVERRIDE BUTTON / BRAND ROW STYLING */
+.brand-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* Overrides any default styles inside your <Button /> component */
+.brand-link button, 
+.brand-link > div,
+.companies-list .brand-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  height: 46px !important;
+  padding: 6px 12px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Hover Effect: Glow & Shift right */
+.brand-link:hover button,
+.brand-link:hover > div {
+  background: rgba(229, 184, 105, 0.1) !important;
+  border-color: var(--accent-gold, #e5b869) !important;
+  transform: translateX(4px);
+}
+
+/* Brand Logo Image inside row */
+.brand-link img {
+  width: 28px !important;
+  height: 28px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Brand Name Text */
+.brand-link span,
+.brand-link p,
+.brand-link h3,
+.brand-link h4 {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #f3f4f6 !important;
+  margin: 0 !important;
+  text-transform: capitalize;
+}
+
+.brand-link:hover span {
+  color: var(--accent-gold, #e5b869) !important;
+}
+/* TOGGLE VIEW BUTTON */
+.view-toggle-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, #232a3b);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-toggle-btn:hover {
+  background: var(--accent-gold, #e5b869);
+  color: #000;
+  border-color: var(--accent-gold, #e5b869);
 }

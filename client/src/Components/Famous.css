@@ -1,0 +1,71 @@
+/* FAMOUS CARS CONTAINER */
+.famous-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.famous-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.famous-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.gold-text {
+  color: #e5b869;
+}
+
+.famous-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* SLIDER MARQUEE WRAPPER */
+.slider-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 10px 0 20px 0;
+}
+
+.famouscards-marquee {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+/* PAUSE ON HOVER */
+/* .slider-wrapper:hover .famouscards-marquee {
+  animation-play-state: paused;
+} */
+
+/* INFINITE SCROLL ANIMATION */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.loading-state {
+  color: #9ca3af;
+  padding: 2rem;
+  text-align: center;
+  background: #121620;
+  border-radius: 12px;
+}

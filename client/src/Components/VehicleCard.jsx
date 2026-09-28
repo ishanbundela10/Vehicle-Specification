@@ -1,62 +1,76 @@
-import React from 'react'
-import "./VehicleCard.css"
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Heart, Star, Zap, Gauge, Timer } from 'lucide-react';
+import "./VehicleCard.css";
 
+function VehicleCard({ car, wishlist = [], toggleWishlist = () => {} }) {
+  const isWishlisted = wishlist.some((item) => (item._id || item.id) === (car._id || car.id));
 
-function VehicleCard({ car, wishlist = [], toggleWishlist = () => { } }) {
-
-  const isWishlisted = wishlist.find((item) => item.id === car.id)
+  const handleWishlistClick = (e) => {
+    e.preventDefault(); // Prevents Link navigation
+    e.stopPropagation(); // Prevents event bubbling
+    toggleWishlist(car);
+  };
 
   return (
-    <>
-    <Link to={`/brand/${car.brand}/${car.name}`}>
-      <div className="vehiclecards cursor-pointer">
+    <Link to={`/brand/${encodeURIComponent(car.brand.toLowerCase())}/${encodeURIComponent(car.name.toLowerCase())}`} className="vehicle-card-link">
+      <div className="vehiclecards">
         
-        <div className="vehiclebox w-full h-1/2 object-cover overflow-hidden">
-          <img src={car.img} alt="" className="w-full h-full object-cover rounded-lg cursor-pointer hover:scale-125" />
+        {/* CAR IMAGE CONTAINER */}
+        <div className="vehiclebox">
+          <img src={car.img} alt={car.name} className="car-img" />
+          <span className="car-type-badge">{car.type || 'Supercar'}</span>
+          
+          {/* WISHLIST HEART BUTTON */}
+          <button 
+            type="button" 
+            onClick={handleWishlistClick} 
+            className={`wishlist-btn ${isWishlisted ? 'active' : ''}`}
+            title={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+          >
+            <Heart size={18} fill={isWishlisted ? "#ef4444" : "none"} color={isWishlisted ? "#ef4444" : "#ffffff"} />
+          </button>
         </div>
+
+        {/* DETAILS BOX */}
         <div className="details-box">
-          <div className='flex flex-col gap-1'>
-            <span className='text-xs border px-2 py-0.5' style={{width:"fit-content"}}>{car.type}</span>
-            <span className='text-xs mt-1 '>{car.brand.toUpperCase()}</span>
-            <span className='text-2xl font-medium' >{car.name}</span>
-            <div className='flex justify-around my-2'>
-              <span className='border w-14 px-3 py-0.5 rounded-sm'>
-                <div className='text-center'>
-                  <div className='font-medium'>{car.performance.power_hp}</div>
-                  <div className='text-[10px]'>HP</div>
-                </div>
-              </span>
-              <span className='border w-18 rounded-sm'>
-                <div className='text-center'>
-                  <div className='font-medium'>{car.performance.top_speed_kmh}</div>
-                  <div className='text-[10px]'>TOP SPEED</div>
-                </div>
-              </span>
-              <span className='border w-16 rounded-sm'>
-                <div className='text-center'>
-                  <div className='font-medium'>{car.performance.acceleration_sec}</div>
-                  <div className='text-[10px]'>0-100</div>
-                </div>
-              </span>
+          <span className="brand-name">{car.brand?.toUpperCase()}</span>
+          <h3 className="car-title">{car.name}</h3>
+
+          {/* SPECS GRID */}
+          <div className="specs-grid">
+            <div className="spec-pill">
+              <span className="spec-val">{car.performance?.power_hp || '--'}</span>
+              <span className="spec-lbl"><Zap size={10} /> HP</span>
+            </div>
+            <div className="spec-pill">
+              <span className="spec-val">{car.performance?.top_speed_kmh || '--'}</span>
+              <span className="spec-lbl"><Gauge size={10} /> TOP KM/H</span>
+            </div>
+            <div className="spec-pill">
+              <span className="spec-val">{car.performance?.acceleration_sec || '--'}s</span>
+              <span className="spec-lbl"><Timer size={10} /> 0-100</span>
             </div>
           </div>
-          <div className="rating">
+
+          {/* RATING BAR */}
+          <div className="rating-row">
             <div className="stars">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className={i < Math.floor(car.rating) ? 'star filled' : (i - 0.5 < car.rating ? 'star half' : 'star')}>
-                  ★
-                </span>
+                <Star
+                  key={i}
+                  size={14}
+                  className={i < Math.floor(car.rating || 5) ? 'star-icon filled' : 'star-icon'}
+                />
               ))}
             </div>
-            <span className="rating-value">{car.rating}/5</span>
-            <button onClick={() => { toggleWishlist(car) }} className='text-3xl'> {isWishlisted ? "❤️" : "🤍"} </button>
+            <span className="rating-value">{car.rating ? `${car.rating}/5` : '5/5'}</span>
           </div>
+
         </div>
       </div>
     </Link>
-    </>
-  )
+  );
 }
 
-export default VehicleCard
+export default VehicleCard;
