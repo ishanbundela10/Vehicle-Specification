@@ -51,10 +51,13 @@ connectDB();
 
 // })
 
-// app.get("/", (req, res)=>{
-//   res.send('hello');
+app.get("/", (req, res)=>{
+  res.send('hello');
   
-// })
+})
+
+// routes
+
 app.use("/api/cars", carsroutes);
 app.use("/api/companies", companyroutes);
 app.use("/api/brands", brandoverviewroutes )

@@ -1099,6 +1099,843 @@ const overviewbrands = [
             { model: "Zenvo TSR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Zenvo_TSR_%282017%29.jpg/960px-Zenvo_TSR_%282017%29.jpg" },
             { model: "Zenvo Aurora Tur", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Zenvo_Aurora_Tur_%222023%29.jpg/960px-Zenvo_Aurora_Tur_%222023%29.jpg" },
         ]
+    },
+    {
+        id: 'bristol',
+        brand: "Bristol",
+        logo: 'https://www.carlogos.org/car-logos/bristol-logo.png',
+        founded_year: 1945,
+        founder: 'Sir George White',
+        headquarter: { city: 'Filton', country: 'United Kingdom' },
+        description: 'Bristol Cars was a British manufacturer of hand-built luxury sports cars with aircraft engineering heritage, famous for the V10-powered Fighter supercar.',
+        top_speed_onroad: 210,
+        top_speed_trackonly: 225,
+        torque_onroad: 712,
+        torque_trackonly: 1400,
+        fastest_onroad: 'Bristol Fighter S',
+        fastest_trackonly: 'Bristol Fighter T',
+        famous_cars: [
+            { model: "Bristol Fighter T", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1910_Rolls-Royce_Silver_Ghost.jpg/960px-1910_Rolls-Royce_Silver_Ghost.jpg" },
+            { model: "Bristol Bullet", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2022_Acura_NSX_Type_S.jpg/960px-2022_Acura_NSX_Type_S.jpg" }
+        ]
+    },
+    {
+        id: 'buick',
+        brand: "Buick",
+        logo: 'https://www.carlogos.org/car-logos/buick-logo.png',
+        founded_year: 1903,
+        founder: 'David Dunbar Buick',
+        headquarter: { city: 'Detroit', country: 'USA' },
+        description: 'Buick is an iconic American brand known for muscle car legends like the GNX, combining turbocharged V6 power with understated luxury styling.',
+        top_speed_onroad: 124,
+        top_speed_trackonly: 150,
+        torque_onroad: 488,
+        torque_trackonly: 500,
+        fastest_onroad: 'Buick Regal GNX',
+        fastest_trackonly: 'Buick Wildcat Concept',
+        famous_cars: [
+            { model: "Buick GNX", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/1953_Chevrolet_Corvette_C1.jpg/960px-1953_Chevrolet_Corvette_C1.jpg" },
+            { model: "Buick Riviera GS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Chevrolet_Corvette_C7_Z06_%282015%29.jpg/960px-Chevrolet_Corvette_C7_Z06_%282015%29.jpg" }
+        ]
+    },
+    {
+        id: 'callaway',
+        brand: "Callaway",
+        logo: 'https://1000logos.net/wp-content/uploads/2024/01/Callaway-Logo.png',
+        founded_year: 1977,
+        founder: 'Reeves Callaway',
+        headquarter: { city: 'Old Lyme, Connecticut', country: 'USA' },
+        description: 'Callaway Cars is an American specialty vehicle manufacturer famous for twin-turbocharged Corvettes, including the record-breaking Sledgehammer.',
+        top_speed_onroad: 254,
+        top_speed_trackonly: 254,
+        torque_onroad: 1047,
+        torque_trackonly: 1047,
+        fastest_onroad: 'Callaway Sledgehammer Corvette',
+        fastest_trackonly: 'Callaway C16 Speedster',
+        famous_cars: [
+            { model: "Callaway Sledgehammer", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Chevrolet_Corvette_C8_Stingray_%282020%29.jpg/960px-Chevrolet_Corvette_C8_Stingray_%282020%29.jpg" },
+            { model: "Callaway C16", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Chevrolet_Corvette_C8_Z06_%282023%29.jpg/960px-Chevrolet_Corvette_C8_Z06_%282023%29.jpg" }
+        ]
+    },
+    {
+        id: 'caparo',
+        brand: "Caparo",
+        logo: 'https://www.carlogos.org/car-logos/caparo-logo.png',
+        founded_year: 2006,
+        founder: 'Graham Halstead & Ben Scott-Geddes',
+        headquarter: { city: 'Leamington Spa', country: 'United Kingdom' },
+        description: 'Caparo Vehicle Technologies created the T1, a lightweight F1-inspired street-legal race car capable of immense cornering g-forces.',
+        top_speed_onroad: 205,
+        top_speed_trackonly: 205,
+        torque_onroad: 420,
+        torque_trackonly: 450,
+        fastest_onroad: 'Caparo T1',
+        fastest_trackonly: 'Caparo T1 Race',
+        famous_cars: [
+            { model: "Caparo T1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Chevrolet_Corvette_ZR1_C8_%282025%29.jpg/960px-Chevrolet_Corvette_ZR1_C8_%282025%29.jpg" }
+        ]
+    },
+    {
+        id: 'cizeta',
+        brand: "Cizeta",
+        logo: 'https://www.carlogos.org/car-logos/cizeta-logo.png',
+        founded_year: 1988,
+        founder: 'Claudio Zampolli & Giorgio Moroder',
+        headquarter: { city: 'Modena', country: 'Italy' },
+        description: 'Cizeta is an exotic Italian manufacturer famous for creating the V16T, a transverse V16 quad-turbo supercar with four pop-up headlights.',
+        top_speed_onroad: 204,
+        top_speed_trackonly: 204,
+        torque_onroad: 540,
+        torque_trackonly: 540,
+        fastest_onroad: 'Cizeta-Moroder V16T',
+        fastest_trackonly: 'Cizeta V16T TT',
+        famous_cars: [
+            { model: "Cizeta V16T", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Czinger_21C_%282021%29.jpg/960px-Czinger_21C_%282021%29.jpg" }
+        ]
+    },
+    {
+        id: 'cupra',
+        brand: "Cupra",
+        logo: 'https://1000logos.net/wp-content/uploads/2020/06/Cupra-Logo.png',
+        founded_year: 2018,
+        founder: 'SEAT / VW Group',
+        headquarter: { city: 'Martorell', country: 'Spain' },
+        description: 'Cupra is a high-performance Spanish automotive brand producing aggressive, high-tech electric and turbocharged performance crossover cars.',
+        top_speed_onroad: 155,
+        top_speed_trackonly: 180,
+        torque_onroad: 480,
+        torque_trackonly: 500,
+        fastest_onroad: 'Cupra Formentor VZ5',
+        fastest_trackonly: 'Cupra E-TCR',
+        famous_cars: [
+            { model: "Cupra Formentor VZ5", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Czinger_21C_V_Max.jpg/960px-Czinger_21C_V_Max.jpg" }
+        ]
+    },
+    {
+        id: 'dallara',
+        brand: "Dallara",
+        logo: 'https://1000logos.net/wp-content/uploads/2023/06/Dallara-Logo.png',
+        founded_year: 1972,
+        founder: 'Gian Paolo Dallara',
+        headquarter: { city: 'Varano de\' Melegari', country: 'Italy' },
+        description: 'Dallara is an Italian chassis manufacturer for IndyCar and Formula racing, creator of the ultralight street-legal Dallara Stradale.',
+        top_speed_onroad: 174,
+        top_speed_trackonly: 180,
+        torque_onroad: 500,
+        torque_trackonly: 500,
+        fastest_onroad: 'Dallara Stradale',
+        fastest_trackonly: 'Dallara EXP',
+        famous_cars: [
+            { model: "Dallara Stradale", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Czinger_Hyper_GT_%282023%29.jpg/960px-Czinger_Hyper_GT_%282023%29.jpg" }
+        ]
+    },
+    {
+        id: 'donkervoort',
+        brand: "Donkervoort",
+        logo: 'https://www.carlogos.org/car-logos/donkervoort-logo.png',
+        founded_year: 1978,
+        founder: 'Joop Donkervoort',
+        headquarter: { city: 'Lelystad', country: 'Netherlands' },
+        description: 'Donkervoort is a Dutch manufacturer of ultra-lightweight sports cars with extreme power-to-weight ratios and Audi Turbo 5-cylinder power.',
+        top_speed_onroad: 174,
+        top_speed_trackonly: 180,
+        torque_onroad: 690,
+        torque_trackonly: 700,
+        fastest_onroad: 'Donkervoort F22',
+        fastest_trackonly: 'Donkervoort D8 GTO JD70',
+        famous_cars: [
+            { model: "Donkervoort F22", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Czinger_21C_Track_Edition.jpg/960px-Czinger_21C_Track_Edition.jpg" }
+        ]
+    },
+    {
+        id: 'dsautomobiles',
+        brand: "DS Automobiles",
+        logo: 'https://www.carlogos.org/car-logos/ds-logo.png',
+        founded_year: 2014,
+        founder: 'Stellantis',
+        headquarter: { city: 'Paris', country: 'France' },
+        description: 'DS Automobiles is a French luxury brand with Formula E racing pedigree, creating electric performance concepts like the E-Tense Performance.',
+        top_speed_onroad: 155,
+        top_speed_trackonly: 155,
+        torque_onroad: 8000,
+        torque_trackonly: 8000,
+        fastest_onroad: 'DS E-Tense Performance',
+        fastest_trackonly: 'DS E-Tense FE21',
+        famous_cars: [
+            { model: "DS E-Tense Performance", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Czinger_21C_LMR.jpg/960px-Czinger_21C_LMR.jpg" }
+        ]
+    },
+    {
+        id: 'fiat',
+        brand: "Fiat",
+        logo: 'https://www.carlogos.org/car-logos/fiat-logo.png',
+        founded_year: 1899,
+        founder: 'Giovanni Agnelli',
+        headquarter: { city: 'Turin', country: 'Italy' },
+        description: 'Fiat is one of Italy\'s oldest automobile manufacturers, historic creator of legendary sports cars like the 8V Supersonic and Dino Spider.',
+        top_speed_onroad: 130,
+        top_speed_trackonly: 150,
+        fastest_onroad: 'Fiat Dino Coupe',
+        fastest_trackonly: 'Fiat 8V Otto Vu',
+        famous_cars: [
+            { model: "Fiat 8V Supersonic", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/De_Tomaso_Pantera_%281971%29.jpg/960px-De_Tomaso_Pantera_%281971%29.jpg" }
+        ]
+    },
+    {
+        id: 'gemballa',
+        brand: "Gemballa",
+        logo: 'https://1000logos.net/wp-content/uploads/2019/11/Gemballa-logo.png',
+        founded_year: 1981,
+        founder: 'Uwe Gemballa',
+        headquarter: { city: 'Leonberg', country: 'Germany' },
+        description: 'Gemballa is a German extreme tuning house known for legendary custom Porsche and Ferrari builds, including the 670hp Mirage GT.',
+        top_speed_onroad: 208,
+        top_speed_trackonly: 215,
+        torque_onroad: 630,
+        torque_trackonly: 650,
+        fastest_onroad: 'Gemballa Mirage GT',
+        fastest_trackonly: 'Gemballa MIG-U1',
+        famous_cars: [
+            { model: "Gemballa Mirage GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/De_Tomaso_Mangusta_%281967%29.jpg/960px-De_Tomaso_Mangusta_%281967%29.jpg" }
+        ]
+    },
+    {
+        id: 'ginetta',
+        brand: "Ginetta",
+        logo: 'https://www.carlogos.org/car-logos/ginetta-logo.png',
+        founded_year: 1958,
+        founder: 'Walklett Brothers',
+        headquarter: { city: 'Leeds', country: 'United Kingdom' },
+        description: 'Ginetta is a British specialist race and sports car builder known for lightweight track cars and the high-downforce Akula supercar.',
+        top_speed_onroad: 200,
+        top_speed_trackonly: 210,
+        torque_onroad: 705,
+        torque_trackonly: 705,
+        fastest_onroad: 'Ginetta Akula',
+        fastest_trackonly: 'Ginetta G58',
+        famous_cars: [
+            { model: "Ginetta Akula", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/De_Tomaso_Vallelunga_%281965%29.jpg/960px-De_Tomaso_Vallelunga_%281965%29.jpg" }
+        ]
+    },
+    {
+        id: 'gordonmurray',
+        brand: "Gordon Murray",
+        logo: 'https://1000logos.net/wp-content/uploads/2024/01/Gordon-Murray-Automotive-logo.png',
+        founded_year: 2017,
+        founder: 'Professor Gordon Murray',
+        headquarter: { city: 'Windlesham', country: 'United Kingdom' },
+        description: 'GMA builds analogue hypercars designed by legendary F1 designer Gordon Murray, featuring ultra-high revving Cosworth V12 engines.',
+        top_speed_onroad: 226,
+        top_speed_trackonly: 230,
+        torque_onroad: 467,
+        torque_trackonly: 485,
+        fastest_onroad: 'GMA T.50',
+        fastest_trackonly: 'GMA T.50s Niki Lauda',
+        famous_cars: [
+            { model: "GMA T.50", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/De_Tomaso_P72_%282019%29.jpg/960px-De_Tomaso_P72_%282019%29.jpg" }
+        ]
+    },
+    {
+        id: 'gumpert',
+        brand: "Gumpert",
+        logo: 'https://www.carlogos.org/car-logos/gumpert-logo.png',
+        founded_year: 2004,
+        founder: 'Roland Gumpert',
+        headquarter: { city: 'Altenburg', country: 'Germany' },
+        description: 'Gumpert created the Apollo, an extreme Nürburgring record-setting supercar engineered with intense downforce and twin-turbo V8 power.',
+        top_speed_onroad: 224,
+        top_speed_trackonly: 224,
+        torque_onroad: 900,
+        torque_trackonly: 900,
+        fastest_onroad: 'Gumpert Apollo S',
+        fastest_trackonly: 'Gumpert Apollo Enraged',
+        famous_cars: [
+            { model: "Gumpert Apollo S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/De_Tomaso_Deauville_%281971%29.jpg/960px-De_Tomaso_Deauville_%281971%29.jpg" }
+        ]
+    },
+    {
+        id: 'holden',
+        brand: "Holden",
+        logo: 'https://www.carlogos.org/car-logos/holden-logo.png',
+        founded_year: 1856,
+        founder: 'James Alexander Holden',
+        headquarter: { city: 'Melbourne', country: 'Australia' },
+        description: 'Holden HSV built iconic Australian rear-wheel-drive muscle cars powered by supercharged V8 engines.',
+        top_speed_onroad: 182,
+        top_speed_trackonly: 186,
+        torque_onroad: 740,
+        torque_trackonly: 740,
+        fastest_onroad: 'HSV GTS-R W1',
+        fastest_trackonly: 'Holden Commodore V8 Supercar',
+        famous_cars: [
+            { model: "HSV GTS-R W1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dodge_Viper_GTS-R_%281996%29.jpg/960px-Dodge_Viper_GTS-R_%281996%29.jpg" }
+        ]
+    },
+    {
+        id: 'hummer',
+        brand: "Hummer",
+        logo: 'https://www.carlogos.org/car-logos/hummer-logo.png',
+        founded_year: 1992,
+        founder: 'AM General / GM',
+        headquarter: { city: 'Detroit', country: 'USA' },
+        description: 'Hummer produces military-derived super-trucks, now reborn as a 1000hp tri-motor electric super-EV with Watts to Freedom launch control.',
+        top_speed_onroad: 106,
+        top_speed_trackonly: 106,
+        torque_onroad: 15500,
+        torque_trackonly: 15500,
+        fastest_onroad: 'GMC Hummer EV Edition 1',
+        fastest_trackonly: 'GMC Hummer EV SUV',
+        famous_cars: [
+            { model: "Hummer EV Edition 1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Dodge_Viper_ACR_%282016%29.jpg/960px-Dodge_Viper_ACR_%282016%29.jpg" }
+        ]
+    },
+    {
+        id: 'infiniti',
+        brand: "Infiniti",
+        logo: 'https://www.carlogos.org/car-logos/infiniti-logo.png',
+        founded_year: 1989,
+        founder: 'Nissan Motor Co.',
+        headquarter: { city: 'Yokohama', country: 'Japan' },
+        description: 'Infiniti is Nissan\'s luxury arm, producing twin-turbo V6 sports coupes like the Q60 Red Sport 400 and F1-hybrid concepts.',
+        top_speed_onroad: 155,
+        top_speed_trackonly: 180,
+        torque_onroad: 475,
+        torque_trackonly: 500,
+        fastest_onroad: 'Infiniti Q60 Red Sport 400',
+        fastest_trackonly: 'Infiniti Project Black S',
+        famous_cars: [
+            { model: "Infiniti Q60 Red Sport 400", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dodge_Challenger_SRT_Demon_%282018%29.jpg/960px-Dodge_Challenger_SRT_Demon_%282018%29.jpg" }
+        ]
+    },
+    {
+        id: 'isorivolta',
+        brand: "Iso Rivolta",
+        logo: 'https://1000logos.net/wp-content/uploads/2023/08/Iso-Logo.png',
+        founded_year: 1953,
+        founder: 'Renzo Rivolta',
+        headquarter: { city: 'Bresso', country: 'Italy' },
+        description: 'Iso Rivolta combined sleek Italian design with Corvette V8 muscle, producing classic icons like the Grifo and GTZ.',
+        top_speed_onroad: 171,
+        top_speed_trackonly: 190,
+        torque_onroad: 500,
+        torque_trackonly: 600,
+        fastest_onroad: 'Iso Grifo 7 Litri',
+        fastest_trackonly: 'Iso GTZ (2020)',
+        famous_cars: [
+            { model: "Iso Grifo 7 Litri", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Dodge_Charger_SRT_Hellcat_%282015%29.jpg/960px-Dodge_Charger_SRT_Hellcat_%282015%29.jpg" }
+        ]
+    },
+    {
+        id: 'karma',
+        brand: "Karma",
+        logo: 'https://www.carlogos.org/car-logos/karma-logo.png',
+        founded_year: 2014,
+        founder: 'Wanxiang Group',
+        headquarter: { city: 'Irvine, California', country: 'USA' },
+        description: 'Karma Automotive produces luxury hybrid and electric sports cars featuring striking design and high-output EV powertrains.',
+        top_speed_onroad: 125,
+        top_speed_trackonly: 165,
+        torque_onroad: 1350,
+        torque_trackonly: 1350,
+        fastest_onroad: 'Karma GS-6',
+        fastest_trackonly: 'Karma Kaveya',
+        famous_cars: [
+            { model: "Karma Revero GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dodge_Challenger_SRT_Demon_170_%282023%29.jpg/960px-Dodge_Challenger_SRT_Demon_170_%282023%29.jpg" }
+        ]
+    },
+    {
+        id: 'ktm',
+        brand: "KTM",
+        logo: 'https://www.carlogos.org/car-logos/ktm-logo.png',
+        founded_year: 1934,
+        founder: 'Johann Trunkenpolz',
+        headquarter: { city: 'Mattighofen', country: 'Austria' },
+        description: 'KTM Sportcar GmbH produces ultra-lightweight track weapons and the GT-XR, utilizing Audi 5-cylinder turbo power.',
+        top_speed_onroad: 174,
+        top_speed_trackonly: 174,
+        torque_onroad: 581,
+        torque_trackonly: 581,
+        fastest_onroad: 'KTM X-Bow GT-XR',
+        fastest_trackonly: 'KTM X-Bow GTX',
+        famous_cars: [
+            { model: "KTM X-Bow GT-XR", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ford_GT40_%281966%29.jpg/960px-Ford_GT40_%281966%29.jpg" }
+        ]
+    },
+    {
+        id: 'lancia',
+        brand: "Lancia",
+        logo: 'https://www.carlogos.org/car-logos/lancia-logo.png',
+        founded_year: 1906,
+        founder: 'Vincenzo Lancia',
+        headquarter: { city: 'Turin', country: 'Italy' },
+        description: 'Lancia is World Rally Championship royalty, legendary for producing iconic rally icons like the Stratos, 037, and Delta Integrale.',
+        top_speed_onroad: 140,
+        top_speed_trackonly: 155,
+        torque_onroad: 310,
+        torque_trackonly: 350,
+        fastest_onroad: 'Lancia Delta HF Integrale Evo II',
+        fastest_trackonly: 'Lancia Stratos HF',
+        famous_cars: [
+            { model: "Lancia Stratos HF", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ford_GT_%282017%29.jpg/960px-Ford_GT_%282017%29.jpg" },
+            { model: "Lancia Delta HF Integrale", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ford_Mustang_Shelby_GT500_%282020%29.jpg/960px-Ford_Mustang_Shelby_GT500_%282020%29.jpg" }
+        ]
+    },
+    {
+        id: 'ligier',
+        brand: "Ligier",
+        logo: 'https://www.carlogos.org/car-logos/ligier-logo.png',
+        founded_year: 1968,
+        founder: 'Guy Ligier',
+        headquarter: { city: 'Avermes', country: 'France' },
+        description: 'Ligier is a French racing car manufacturer with Formula 1 and Endurance racing pedigree, building modern track sports cars like the JS2 R.',
+        top_speed_onroad: 160,
+        top_speed_trackonly: 175,
+        torque_onroad: 420,
+        torque_trackonly: 420,
+        fastest_onroad: 'Ligier JS2 R',
+        fastest_trackonly: 'Ligier JS P320',
+        famous_cars: [
+            { model: "Ligier JS2 R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ford_Mustang_GTD_%282024%29.jpg/960px-Ford_Mustang_GTD_%282024%29.jpg" }
+        ]
+    },
+    {
+        id: 'lister',
+        brand: "Lister",
+        logo: 'https://www.carlogos.org/car-logos/lister-logo.png',
+        founded_year: 1954,
+        founder: 'Brian Lister',
+        headquarter: { city: 'Cambridgeshire', country: 'United Kingdom' },
+        description: 'Lister Motor Company is a British sports car manufacturer famous for the V12 Lister Storm supercar and high-performance Jaguar tuning.',
+        top_speed_onroad: 208,
+        top_speed_trackonly: 208,
+        torque_onroad: 780,
+        torque_trackonly: 800,
+        fastest_onroad: 'Lister Storm V12',
+        fastest_trackonly: 'Lister LFT-660',
+        famous_cars: [
+            { model: "Lister Storm V12", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ford_Mustang_Shelby_GT350R_%282016%29.jpg/960px-Ford_Mustang_Shelby_GT350R_%282016%29.jpg" }
+        ]
+    },
+    {
+        id: 'lucid',
+        brand: "Lucid",
+        logo: 'https://www.carlogos.org/car-logos/lucid-logo.png',
+        founded_year: 2007,
+        founder: 'Bernard Tse & Sam Weng',
+        headquarter: { city: 'Newark, California', country: 'USA' },
+        description: 'Lucid Motors creates world-leading electric super-sedans like the 1200hp Air Sapphire with sub-2-second 0-60 acceleration.',
+        top_speed_onroad: 205,
+        top_speed_trackonly: 205,
+        torque_onroad: 1930,
+        torque_trackonly: 1930,
+        fastest_onroad: 'Lucid Air Sapphire',
+        fastest_trackonly: 'Lucid Air Sapphire',
+        famous_cars: [
+            { model: "Lucid Air Sapphire", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Hennessey_Venom_GT_%282011%29.jpg/960px-Hennessey_Venom_GT_%282011%29.jpg" }
+        ]
+    },
+    {
+        id: 'mazda',
+        brand: "Mazda",
+        logo: 'https://www.carlogos.org/car-logos/mazda-logo.png',
+        founded_year: 1920,
+        founder: 'Jujiro Matsuda',
+        headquarter: { city: 'Hiroshima', country: 'Japan' },
+        description: 'Mazda is famous for lightweight roadsters like the MX-5 Miata and rotary-powered sports cars like the RX-7 and 4-rotor 787B Le Mans winner.',
+        top_speed_onroad: 155,
+        top_speed_trackonly: 210,
+        torque_onroad: 314,
+        torque_trackonly: 608,
+        fastest_onroad: 'Mazda RX-7 Spirit R',
+        fastest_trackonly: 'Mazda 787B Le Mans',
+        famous_cars: [
+            { model: "Mazda RX-7 (FD3S)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hennessey_Venom_F5_%282020%29.jpg/960px-Hennessey_Venom_F5_%282020%29.jpg" },
+            { model: "Mazda MX-5 Miata", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hennessey_Venom_F5_Revolution_%282023%29.jpg/960px-Hennessey_Venom_F5_Revolution_%282023%29.jpg" }
+        ]
+    },
+    {
+        id: 'mg',
+        brand: "MG",
+        logo: 'https://www.carlogos.org/car-logos/mg-logo.png',
+        founded_year: 1924,
+        founder: 'Cecil Kimber',
+        headquarter: { city: 'Longbridge', country: 'United Kingdom' },
+        description: 'MG has a rich British roadster history, now producing high-performance EV sports cars like the dual-motor Cyberster roadster.',
+        top_speed_onroad: 125,
+        top_speed_trackonly: 130,
+        torque_onroad: 725,
+        torque_trackonly: 725,
+        fastest_onroad: 'MG Cyberster GT',
+        fastest_trackonly: 'MG XPower SV-R',
+        famous_cars: [
+            { model: "MG Cyberster GT", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hennessey_Mammoth_1000_TRX.jpg/960px-Hennessey_Mammoth_1000_TRX.jpg" }
+        ]
+    },
+    {
+        id: 'mini',
+        brand: "Mini",
+        logo: 'https://www.carlogos.org/car-logos/mini-logo.png',
+        founded_year: 1959,
+        founder: 'Alec Issigonis / BMW Group',
+        headquarter: { city: 'Oxford', country: 'United Kingdom' },
+        description: 'Mini John Cooper Works represents the pinnacle of front-wheel-drive hot hatches with go-kart handling and track-tuned turbo power.',
+        top_speed_onroad: 165,
+        top_speed_trackonly: 165,
+        torque_onroad: 450,
+        torque_trackonly: 450,
+        fastest_onroad: 'Mini JCW GP (F56)',
+        fastest_trackonly: 'Mini JCW Challenge',
+        famous_cars: [
+            { model: "Mini John Cooper Works GP", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hennessey_Mustang_HPE800.jpg/960px-Hennessey_Mustang_HPE800.jpg" }
+        ]
+    },
+    {
+        id: 'mitsuoka',
+        brand: "Mitsuoka",
+        logo: 'https://www.carlogos.org/car-logos/mitsuoka-logo.png',
+        founded_year: 1968,
+        founder: 'Susumu Mitsuoka',
+        headquarter: { city: 'Toyama', country: 'Japan' },
+        description: 'Mitsuoka Motor is a quirky Japanese coachbuilder famous for bespoke retro styling, including the Yamata-no-Orochi supercar inspired by Japanese mythology.',
+        top_speed_onroad: 152,
+        top_speed_trackonly: 152,
+        torque_onroad: 328,
+        torque_trackonly: 328,
+        fastest_onroad: 'Mitsuoka Orochi',
+        fastest_trackonly: 'Mitsuoka Orochi Evangelion',
+        famous_cars: [
+            { model: "Mitsuoka Orochi", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Honda_NSX_Type_R_%281992%29.jpg/960px-Honda_NSX_Type_R_%281992%29.jpg" }
+        ]
+    },
+    {
+        id: 'mosler',
+        brand: "Mosler",
+        logo: 'https://www.carlogos.org/car-logos/mosler-logo.png',
+        founded_year: 1985,
+        founder: 'Warren Mosler',
+        headquarter: { city: 'Riviera Beach, Florida', country: 'USA' },
+        description: 'Mosler Automotive built ultralight mid-engine supercars that dominated endurance racing, most legendary for the MT900 GTR.',
+        top_speed_onroad: 211,
+        top_speed_trackonly: 220,
+        torque_onroad: 650,
+        torque_trackonly: 700,
+        fastest_onroad: 'Mosler MT900 GTR XX',
+        fastest_trackonly: 'Mosler MT900R Race Car',
+        famous_cars: [
+            { model: "Mosler MT900S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Honda_Civic_Type_R_EK9_%281997%29.jpg/960px-Honda_Civic_Type_R_EK9_%281997%29.jpg" }
+        ]
+    },
+    {
+        id: 'noble',
+        brand: "Noble",
+        logo: 'https://www.carlogos.org/car-logos/noble-logo.png',
+        founded_year: 1999,
+        founder: 'Lee Noble',
+        headquarter: { city: 'Leicester', country: 'United Kingdom' },
+        description: 'Noble Automotive builds pure, analogue British supercars with twin-turbo power, manual gearboxes, and zero electronic driver aids.',
+        top_speed_onroad: 225,
+        top_speed_trackonly: 225,
+        torque_onroad: 818,
+        torque_trackonly: 850,
+        fastest_onroad: 'Noble M600',
+        fastest_trackonly: 'Noble M600 Carbon Sport',
+        famous_cars: [
+            { model: "Noble M600", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Honda_Civic_Type_R_FK8_%282017%29.jpg/960px-Honda_Civic_Type_R_FK8_%282017%29.jpg" },
+            { model: "Noble M12 GTO-3R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Honda_Civic_Type_R_FL5_%282023%29.jpg/960px-Honda_Civic_Type_R_FL5_%282023%29.jpg" }
+        ]
+    },
+    {
+        id: 'panoz',
+        brand: "Panoz",
+        logo: 'https://www.carlogos.org/car-logos/panoz-logo.png',
+        founded_year: 1989,
+        founder: 'Dan Panoz',
+        headquarter: { city: 'Braselton, Georgia', country: 'USA' },
+        description: 'Panoz is an American sports car manufacturer with Le Mans winning heritage, famous for the front-mid engine Esperante GTR-1 hypercar.',
+        top_speed_onroad: 215,
+        top_speed_trackonly: 225,
+        torque_onroad: 678,
+        torque_trackonly: 700,
+        fastest_onroad: 'Panoz Esperante GTR-1 Road Car',
+        fastest_trackonly: 'Panoz Abruzzi',
+        famous_cars: [
+            { model: "Panoz Esperante GTR-1", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Honda_Integra_Type_R_DC2_%281995%29.jpg/960px-Honda_Integra_Type_R_DC2_%281995%29.jpg" }
+        ]
+    },
+    {
+        id: 'peugeot',
+        brand: "Peugeot",
+        logo: 'https://www.carlogos.org/car-logos/peugeot-logo.png',
+        founded_year: 1896,
+        founder: 'Armand Peugeot',
+        headquarter: { city: 'Poissy', country: 'France' },
+        description: 'Peugeot Sport has legendary Le Mans and WRC rally victories, developing iconic hot hatches and hypercar concepts like the Onyx and 9X8.',
+        top_speed_onroad: 155,
+        top_speed_trackonly: 215,
+        torque_onroad: 520,
+        torque_trackonly: 700,
+        fastest_onroad: 'Peugeot 508 PSE',
+        fastest_trackonly: 'Peugeot 9X8 LMH',
+        famous_cars: [
+            { model: "Peugeot 205 Turbo 16", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Hyundai_i30_N_%282017%29.jpg/960px-Hyundai_i30_N_%282017%29.jpg" }
+        ]
+    },
+    {
+        id: 'pininfarina',
+        brand: "Pininfarina",
+        logo: 'https://www.carlogos.org/car-logos/pininfarina-logo.png',
+        founded_year: 1930,
+        founder: 'Battista "Pinin" Farina',
+        headquarter: { city: 'Cambiano', country: 'Italy' },
+        description: 'Automobili Pininfarina is an Italian luxury electric hypercar manufacturer, creator of the 1900hp Battista — one of the fastest accelerating cars on Earth.',
+        top_speed_onroad: 222,
+        top_speed_trackonly: 222,
+        torque_onroad: 2360,
+        torque_trackonly: 2360,
+        fastest_onroad: 'Pininfarina Battista',
+        fastest_trackonly: 'Pininfarina Battista Targamerica',
+        famous_cars: [
+            { model: "Pininfarina Battista", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hyundai_Veloster_N_%282018%29.jpg/960px-Hyundai_Veloster_N_%282018%29.jpg" }
+        ]
+    },
+    {
+        id: 'pontiac',
+        brand: "Pontiac",
+        logo: 'https://www.carlogos.org/car-logos/pontiac-logo.png',
+        founded_year: 1926,
+        founder: 'General Motors',
+        headquarter: { city: 'Detroit', country: 'USA' },
+        description: 'Pontiac created the original American muscle car era with the 1964 GTO and the legendary Firebird Trans Am.',
+        top_speed_onroad: 175,
+        top_speed_trackonly: 180,
+        torque_onroad: 542,
+        torque_trackonly: 550,
+        fastest_onroad: 'Pontiac GTO 6.0 (2006)',
+        fastest_trackonly: 'Pontiac Firebird Trans Am WS6',
+        famous_cars: [
+            { model: "Pontiac GTO (1964)", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Hyundai_Elantra_N_%282021%29.jpg/960px-Hyundai_Elantra_N_%282021%29.jpg" },
+            { model: "Pontiac Firebird Trans Am", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hyundai_Ioniq_5_N_%282024%29.jpg/960px-Hyundai_Ioniq_5_N_%282024%29.jpg" }
+        ]
+    },
+    {
+        id: 'praga',
+        brand: "Praga",
+        logo: 'https://www.carlogos.org/car-logos/praga-logo.png',
+        founded_year: 1907,
+        founder: 'František Ringhoffer',
+        headquarter: { city: 'Prague', country: 'Czech Republic' },
+        description: 'Praga is a historic Czech race car manufacturer, builder of the ultralight Bohema road-legal hypercar with Nissan GT-R twin-turbo power.',
+        top_speed_onroad: 186,
+        top_speed_trackonly: 190,
+        torque_onroad: 725,
+        torque_trackonly: 725,
+        fastest_onroad: 'Praga Bohema',
+        fastest_trackonly: 'Praga R1T',
+        famous_cars: [
+            { model: "Praga Bohema", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hyundai_i20_N_%282021%29.jpg/960px-Hyundai_i20_N_%282021%29.jpg" }
+        ]
+    },
+    {
+        id: 'prodrive',
+        brand: "Prodrive",
+        logo: 'https://www.carlogos.org/car-logos/prodrive-logo.png',
+        founded_year: 1984,
+        founder: 'David Richards',
+        headquarter: { city: 'Banbury', country: 'United Kingdom' },
+        description: 'Prodrive is a legendary motorsport group behind Subaru\'s WRC titles and Aston Martin Le Mans victories, creator of the 600hp Hunter hyper-SUV.',
+        top_speed_onroad: 180,
+        top_speed_trackonly: 186,
+        torque_onroad: 700,
+        torque_trackonly: 700,
+        fastest_onroad: 'Prodrive Hunter',
+        fastest_trackonly: 'Prodrive P25',
+        famous_cars: [
+            { model: "Prodrive Hunter", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Jaguar_XJ220_%281992%29.jpg/960px-Jaguar_XJ220_%281992%29.jpg" },
+            { model: "Prodrive P25", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jaguar_F-Type_SVR_%282016%29.jpg/960px-Jaguar_F-Type_SVR_%282016%29.jpg" }
+        ]
+    },
+    {
+        id: 'radical',
+        brand: "Radical",
+        logo: 'https://www.carlogos.org/car-logos/radical-logo.png',
+        founded_year: 1997,
+        founder: 'Mick Hyde & Phil Abbott',
+        headquarter: { city: 'Peterborough', country: 'United Kingdom' },
+        description: 'Radical Motorsport builds high-downforce, motorcycle-engined track cars that held the Nürburgring Nordschleife lap record.',
+        top_speed_onroad: 178,
+        top_speed_trackonly: 185,
+        torque_onroad: 430,
+        torque_trackonly: 450,
+        fastest_onroad: 'Radical SR8 RX',
+        fastest_trackonly: 'Radical RXC Turbo GT3',
+        famous_cars: [
+            { model: "Radical SR8", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jaguar_F-Pace_SVR_%282018%29.jpg/960px-Jaguar_F-Pace_SVR_%282018%29.jpg" }
+        ]
+    },
+    {
+        id: 'ruf',
+        brand: "RUF",
+        logo: 'https://www.carlogos.org/car-logos/ruf-logo.png',
+        founded_year: 1936,
+        founder: 'Alois Ruf Sr.',
+        headquarter: { city: 'Pfaffenhausen', country: 'Germany' },
+        description: 'RUF Automobile is an independent German manufacturer crafting bespoke sports cars, world-renowned for the legendary 1987 CTR Yellowbird.',
+        top_speed_onroad: 223,
+        top_speed_trackonly: 225,
+        torque_onroad: 880,
+        torque_trackonly: 880,
+        fastest_onroad: 'RUF CTR Anniversary',
+        fastest_trackonly: 'RUF CTR3 Clubsport',
+        famous_cars: [
+            { model: "RUF CTR Yellowbird", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Jaguar_XE_SV_Project_8_%282017%29.jpg/960px-Jaguar_XE_SV_Project_8_%282017%29.jpg" },
+            { model: "RUF CTR3", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Jaguar_C-X75_%282010%29.jpg/960px-Jaguar_C-X75_%282010%29.jpg" }
+        ]
+    },
+    {
+        id: 'scg',
+        brand: "SCG",
+        logo: 'https://1000logos.net/wp-content/uploads/2024/01/SCG-logo.png',
+        founded_year: 2011,
+        founder: 'James Glickenhaus',
+        headquarter: { city: 'Sleepy Hollow, NY', country: 'USA' },
+        description: 'Scuderia Cameron Glickenhaus builds bespoke Le Mans Hypercars and Nürburgring 24 Hours race cars for road and track.',
+        top_speed_onroad: 217,
+        top_speed_trackonly: 230,
+        torque_onroad: 850,
+        torque_trackonly: 850,
+        fastest_onroad: 'SCG 003S',
+        fastest_trackonly: 'SCG 007 LMH',
+        famous_cars: [
+            { model: "SCG 003S", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lexus_LFA_%282010%29.jpg/960px-Lexus_LFA_%282010%29.jpg" }
+        ]
+    },
+    {
+        id: 'singer',
+        brand: "Singer",
+        logo: 'https://www.carlogos.org/car-logos/singer-logo.png',
+        founded_year: 2009,
+        founder: 'Rob Dickinson',
+        headquarter: { city: 'Los Angeles', country: 'USA' },
+        description: 'Singer Vehicle Design restores and reimagines air-cooled Porsche 911s into bespoke, lightweight engineering masterpieces.',
+        top_speed_onroad: 200,
+        top_speed_trackonly: 205,
+        torque_onroad: 450,
+        torque_trackonly: 500,
+        fastest_onroad: 'Singer DLS Turbo',
+        fastest_trackonly: 'Singer DLS (Dynamics & Lightweight Study)',
+        famous_cars: [
+            { model: "Singer DLS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Lexus_RC_F_Track_Edition_%282019%29.jpg/960px-Lexus_RC_F_Track_Edition_%282019%29.jpg" }
+        ]
+    },
+    {
+        id: 'spaniagta',
+        brand: "Spania GTA",
+        logo: 'https://www.carlogos.org/car-logos/spania-gta-logo.png',
+        founded_year: 2010,
+        founder: 'Domingo Ochoa',
+        headquarter: { city: 'Torrent, Valencia', country: 'Spain' },
+        description: 'Spania GTA is a Spanish hypercar builder creator of the GTA Spano, featuring twin-turbo V10 power and Graphene chassis technology.',
+        top_speed_onroad: 230,
+        top_speed_trackonly: 230,
+        torque_onroad: 1220,
+        torque_trackonly: 1220,
+        fastest_onroad: 'GTA Spano',
+        fastest_trackonly: 'GTA Spano R',
+        famous_cars: [
+            { model: "GTA Spano", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lexus_IS_F_%282007%29.jpg/960px-Lexus_IS_F_%282007%29.jpg" }
+        ]
+    },
+    {
+        id: 'tommykaira',
+        brand: "Tommykaira",
+        logo: 'https://cdn.worldvectorlogo.com/logos/tommy-kaira.svg',
+        founded_year: 1986,
+        founder: 'Yoshikazu Tomita & Kikuo Kaira',
+        headquarter: { city: 'Kyoto', country: 'Japan' },
+        description: 'Tommykaira is a Japanese tuning and hypercar house famous for mid-engine GT sports cars like the ZZII and modified Skylines.',
+        top_speed_onroad: 211,
+        top_speed_trackonly: 215,
+        torque_onroad: 637,
+        torque_trackonly: 650,
+        fastest_onroad: 'Tommykaira ZZII',
+        fastest_trackonly: 'Tommykaira ZZII Race',
+        famous_cars: [
+            { model: "Tommykaira ZZII", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lexus_GS_F_%282015%29.jpg/960px-Lexus_GS_F_%282015%29.jpg" }
+        ]
+    },
+    {
+        id: 'ultima',
+        brand: "Ultima",
+        logo: 'https://www.carlogos.org/car-logos/ultima-logo.png',
+        founded_year: 1992,
+        founder: 'Ted & Richard Marlow',
+        headquarter: { city: 'Hinckley', country: 'United Kingdom' },
+        description: 'Ultima Sports builds supercharged V8 kit hypercars that have broken world acceleration and skidpad records.',
+        top_speed_onroad: 250,
+        top_speed_trackonly: 250,
+        torque_onroad: 1247,
+        torque_trackonly: 1247,
+        fastest_onroad: 'Ultima RS 1200',
+        fastest_trackonly: 'Ultima Evolution Coupe',
+        famous_cars: [
+            { model: "Ultima RS", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lexus_LC_500_%282017%29.jpg/960px-Lexus_LC_500_%282017%29.jpg" }
+        ]
+    },
+    {
+        id: 'venturi',
+        brand: "Venturi",
+        logo: 'https://www.carlogos.org/car-logos/venturi-logo.png',
+        founded_year: 1984,
+        founder: 'Claude Poiraud & Gérard Godfroy',
+        headquarter: { city: 'Fontvieille', country: 'Monaco' },
+        description: 'Venturi is a Monagasque automotive company that produced classic French supercars like the Atlantique 300 and electric record setters.',
+        top_speed_onroad: 171,
+        top_speed_trackonly: 186,
+        torque_onroad: 520,
+        torque_trackonly: 550,
+        fastest_onroad: 'Venturi Atlantique 300 Biturbo',
+        fastest_trackonly: 'Venturi 400 GT',
+        famous_cars: [
+            { model: "Venturi Atlantique 300", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lotus_Elise_%281996%29.jpg/960px-Lotus_Elise_%281996%29.jpg" }
+        ]
+    },
+    {
+        id: 'volkswagen',
+        brand: "Volkswagen",
+        logo: 'https://www.carlogos.org/car-logos/volkswagen-logo.png',
+        founded_year: 1937,
+        founder: 'German Labour Front',
+        headquarter: { city: 'Wolfsburg', country: 'Germany' },
+        description: 'Volkswagen\'s R division crafts high-performance AWD Golf R hatches, while historically building the legendary W12 Nardo speed record supercar.',
+        top_speed_onroad: 168,
+        top_speed_trackonly: 217,
+        torque_onroad: 420,
+        torque_trackonly: 620,
+        fastest_onroad: 'Volkswagen Golf R (Mk 8)',
+        fastest_trackonly: 'Volkswagen W12 Nardo Concept',
+        famous_cars: [
+            { model: "Volkswagen W12 Nardo", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Lotus_Exige_S3_%282012%29.jpg/960px-Lotus_Exige_S3_%282012%29.jpg" },
+            { model: "Volkswagen Golf R", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Lotus_Evora_GT410_%282019%29.jpg/960px-Lotus_Evora_GT410_%282019%29.jpg" }
+        ]
+    },
+    {
+        id: 'wiesmann',
+        brand: "Wiesmann",
+        logo: 'https://www.carlogos.org/car-logos/wiesmann-logo.png',
+        founded_year: 1988,
+        founder: 'Martin & Friedhelm Wiesmann',
+        headquarter: { city: 'Dülmen', country: 'Germany' },
+        description: 'Wiesmann is a German boutique sports car builder crafting retro-styled aluminum roadsters powered by BMW M power engines.',
+        top_speed_onroad: 193,
+        top_speed_trackonly: 193,
+        torque_onroad: 680,
+        torque_trackonly: 700,
+        fastest_onroad: 'Wiesmann GT MF5',
+        fastest_trackonly: 'Wiesmann Project Thunderball',
+        famous_cars: [
+            { model: "Wiesmann GT MF5", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lotus_Evija_%282019%29.jpg/960px-Lotus_Evija_%282019%29.jpg" }
+        ]
     }
 ]
+
 export default overviewbrands;

@@ -36,7 +36,8 @@ function BrandPage() {
         const response = await axios.get(
           `http://localhost:1003/api/cars?brand=${encodeURIComponent(brandName)}`
         );
-
+        console.log("Brand:", brandName);
+        console.log("Cars received:", response.data?.length, response.data);
         setCars(Array.isArray(response.data) ? response.data : []);
       } catch (err) {
         console.error('Error fetching cars:', err);

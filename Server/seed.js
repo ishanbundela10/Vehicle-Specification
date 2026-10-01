@@ -5,14 +5,17 @@ import connectDB from "./src/db/index.js";
 import { Car } from "./src/models/car.models.js"
 import cars from "./src/db/data/cars.js"
 
-// import {BrandOverview} from "./src/models/brandoverview.models.js"
-// import overviewbrands from "./src/db/data/overview.js"
+// import { Company } from "./src/models/company.models.js";
+// import companies from "./src/db/data/company.js";
+
+// import { BrandOverview } from "./src/models/brandoverview.models.js";
+// import overviewbrands from "./src/db/data/overview.js";
 
 const seedData = async () => {
   try {
     await connectDB();
 
-    // await BrandOverview.deleteMany(); // optional (clears old data)
+    // await Car.deleteMany(); // optional (clears old data)
 
     await Car.insertMany(cars);
 

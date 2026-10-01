@@ -30,7 +30,7 @@ const OverviewPage = () => {
 
         // Prefer full backend URL if proxy not set
         const response = await axios.get(
-          `http://localhost:1003/api/brands/${brandName.toLowerCase()}`
+          `http://localhost:1003/api/brands/${encodeURIComponent(brandName.toLowerCase())}`
         );
 
         setBrand(response.data);

@@ -1,0 +1,87 @@
+const cars = [
+  {
+    id: "ariel-atom-2000",
+    brand: "Ariel",
+    name: "Atom",
+    img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
+    type: "Exoskeleton Sports Car",
+    comfort: 1, mileage: 3, stability: 4, rating: 4.6,
+    performance: { power_hp: 190, top_speed_kmh: 225, acceleration_sec: 4.5, weight_kg: 456, power_to_weight: 0.41 },
+    technical: { engine: "1.8L Rover K-Series I4", displacement_cc: 1796, fuel: "Petrol", transmission: "5-Speed Manual", cylinders: 4 },
+    chassis: { material: "Tubular Steel Spaceframe", brake_material: "Ventilated Discs", suspension: "Pushrod Double Wishbone", drivetrain: "RWD" },
+    production: { start_year: 2000, end_year: 2003, units_produced: 300, country: "United Kingdom" },
+    price: { usd: { min: 35000, max: 45000, currency: "USD" }, inr: { min: 2905000, max: 3735000, currency: "INR" } },
+    era: "2000s", status: "Discontinued", rarity: "Rare"
+  },
+  {
+    id: "ariel-atom-2-300-2004",
+    brand: "Ariel",
+    name: "Atom 2 300",
+    img: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1200&q=80",
+    type: "Track Toy",
+    comfort: 1, mileage: 2, stability: 5, rating: 4.8,
+    performance: { power_hp: 300, top_speed_kmh: 241, acceleration_sec: 2.9, weight_kg: 456, power_to_weight: 0.65 },
+    technical: { engine: "2.0L Supercharged Honda K20", displacement_cc: 1998, fuel: "Petrol", transmission: "6-Speed Manual", cylinders: 4 },
+    chassis: { material: "Tubular Exoskeleton", brake_material: "Alcon Discs", suspension: "Inboard Pushrod", drivetrain: "RWD" },
+    production: { start_year: 2004, end_year: 2008, units_produced: 500, country: "United Kingdom" },
+    price: { usd: { min: 50000, max: 65000, currency: "USD" }, inr: { min: 4150000, max: 5395000, currency: "INR" } },
+    era: "2000s", status: "Discontinued", rarity: "Uncommon"
+  },
+  {
+    id: "ariel-atom-3-300-2008",
+    brand: "Ariel",
+    name: "Atom 3 300",
+    img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80",
+    type: "Track Toy",
+    comfort: 1, mileage: 2, stability: 5, rating: 4.8,
+    performance: { power_hp: 300, top_speed_kmh: 249, acceleration_sec: 2.8, weight_kg: 469, power_to_weight: 0.64 },
+    technical: { engine: "2.0L Supercharged Honda K20Z4", displacement_cc: 1998, fuel: "Petrol", transmission: "6-Speed Manual", cylinders: 4 },
+    chassis: { material: "Steel Tube Frame", brake_material: "Alcon Discs", suspension: "Pushrod Double Wishbone", drivetrain: "RWD" },
+    production: { start_year: 2008, end_year: 2012, units_produced: 800, country: "United Kingdom" },
+    price: { usd: { min: 65000, max: 80000, currency: "USD" }, inr: { min: 5395000, max: 6640000, currency: "INR" } },
+    era: "2000s", status: "Discontinued", rarity: "Uncommon"
+  },
+  {
+    id: "ariel-atom-35r-2014",
+    brand: "Ariel",
+    name: "Atom 3.5 R",
+    img: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d0?auto=format&fit=crop&w=1200&q=80",
+    type: "Track Toy",
+    comfort: 1, mileage: 1, stability: 5, rating: 4.9,
+    performance: { power_hp: 350, top_speed_kmh: 250, acceleration_sec: 2.5, weight_kg: 550, power_to_weight: 0.63 },
+    technical: { engine: "2.0L Supercharged Honda I4", displacement_cc: 1998, fuel: "Petrol", transmission: "6-Speed Sadev Sequential", cylinders: 4 },
+    chassis: { material: "Tubular Exoskeleton", brake_material: "Alcon Discs", suspension: "Ohlins Pushrod", drivetrain: "RWD" },
+    production: { start_year: 2014, end_year: 2017, units_produced: 250, country: "United Kingdom" },
+    price: { usd: { min: 85000, max: 100000, currency: "USD" }, inr: { min: 7055000, max: 8300000, currency: "INR" } },
+    era: "2010s", status: "Discontinued", rarity: "Rare"
+  },
+  {
+    id: "ariel-atom-4r-2023",
+    brand: "Ariel",
+    name: "Atom 4R",
+    img: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=80",
+    type: "Track Hyper-Toy",
+    comfort: 1, mileage: 2, stability: 5, rating: 5.0,
+    performance: { power_hp: 400, top_speed_kmh: 274, acceleration_sec: 2.7, weight_kg: 595, power_to_weight: 0.67 },
+    technical: { engine: "2.0L Turbocharged Honda K20C", displacement_cc: 1996, fuel: "Petrol", transmission: "6-Speed Sequential", cylinders: 4 },
+    chassis: { material: "Bronze-Welded Steel Tube", brake_material: "AP Racing Discs", suspension: "Ohlins TTX Adjustable", drivetrain: "RWD" },
+    production: { start_year: 2023, end_year: null, units_produced: null, country: "United Kingdom" },
+    price: { usd: { min: 95000, max: 120000, currency: "USD" }, inr: { min: 7885000, max: 9960000, currency: "INR" } },
+    era: "Modern", status: "Active", rarity: "Limited"
+  },
+  {
+    id: "ariel-atom-500-v8-2010",
+    brand: "Ariel",
+    name: "Atom 500 V8",
+    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    type: "Hyper Track Toy",
+    comfort: 1, mileage: 1, stability: 5, rating: 5.0,
+    performance: { power_hp: 500, top_speed_kmh: 275, acceleration_sec: 2.3, weight_kg: 550, power_to_weight: 0.90 },
+    technical: { engine: "3.0L Hartley V8", displacement_cc: 3000, fuel: "Petrol", transmission: "6-Speed Sadev Sequential", cylinders: 8 },
+    chassis: { material: "Tubular Steel / Carbon Aero", brake_material: "Alcon Discs", suspension: "Pushrod Double Wishbone", drivetrain: "RWD" },
+    production: { start_year: 2010, end_year: 2012, units_produced: 25, country: "United Kingdom" },
+    price: { usd: { min: 200000, max: 250000, currency: "USD" }, inr: { min: 16600000, max: 20750000, currency: "INR" } },
+    era: "2010s", status: "Discontinued", rarity: "Ultra Rare"
+  }
+];
+export default cars;

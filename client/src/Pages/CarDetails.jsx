@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import {
     ArrowLeft, Home, Gauge, Zap, Timer,
-    Settings, Wrench, Shield, Globe, Trophy, Info
+    Settings, Wrench, Shield, Globe, Trophy, Info, AlertCircle
 } from 'lucide-react';
 
 const CarDetails = () => {
