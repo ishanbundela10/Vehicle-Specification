@@ -19,6 +19,7 @@
 body{
     background-color: var(--primary);
     color: var(--text);
+    padding-top: 70px;
 }
 html{
     scrollbar-width: thin;

@@ -1,109 +1,232 @@
-import React from 'react'
-import { useParams, Link } from 'react-router-dom'
-// import overview from '../data/overview'
-import '../Pages/OverviewPage.css'
-import '../App.css'
-import axios from "axios"
-import { useState, useEffect } from 'react' 
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
+import {
+  ArrowLeft,
+  Home,
+  Building2,
+  Calendar,
+  MapPin,
+  User,
+  Gauge,
+  Trophy,
+  Car,
+  Info,
+  Flag
+} from 'lucide-react';
+import './OverviewPage.css';
+
 const OverviewPage = () => {
-    const { brandName } = useParams();
-    // console.log(brandName)
-    const [brands, setBrands] = useState(null)
-    // const brandOV = overview.find(
-    //     (item) => item.brand.toLowerCase() === brandName.toLowerCase()
-    // );
-    // if (!brandOV) {
-    //     return (
-    //         <div className='p-6'>
-    //             <Link to={'/'} className='bg-gray-600 p-2 rounded-2xl font-bold'>HOME</Link>
-    //             <p className='text-white text-2xl mt-4'>Brand not found</p>
-    //         </div>
-    //     );
-    // }
+  const { brandName } = useParams();
+  const [brand, setBrand] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-    useEffect(() => {
-      const fetchBrand = async() => {
-        try {
-            const response = await axios.get(
-                `/api/brands/${brandName.toLowerCase()}`
-            )
-            setBrands(response.data)
-            // console.log(response.data)
-        } catch (error) {
-            console.log("error", error)
-        }
+  useEffect(() => {
+    const fetchBrand = async () => {
+      try {
+        setLoading(true);
+        setError('');
+
+        // Prefer full backend URL if proxy not set
+        const response = await axios.get(
+          `http://localhost:1003/api/brands/${brandName.toLowerCase()}`
+        );
+
+        setBrand(response.data);
+      } catch (err) {
+        console.error('Brand fetch error:', err);
+        setError('Brand not found or server error.');
+        setBrand(null);
+      } finally {
+        setLoading(false);
       }
-      fetchBrand();
-    }, [brandName])
+    };
 
-    if (!brands) {
-        return  <h1 className="text-white p-5">Loading...</h1>;
-    }
+    if (brandName) fetchBrand();
+  }, [brandName]);
+
+  if (loading) {
     return (
-        <>
-            <div className='p-6'>
-                <div className='flex justify-between'>
-                    <Link to={'/'} className='bg-gray-600 p-2 rounded-2xl font-bold'>HOME</Link>
-                    <Link to={`/brand/${brandName}`} className='bg-gray-600 p-2 rounded-2xl font-bold'>← BACK</Link>
-                </div>
+      <div className="ov-loading">
+        <div className="ov-spinner"></div>
+        <h2>LOADING BRAND ARCHIVE...</h2>
+      </div>
+    );
+  }
 
-                <div className='mt-6 max-w-[full] bg-gray-700 rounded-2xl '>
-                    <div className='flex items-center gap-6 py-6'>
-                        <img src={brands.logo} alt={brands.brand} className='w-36 h-36 object-contain' />
-                        <div>
-                            <h1 className='text-white text-4xl font-bold'>{brands.brand}</h1>
-                            <p className='text-gray-400'>Founded: {brands.founded_year}</p>
-                            <p className='text-gray-400'>Founder: {brands.founder}</p>
-                            <p className='text-gray-400'>Headquarters: {brands.headquarter.city}, {brands.headquarter.country}</p>
+  if (error || !brand) {
+    return (
+      <div className="ov-error">
+        <h2>{error || 'Brand Not Found'}</h2>
+        <Link to="/" className="ov-btn primary">Return Home</Link>
+      </div>
+    );
+  }
 
-                        </div>
-                    </div>
+  const famousCars = Array.isArray(brand.famous_cars) ? brand.famous_cars : [];
+  const displayFamous = famousCars.length > 0 ? [...famousCars, ...famousCars] : [];
 
-                    <div className='p-6 rounded-lg'>
+  return (
+    <div className="ov-page">
+      {/* TOP BAR */}
+      <div className="ov-topbar">
+        <div className="ov-top-left">
+          <Link to="/" className="ov-btn">
+            <Home size={16} /> HOME
+          </Link>
+          <Link to={`/brand/${brandName}`} className="ov-btn">
+            <Car size={16} /> VIEW MODELS
+          </Link>
+        </div>
+        <Link to={`/brand/${brandName}`} className="ov-back">
+          <ArrowLeft size={16} /> BACK
+        </Link>
+      </div>
 
-                        <div className='mb-6'>
-                            <p className='text-gray-300 font-semibold mb-2'>Description</p>
-                            <p className='text-white text-medium font-sans'>{brands.description}</p>
-                        </div>
+      <div className="ov-container">
+        {/* HERO CARD */}
+        <section className="ov-hero-card">
+          <div className="ov-logo-wrap">
+            <img
+              src={brand.logo}
+              alt={brand.brand}
+              className="ov-logo"
+              onError={(e) => {
+                e.currentTarget.src =
+                  'https://via.placeholder.com/160x160?text=Logo';
+              }}
+            />
+          </div>
 
-                        <div className='grid grid-cols-2 gap-6'>
-                            <div>
-                                <p className='text-gray-300 font-semibold'>Fastest Car (on road)</p>
-                                <p className='text-white text-lg font-mono'>{brands.fastest_onroad}</p>
-                            </div>
-                            <div>
-                                <p className='text-gray-300 font-semibold'>Top Speed (on road)</p>
-                                <p className='text-white text-lg font-mono'>{brands.top_speed_onroad || 'N/A'} MPH</p>
-                            </div>
-                        </div>
-
-                        <div className='grid grid-cols-2 gap-6'>
-                            <div>
-                                <p className='text-gray-300 font-semibold'>Fastest Car (Track only)</p>
-                                <p className='text-white text-lg font-mono'>{brands.fastest_trackonly}</p>
-                            </div>
-                            <div>
-                                <p className='text-gray-300 font-semibold'>Top Speed (Track only)</p>
-                                <p className='text-white text-lg font-mono'>{brands.top_speed_trackonly || 'N/A'} MPH</p>
-                            </div>
-                        </div>
-
-                        <h1 className='text-gray-300 font-semibold mt-8 mb-2'>Famous Cars</h1>
-                        <div className='OVfamous'>
-                            <div className="OVslider">
-                                {[...brands.famous_cars, ...brands.famous_cars].map((fc) => (
-                                    <div key={fc.id} className='carbox'>
-                                        <img src={fc.image_url} alt="no" className='w-50 h-30' />
-                                        <div className='text-[15px]'>{fc.model}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div className="ov-hero-info">
+            <div className="ov-badge-row">
+              <span className="ov-badge gold">
+                <Building2 size={14} /> Brand Overview
+              </span>
+              {brand.headquarter?.country && (
+                <span className="ov-badge cyan">
+                  <Flag size={14} /> {brand.headquarter.country}
+                </span>
+              )}
             </div>
-        </>
-    )
-}
 
-export default OverviewPage
+            <h1 className="ov-title">{brand.brand}</h1>
+
+            <div className="ov-meta-grid">
+              <div className="ov-meta-item">
+                <Calendar size={16} className="meta-icon" />
+                <div>
+                  <span className="meta-label">Founded</span>
+                  <strong>{brand.founded_year || 'N/A'}</strong>
+                </div>
+              </div>
+
+              <div className="ov-meta-item">
+                <User size={16} className="meta-icon" />
+                <div>
+                  <span className="meta-label">Founder</span>
+                  <strong>{brand.founder || 'N/A'}</strong>
+                </div>
+              </div>
+
+              <div className="ov-meta-item">
+                <MapPin size={16} className="meta-icon" />
+                <div>
+                  <span className="meta-label">Headquarters</span>
+                  <strong>
+                    {brand.headquarter?.city || 'N/A'}
+                    {brand.headquarter?.country
+                      ? `, ${brand.headquarter.country}`
+                      : ''}
+                  </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DESCRIPTION */}
+        <section className="ov-section">
+          <h2 className="ov-section-title">
+            <Info size={18} /> About the Brand
+          </h2>
+          <p className="ov-description">
+            {brand.description || 'No description available for this brand.'}
+          </p>
+        </section>
+
+        {/* SPEED RECORDS */}
+        <section className="ov-section">
+          <h2 className="ov-section-title">
+            <Gauge size={18} /> Speed Legacy
+          </h2>
+
+          <div className="ov-stats-grid">
+            <div className="ov-stat-card">
+              <span className="stat-label">Fastest On-Road</span>
+              <strong className="stat-value">{brand.fastest_onroad || 'N/A'}</strong>
+              <span className="stat-sub">
+                {brand.top_speed_onroad ? `${brand.top_speed_onroad} MPH` : 'Top speed N/A'}
+              </span>
+            </div>
+
+            <div className="ov-stat-card">
+              <span className="stat-label">Fastest Track-Only</span>
+              <strong className="stat-value">{brand.fastest_trackonly || 'N/A'}</strong>
+              <span className="stat-sub">
+                {brand.top_speed_trackonly
+                  ? `${brand.top_speed_trackonly} MPH`
+                  : 'Top speed N/A'}
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* FAMOUS CARS SLIDER */}
+        <section className="ov-section">
+          <div className="ov-section-head">
+            <h2 className="ov-section-title">
+              <Trophy size={18} /> Famous Cars
+            </h2>
+            {famousCars.length > 0 && (
+              <span className="ov-hint">Hover to pause</span>
+            )}
+          </div>
+
+          {famousCars.length === 0 ? (
+            <div className="ov-empty">No famous cars listed for this brand.</div>
+          ) : (
+            <div className="OVfamous">
+              <div className="OVslider">
+                {displayFamous.map((fc, index) => (
+                  <Link
+                    key={`${fc.id || fc.model}-${index}`}
+                    to={`/brand/${encodeURIComponent(brandName)}/${encodeURIComponent(
+                      (fc.model || '').toLowerCase()
+                    )}`}
+                    className="carbox"
+                  >
+                    <div className="carbox-img-wrap">
+                      <img
+                        src={fc.image_url}
+                        alt={fc.model}
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            'https://via.placeholder.com/240x140?text=Car';
+                        }}
+                      />
+                    </div>
+                    <div className="carbox-name">{fc.model}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default OverviewPage;

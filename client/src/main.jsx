@@ -9,6 +9,9 @@ import UrDreamcar from './Pages/UrDreamcar.jsx'
 import CarDetails from './Pages/CarDetails.jsx'
 import About from './Pages/About.jsx'
 import Contact from './Pages/Contact.jsx'
+import Terms from './Pages/Terms.jsx'
+import Privacy from './Pages/Privacy.jsx'
+import Safety from './Pages/Safety.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,18 @@ const router = createBrowserRouter([
     {
       path: "contact",
       element: <Contact />
+    },
+    {
+      path: "terms",
+      element: <Terms />
+    },
+    {
+      path: "privacy",
+      element: <Privacy />
+    },
+    {
+      path: "safety",
+      element: <Safety />
     }
 
     ],

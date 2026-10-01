@@ -54,10 +54,10 @@ const PACKAGE_OPTIONS = [
   { id: "suspension", name: "Air Suspension with Lift Kit", price: 300000 },
 ];
 
-const formatINR = (n = 0) =>
-  new Intl.NumberFormat("en-IN", {
+const formatUSD = (n = 0) =>
+  new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "INR",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(n);
 
@@ -145,8 +145,8 @@ const UrDreamcar = () => {
     );
   }, [cars, search]);
 
-  const basePrice = selectedCar?.price?.inr?.min || selectedCar?.price?.usd?.min || 0;
-
+  const basePrice = selectedCar?.price?.usd?.min || selectedCar?.price?.inr?.min || 0;
+  
   const totalPrice = useMemo(() => {
     const packagesCost = selectedPackages.reduce((s, p) => s + p.price, 0);
     return (
@@ -393,9 +393,9 @@ const UrDreamcar = () => {
                         <div className="card-info">
                           <h4>{car.brand} {car.name}</h4>
                           <p>{car.type} • {car.technical?.engine || "N/A"}</p>
-                          <span className="price-tag">
-                            {formatINR(car.price?.inr?.min || 0)}
-                          </span>
+                         <span className="price-tag">
+  {formatUSD(car.price?.usd?.min || car.price?.inr?.min || 0)}
+</span>
                         </div>
 
                         <div className="card-actions">
@@ -428,7 +428,7 @@ const UrDreamcar = () => {
                     >
                       <span className="swatch-circle" style={{ backgroundColor: c.hex }} />
                       <span className="swatch-name">{c.name}</span>
-                      <span className="swatch-price">{c.price ? `+${formatINR(c.price)}` : "Included"}</span>
+                      <span className="swatch-price">{c.price ? `+${formatUSD(c.price)}` : "Included"}</span>
                     </button>
                   ))}
                 </div>
@@ -444,7 +444,7 @@ const UrDreamcar = () => {
                       <Disc size={22} />
                       <div className="card-info">
                         <h4>{w.name}</h4>
-                        <span className="price-tag">{w.price ? `+${formatINR(w.price)}` : "Included"}</span>
+                        <span className="price-tag">{w.price ? `+${formatUSD(w.price)}` : "Included"}</span>
                       </div>
                       {selectedWheels.id === w.id && <Check className="check-badge" />}
                     </div>
@@ -467,7 +467,7 @@ const UrDreamcar = () => {
                       <div className="card-info">
                         <h4>{t.name}</h4>
                         <p>{t.hpBonus ? `+${t.hpBonus} HP` : "Factory stock"}</p>
-                        <span className="price-tag">{t.price ? `+${formatINR(t.price)}` : "Included"}</span>
+                        <span className="price-tag">{t.price ? `+${formatUSD(t.price)}` : "Included"}</span>
                       </div>
                       {selectedTune.id === t.id && <Check className="check-badge" />}
                     </div>
@@ -491,7 +491,7 @@ const UrDreamcar = () => {
                       >
                         <div className="card-info">
                           <h4>{pkg.name}</h4>
-                          <span className="price-tag">+{formatINR(pkg.price)}</span>
+                          <span className="price-tag">+{formatUSD(pkg.price)}</span>
                         </div>
                         <div className={`checkbox-custom ${checked ? "checked" : ""}`}>
                           {checked && <Check size={14} />}
@@ -508,7 +508,7 @@ const UrDreamcar = () => {
           <div className="price-footer">
             <div className="price-details">
               <span className="price-label">Estimated Build Price</span>
-              <span className="total-price-text">{formatINR(totalPrice)}</span>
+              <span className="total-price-text">{formatUSD(totalPrice)}</span>
             </div>
             <div className="action-btns">
               <button className="reset-btn" onClick={resetBuild} title="Reset Build">
@@ -533,10 +533,10 @@ const UrDreamcar = () => {
             <div className="modal-body">
               <div className="summary-spec-header">
                 <h3>{selectedCar.brand} {selectedCar.name}</h3>
-                <p className="gold-text">{formatINR(totalPrice)}</p>
+                <p className="gold-text">{formatUSD(totalPrice)}</p>
               </div>
               <ul className="summary-list">
-                <li><span>Base Price</span><strong>{formatINR(basePrice)}</strong></li>
+                <li><span>Base Price</span><strong>{formatUSD(basePrice)}</strong></li>
                 <li><span>Paint</span><strong>{selectedColor.name}</strong></li>
                 <li><span>Wheels</span><strong>{selectedWheels.name}</strong></li>
                 <li><span>Tune</span><strong>{selectedTune.name}</strong></li>
@@ -631,7 +631,7 @@ const UrDreamcar = () => {
 
                     <li className="total-row">
                       <span>Total Value</span>
-                      <strong className="gold-text">{formatINR(detailedBuild.totalPrice)}</strong>
+                      <strong className="gold-text">{formatUSD(detailedBuild.totalPrice)}</strong>
                     </li>
                   </ul>
                 </div>
@@ -653,7 +653,7 @@ const UrDreamcar = () => {
                       />
                       <div className="garage-info">
                         <h4>{build.carName}</h4>
-                        <span className="gold-text">{formatINR(build.totalPrice)}</span>
+                        <span className="gold-text">{formatUSD(build.totalPrice)}</span>
                         <small className="date-tag">Saved on {build.savedAt}</small>
 
                         <div className="garage-card-actions">

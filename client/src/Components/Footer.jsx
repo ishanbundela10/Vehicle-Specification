@@ -12,7 +12,7 @@ const Footer = () => {
                 <Car className="w-6 h-6 text-white" />
               </div>
               <div>
-                <div className="text-xl font-black tracking-tight">VehicleSpecification</div>
+                <div className="text-xl font-black tracking-tight">Apex Forge</div>
                 <div className="text-xs uppercase tracking-[0.22em] text-slate-400">Drive smarter</div>
               </div>
             </div>
@@ -32,10 +32,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4 text-white">Support</h4>
             <ul className="space-y-3 text-slate-300">
-              <li><a href="#" className="transition-colors duration-200 hover:text-orange-400">Help Center</a></li>
-              <li><a href="#" className="transition-colors duration-200 hover:text-orange-400">Safety Tips</a></li>
-              <li><a href="#" className="transition-colors duration-200 hover:text-orange-400">Contact Us</a></li>
-              <li><a href="#" className="transition-colors duration-200 hover:text-orange-400">Privacy Policy</a></li>
+              <li><Link to="contact" className="transition-colors duration-200 hover:text-orange-400">Help Center</Link></li>
+              <li><Link to="safety" className="transition-colors duration-200 hover:text-orange-400">Safety Tips</Link></li>
+              <li><Link to="contact" className="transition-colors duration-200 hover:text-orange-400">Contact Us</Link></li>
+              <li><Link to="privacy" className="transition-colors duration-200 hover:text-orange-400">Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -44,25 +44,25 @@ const Footer = () => {
             <ul className="space-y-3 text-slate-300">
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-orange-400" />
-                <span>support@vehiclespec.com</span>
+                <span>zenistuagatsuma03092007@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-orange-400" />
-                <span>+91 90099 49018</span>
+                <span>+81 90-1234-5678</span>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-orange-400" />
-                <span>Bhopal, India</span>
+                <span>Tokyo, Japan</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col gap-4 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; 2026 VehicleSpecification. All rights reserved.</p>
+          <p>&copy; 2026 Apex Forge. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-orange-400 transition-colors">Terms</a>
-            <a href="#" className="hover:text-orange-400 transition-colors">Privacy</a>
+            <Link to="terms" className="transition-colors duration-200 hover:text-orange-400">Terms</Link>
+            <Link to="privacy" className="transition-colors duration-200 hover:text-orange-400">Privacy Policy</Link>
             <a href="#" className="hover:text-orange-400 transition-colors">Cookies</a>
           </div>
         </div>

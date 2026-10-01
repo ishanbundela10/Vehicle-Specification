@@ -45,7 +45,7 @@ const Contact = () => {
               <div className="info-icon-wrapper"><Phone className="text-cyan" /></div>
               <div>
                 <h4>Phone</h4>
-                <p>+1 (800) 555-RACE</p>
+                <p>+81 90-1234-5678</p>
               </div>
             </div>
             
@@ -53,7 +53,7 @@ const Contact = () => {
               <div className="info-icon-wrapper"><Mail className="text-gold" /></div>
               <div>
                 <h4>Email</h4>
-                <p>pitcrew@dreamcars.com</p>
+                <p>zenistuagatsuma03092007@gmail.com</p>
               </div>
             </div>
 
@@ -61,7 +61,7 @@ const Contact = () => {
               <div className="info-icon-wrapper"><MapPin className="text-purple" /></div>
               <div>
                 <h4>Headquarters</h4>
-                <p>123 Apex Apex Apex Blvd,<br/>Motor City, MC 90210</p>
+                <p>2-8-14 Shibaura, Minato-ku,<br/>Tokyo 108-0023, Japan</p>
               </div>
             </div>
           </div>

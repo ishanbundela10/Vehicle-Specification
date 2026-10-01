@@ -1,115 +1,256 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom';
-// import cars from '../data/cars';
-import UrDreamcar from './UrDreamcar';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
+import {
+  Home,
+  ArrowLeft,
+  Info,
+  Search,
+  Gauge,
+  Zap,
+  Timer,
+  Car,
+  LayoutGrid,
+  AlertCircle
+} from 'lucide-react';
 import Sidebar from '../Components/Sidebar';
-// import companies from '../data/company';
-import axios from "axios";
-
+import './BrandPage.css';
 
 function BrandPage() {
-  const [cars, setCars] = useState([]);
   const { brandName } = useParams();
-  const [companies, setCompanies] = useState([])
 
+  const [cars, setCars] = useState([]);
+  const [companies, setCompanies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [search, setSearch] = useState('');
+  const [sortBy, setSortBy] = useState('name'); // name | hp | speed | accel
 
+  // Fetch brand cars
   useEffect(() => {
     const fetchCars = async () => {
       try {
+        setLoading(true);
+        setError('');
+
         const response = await axios.get(
-          `/api/cars?brand=${brandName}`
+          `http://localhost:1003/api/cars?brand=${encodeURIComponent(brandName)}`
         );
-        setCars(response.data);
-      } catch (error) {
-        console.error("Error fetching cars:", error);
+
+        setCars(Array.isArray(response.data) ? response.data : []);
+      } catch (err) {
+        console.error('Error fetching cars:', err);
+        setError('Failed to load cars for this brand.');
+        setCars([]);
+      } finally {
+        setLoading(false);
       }
     };
 
-
-    fetchCars();
+    if (brandName) fetchCars();
   }, [brandName]);
 
+  // Fetch companies for sidebar
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const company = await axios.get(
-          `/api/companies`
-        );
-        setCompanies(company.data);
-      } catch (error) {
-        console.error("Error fetching companies:", error);
+        const response = await axios.get('http://localhost:1003/api/companies');
+        setCompanies(Array.isArray(response.data) ? response.data : []);
+      } catch (err) {
+        console.error('Error fetching companies:', err);
       }
     };
-    fetchCompanies()
-  }, [])
+    fetchCompanies();
+  }, []);
 
-
-
+  // Scroll top on brand change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [brandName]);
 
-  // const filteredCars = cars.filter(
-  //   (car) => car.brand.toLowerCase() === brandName.toLowerCase()
-  // );
+  // Filter + sort
+  const filteredCars = useMemo(() => {
+    let list = [...cars];
+
+    const q = search.trim().toLowerCase();
+    if (q) {
+      list = list.filter(
+        (car) =>
+          car.name?.toLowerCase().includes(q) ||
+          car.type?.toLowerCase().includes(q) ||
+          car.brand?.toLowerCase().includes(q)
+      );
+    }
+
+    list.sort((a, b) => {
+      if (sortBy === 'hp') {
+        return (b.performance?.power_hp || 0) - (a.performance?.power_hp || 0);
+      }
+      if (sortBy === 'speed') {
+        return (b.performance?.top_speed_kmh || 0) - (a.performance?.top_speed_kmh || 0);
+      }
+      if (sortBy === 'accel') {
+        return (a.performance?.acceleration_sec || 999) - (b.performance?.acceleration_sec || 999);
+      }
+      return (a.name || '').localeCompare(b.name || '');
+    });
+
+    return list;
+  }, [cars, search, sortBy]);
+
+  const brandTitle = brandName
+    ? brandName.charAt(0).toUpperCase() + brandName.slice(1)
+    : 'Brand';
 
   return (
-    <>
-      <div className='flex'>
+    <div className="brand-page">
+      <div className="brand-layout">
         <Sidebar companies={companies} />
-        <div className='pt-2' >
-          <div className='flex justify-between mx-6 w-[67vw]'>
-            <Link to={'/'} className='bg-gray-600 p-2 rounded-2xl font-bold'>HOME</Link>
-            <Link className='ml-5 bg-gray-600 p-2 rounded-2xl font-bold' to={`/Overview/${brandName}`}>Overview Brand</Link>
+
+        <main className="brand-main">
+          {/* TOP BAR */}
+          <div className="brand-topbar">
+            <div className="brand-top-left">
+              <Link to="/" className="bp-btn">
+                <Home size={16} /> HOME
+              </Link>
+              <Link to={`/Overview/${brandName}`} className="bp-btn gold">
+                <Info size={16} /> Brand Overview
+              </Link>
+            </div>
+
+            <Link to="/" className="bp-back">
+              <ArrowLeft size={16} /> BACK
+            </Link>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-5">
-            {cars.map((car) => {
-              return <Link to={`/brand/${car.brand}/${car.name}`}>
-                <div key={car._id} className="border border-gray-600 cursor-pointer rounded-lg h-88 overflow-hidden" style={{ backgroundColor: "#393E46" }}>
-                  <div className='w-full h-1/2 object-cover rounded-lg overflow-hidden'>
-                    <img src={car.img} alt="" className="w-full h-full hover:scale-125" />
-                  </div>
-                  <div className="details-box">
 
-                    <div className='flex flex-col gap-1'>
-                      <span className='text-xs border px-2 py-0.5' style={{ width: "fit-content" }}>{car.type}</span>
-                      <span className='text-xs mt-1 '>{car.brand}</span>
-                      <span className='text-2xl font-medium' >{car.name}</span>
+          {/* HEADER */}
+          <section className="brand-header-card">
+            <div className="brand-header-left">
+              <div className="brand-chip">
+                <Car size={14} /> Models Collection
+              </div>
+              <h1 className="brand-title">{brandTitle}</h1>
+              <p className="brand-subtitle">
+                Explore every model available for this brand with live performance stats.
+              </p>
+            </div>
 
-                      <div className='flex justify-around my-2'>
-                        <span className='border w-14 px-3 py-0.5 rounded-sm'>
-                          <div className='text-center'>
-                            <div className='font-medium'>{car.performance.power_hp}</div>
-                            <div className='text-[10px]'>HP</div>
+            <div className="brand-header-stats">
+              <div className="brand-stat-box">
+                <span className="label">Total Models</span>
+                <strong>{cars.length}</strong>
+              </div>
+              <div className="brand-stat-box">
+                <span className="label">Showing</span>
+                <strong>{filteredCars.length}</strong>
+              </div>
+            </div>
+          </section>
+
+          {/* FILTERS */}
+          <section className="brand-filters">
+            <div className="brand-search">
+              <Search size={18} />
+              <input
+                type="text"
+                placeholder="Search model or type..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+
+            <div className="brand-sort">
+              <LayoutGrid size={16} />
+              <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+                <option value="name">Sort by Name</option>
+                <option value="hp">Sort by HP</option>
+                <option value="speed">Sort by Top Speed</option>
+                <option value="accel">Sort by 0-100</option>
+              </select>
+            </div>
+          </section>
+
+          {/* CONTENT */}
+          {loading ? (
+            <div className="brand-loading">
+              <div className="brand-spinner"></div>
+              <p>Loading {brandTitle} models...</p>
+            </div>
+          ) : error ? (
+            <div className="brand-empty error">
+              <AlertCircle size={28} />
+              <h3>{error}</h3>
+              <button onClick={() => window.location.reload()} className="bp-btn gold">
+                Retry
+              </button>
+            </div>
+          ) : filteredCars.length === 0 ? (
+            <div className="brand-empty">
+              <Car size={28} />
+              <h3>No models found</h3>
+              <p>Try another search or check brand name.</p>
+            </div>
+          ) : (
+            <section className="brand-grid">
+              {filteredCars.map((car) => (
+                <Link
+                  key={car._id || car.id}
+                  to={`/brand/${encodeURIComponent(car.brand)}/${encodeURIComponent(car.name)}`}
+                  className="brand-card-link"
+                >
+                  <article className="brand-card">
+                    <div className="brand-card-image">
+                      <img
+                        src={car.img}
+                        alt={car.name}
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            'https://via.placeholder.com/640x360?text=Car+Image';
+                        }}
+                      />
+                      <span className="type-badge">{car.type || 'Car'}</span>
+                    </div>
+
+                    <div className="brand-card-body">
+                      <span className="car-brand">{car.brand}</span>
+                      <h3 className="car-name">{car.name}</h3>
+
+                      <div className="car-specs">
+                        <div className="spec">
+                          <Zap size={14} />
+                          <div>
+                            <strong>{car.performance?.power_hp ?? '--'}</strong>
+                            <span>HP</span>
                           </div>
-                        </span>
+                        </div>
 
-                        <span className='border w-18 rounded-sm'>
-                          <div className='text-center'>
-                            <div className='font-medium'>{car.performance.top_speed_kmh}</div>
-                            <div className='text-[10px]'>TOP SPEED</div>
+                        <div className="spec">
+                          <Gauge size={14} />
+                          <div>
+                            <strong>{car.performance?.top_speed_kmh ?? '--'}</strong>
+                            <span>KM/H</span>
                           </div>
-                        </span>
+                        </div>
 
-                        <span className='border w-16 rounded-sm'>
-                          <div className='text-center'>
-                            <div className='font-medium'>{car.performance.acceleration_sec}</div>
-                            <div className='text-[10px]'>0-100</div>
+                        <div className="spec">
+                          <Timer size={14} />
+                          <div>
+                            <strong>{car.performance?.acceleration_sec ?? '--'}</strong>
+                            <span>0-100</span>
                           </div>
-                        </span>
-
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </Link>
-            })}
-          </div>
-        </div>
+                  </article>
+                </Link>
+              ))}
+            </section>
+          )}
+        </main>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
 export default BrandPage;

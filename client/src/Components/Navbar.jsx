@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* LOGO */}
         <NavLink to="/" className="navbar-logo">
           <Car className="logo-icon" size={24} />
-          <span className="logo-text">Vehi<span className="gold-text">Check</span></span>
+          <span className="logo-text">Apex<span className="gold-text">forge</span></span>
         </NavLink>
 
         {/* SEARCH BAR */}
@@ -67,7 +67,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/builder" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+            <NavLink to="/makedreamcar" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
               BUILDER
             </NavLink>
           </li>
